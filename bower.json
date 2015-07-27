@@ -12,5 +12,8 @@
     "angular-mocks": "~1.3.x",
     "sinon": "http://sinonjs.org/releases/sinon-1.12.1.js",
     "bardjs": "~0.1"
+  },
+  "resolutions": {
+    "angular": "1.3.17"
   }
 }
