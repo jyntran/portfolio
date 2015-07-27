@@ -3,24 +3,22 @@
 
     angular
         .module('app.routing')
-        .config(ListRoutes);
+        .config(ListRoutes)
+        .run();
 
-        function ListRoutes($stateProvider, $urlRouterProvider) {
+    function ListRoutes($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
 
-            $stateProvider
-                .state('home', {
-                    url: '/home',
-                    templateUrl: '/app/home/home.view.html'
-                })
-                .state('about', {
-                    url: '/about',
-                    templateUrl: '/app/about/about.view.html'
-                });
-        }
-
-    angular.module('app.routing').run(function ($state, $rootScope, $window){
-    });
+        $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: 'home/home.view.html'
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: 'about/about.view.html'
+            });
+    }
 
 })();

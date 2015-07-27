@@ -1,7 +1,7 @@
-// (function() {
-//     'use strict';
+(function() {
+    'use strict';
 
-//     angular.module('app', [
-//         'app.routing'
-//     ])
-// })();
+    angular.module('app', [
+        'app.routing'
+    ]);
+})();
