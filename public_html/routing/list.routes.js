@@ -3,21 +3,21 @@
 
     angular
         .module('app.routing')
-        .config(ListRoutes)
+        .config(routes)
         .run();
 
-    function ListRoutes($stateProvider, $urlRouterProvider) {
+    function routes($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'home/home.view.html'
+                templateUrl: 'states/home/home.view.html'
             })
             .state('about', {
                 url: '/about',
-                templateUrl: 'about/about.view.html'
+                templateUrl: 'states/about/about.view.html'
             });
     }
 
