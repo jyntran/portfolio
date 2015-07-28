@@ -15,8 +15,16 @@
                 url: '/',
                 templateUrl: 'states/home/home.view.html'
             })
+            .state('code', {
+                url: '/',
+                templateUrl: 'states/code/code.view.html'
+            })
+            .state('art', {
+                url: '/',
+                templateUrl: 'states/art/art.view.html'
+            })
             .state('about', {
-                url: '/about',
+                url: '/',
                 templateUrl: 'states/about/about.view.html'
             });
     }
