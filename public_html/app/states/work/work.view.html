@@ -10,9 +10,11 @@
         </div>
 
         <article class="work" data-ng-repeat="work in ctrl.works | filter:ctrl.isActive">
-            <a data-ng-href="{{work.url}}">
                 <h3>{{work.title}}</h3>
-            </a>
                 <p>{{work.description}}</p>
+                <p>
+                    <a ng-if="work.url.live" data-ng-href="{{work.url.live}}">Live</a> | 
+                    <a ng-if="work.url.git" data-ng-href="{{work.url.git}}">GitHub</a>
+                </p>
         </article>
 </section>
