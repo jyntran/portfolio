@@ -1,0 +1,19 @@
+.container {
+    
+    .view {
+        width: 80%;
+        max-width: 768px;
+        margin: auto;
+        @include transition-duration(0.5s);
+
+        &.ng-enter,
+        &.ng-leave.ng-leave-active {
+            opacity:0;
+        }
+
+        &.ng-enter.ng-enter-active,
+        &.ng-leave {
+            opacity:1;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@mixin transition-delay ($time) {
+  -moz-transition-delay: $time;
+  -ms-transition-delay: $time;
+  -webkit-transition-delay: $time;
+  transition-delay: $time;
+}
+
+@mixin transition-duration ($time) {
+  -moz-transition-duration: $time;
+  -ms-transition-duration: $time;
+  -webkit-transition-duration: $time;
+  transition-duration: $time;
+}
+
+@mixin transition-property ($type) {
+  -moz-transition-property: $type;
+  -ms-transition-property: $type;
+  -webkit-transition-property: $type;
+  transition-property: $type;
+}

@@ -1,7 +1,10 @@
 /* Style */
-@import 'reset';
 @import 'font';
+@import 'colours';
+@import 'mixin';
 @import 'header';
+@import 'container';
+@import 'footer';
 
 html, body {
     font-family: Quicksand, Arial, sans-serif;
