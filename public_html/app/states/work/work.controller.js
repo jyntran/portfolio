@@ -26,13 +26,14 @@
 
         function populateWorks() {
             $http.get('/data/works.json')
-                .success(function(data) {
-                    console.log('success')
-                    vm.works = data;
-                })
-                .error(function(error) {
-                    console.log('error')
-                })
+                .then(
+                    function(resp) {
+                        vm.works = resp.data;
+                    },
+                    function(resp) {
+                        console.log(error)
+                    }
+                )
         }
 
         function toggleFilter(filter) {
