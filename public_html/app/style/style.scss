@@ -1,3 +1,8 @@
 /* Style */
-
+@import 'reset';
+@import 'font';
 @import 'header';
+
+html, body {
+    font-family: Quicksand, Arial, sans-serif;
+}
