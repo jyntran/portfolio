@@ -18,3 +18,10 @@
   -webkit-transition-property: $type;
   transition-property: $type;
 }
+
+@mixin transition-timing-function ($type) {
+  -moz-transition-timing-function: $type;
+  -ms-transition-timing-function: $type;
+  -webkit-transition-timing-function: $type;
+  transition-timing-function: $type;
+}

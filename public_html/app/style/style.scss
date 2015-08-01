@@ -9,3 +9,16 @@
 html, body {
     font-family: Quicksand, Arial, sans-serif;
 }
+
+.state {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-home {
+        background-image: url('/app/style/img/container.jpg');
+    }
+
+    &-code {
+        background-image: url('/app/style/img/code.jpg');
+    }
+}
