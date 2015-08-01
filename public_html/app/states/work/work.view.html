@@ -1,0 +1,18 @@
+<section data-ng-controller="WorkCtrl as ctrl">
+    <h3>Work</h3>
+
+        <div class="filter">
+            <p>Filter</p>
+            <label ng-repeat="filter in ctrl.filters">
+                <input type="checkbox" data-ng-click="ctrl.toggleFilter(filter)" checked/>
+                {{filter}}
+            </label>
+        </div>
+
+        <article class="work" data-ng-repeat="work in ctrl.works | filter:ctrl.isActive">
+            <a data-ng-href="{{work.url}}">
+                <h3>{{work.title}}</h3>
+            </a>
+                <p>{{work.description}}</p>
+        </article>
+</section>
