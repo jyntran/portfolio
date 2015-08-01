@@ -1,8 +1,24 @@
 /* Style */
-@import 'reset';
 @import 'font';
+@import 'colours';
+@import 'mixin';
 @import 'header';
+@import 'container';
+@import 'footer';
 
 html, body {
     font-family: Quicksand, Arial, sans-serif;
+}
+
+.state {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-home {
+        background-image: url('/app/style/img/container.jpg');
+    }
+
+    &-code {
+        background-image: url('/app/style/img/code.jpg');
+    }
 }

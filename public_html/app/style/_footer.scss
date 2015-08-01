@@ -1,0 +1,15 @@
+.footer {
+    border-top: 1px solid $gray-light;
+
+    ul {
+        width: 80%;
+        max-width: 768px;
+        padding: 0;
+        margin: auto;
+        
+        li {
+            list-style-type: none;
+            padding: 4px;
+        }
+    }
+}
