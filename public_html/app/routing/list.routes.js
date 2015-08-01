@@ -15,13 +15,9 @@
                 url: '/',
                 templateUrl: 'states/home/home.view.html'
             })
-            .state('code', {
+            .state('work', {
                 url: '/',
-                templateUrl: 'states/code/code.view.html'
-            })
-            .state('art', {
-                url: '/',
-                templateUrl: 'states/art/art.view.html'
+                templateUrl: 'states/work/work.view.html'
             })
             .state('about', {
                 url: '/',

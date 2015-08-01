@@ -1,6 +1,7 @@
 .container {
     min-height: 400px;
     background-image: url('/app/style/img/old_moon.png');
+    overflow: auto;
 
     > a {
         text-decoration: none;
@@ -32,5 +33,27 @@
                 opacity:1;
             }
         }
+    }
+}
+
+/* Work */
+.work {
+    @include transition-duration(0.2s);
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity:0;
+        max-height:0;
+    }
+
+    &.ng-enter.ng-enter-active,
+    &.ng-leave {
+        opacity:1;
+        max-height: 100px;
+    }    
+
+    &.ng-enter-stagger, &.ng-leave-stagger {
+        @include transition-delay(0.5s);
+        @include transition-duration(0s);
     }
 }
