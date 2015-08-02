@@ -1,8 +1,9 @@
 .container {
     min-height: 400px;
-    background-image: url('/app/style/img/old_moon.png');
     overflow: auto;
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     > a {
         text-decoration: none;
         color: $gray;
@@ -31,6 +32,13 @@
             &.ng-leave {
                 left: 0%;
                 opacity:1;
+            }
+
+            section {
+                background-color: $white-a40;
+                box-shadow: 0 0 16px $white;
+                padding: 24px;
+                margin: 24px 0;
             }
         }
     }
