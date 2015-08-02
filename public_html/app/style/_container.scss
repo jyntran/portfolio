@@ -1,8 +1,9 @@
 .container {
     min-height: 400px;
-    background-image: url('/app/style/img/old_moon.png');
     overflow: auto;
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     > a {
         text-decoration: none;
         color: $gray;

@@ -13,6 +13,7 @@
     <script src="routing/routing.module.js"></script>
     <script src="routing/list.routes.js"></script>
     <script src="states/work/work.controller.js"></script>
+    <script src="directives/timeBg.directive.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css" />
@@ -24,7 +25,7 @@
 
     <div data-ng-include="'navigation/header.view.html'"></div>
 
-    <div class="container">
+    <div class="container" time-bg>
         <div class="content">
             <div data-ui-view class="view"></div>
         </div>
