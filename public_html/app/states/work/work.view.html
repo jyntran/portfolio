@@ -2,7 +2,7 @@
     <h3>Work</h3>
 
         <div class="filter">
-            <p>Filter</p>
+            <label>Filter: </label>
             <label ng-repeat="filter in ctrl.filters">
                 <input type="checkbox" data-ng-click="ctrl.toggleFilter(filter)" checked/>
                 {{filter}}
@@ -10,11 +10,10 @@
         </div>
 
         <article class="work" data-ng-repeat="work in ctrl.works | filter:ctrl.isActive">
-                <h3>{{work.title}}</h3>
-                <p>{{work.description}}</p>
-                <p>
-                    <a ng-if="work.url.live" data-ng-href="{{work.url.live}}">Live</a> | 
-                    <a ng-if="work.url.git" data-ng-href="{{work.url.git}}">GitHub</a>
-                </p>
+            <h3>{{work.title}}</h3>
+            <div class="work-description">{{work.description}}</div>
+            <div class="work-actions">
+                <a ng-if="work.url.live" data-ng-href="{{work.url.live}}" class="work-action" alt="Live Link" title="Live Link"><span class="icon-link"></span></a><a ng-if="work.url.git" data-ng-href="{{work.url.git}}" class="work-action" alt="GitHub Link" title="GitHub Link"><span class="icon-github3"></span></a>
+            </div>
         </article>
 </section>

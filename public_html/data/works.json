@@ -14,7 +14,7 @@
             "live": "http://jyntran.ca/fine225",
             "git": "https://github.com/jyntran/absolution"
         },
-        "description": "Frame by frame animation using Bootstrap and Javascript/jQuery.",
+        "description": "Frame by frame animation with Javascript.",
         "tags": [ "art", "code" ]
     },
     {

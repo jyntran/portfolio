@@ -1,5 +1,5 @@
 .container {
-    min-height: 400px;
+    min-height: 768px;
     overflow: auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,8 +45,14 @@
 }
 
 /* Work */
+.filter {
+}
+
 .work {
-    height: 100px;
+    height: 120px;
+    padding: 24px;
+    margin: 24px 0;
+    position: relative;
     @include transition-duration(0.8s);
 
     &.ng-enter,
@@ -59,12 +65,42 @@
     &.ng-enter.ng-enter-active,
     &.ng-leave {
         opacity: 1;
-        height: 100px;
+        height: 120px;
         margin-top: 0px;
     }    
 
     &.ng-enter-stagger, &.ng-leave-stagger {
         @include transition-delay(0.8s);
         @include transition-duration(0s);
+    }
+
+    h3 {
+        margin: 0 0 16px;
+    }
+
+    &-description {
+    }
+
+    &-actions {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 16px;
+    }
+
+    &-action {
+        display: inline-block;
+        background-color: $white;
+        width: 2em;
+        height: 2em;
+        margin-left: 8px;
+        @include box-shadow(1px, 1px, 0px, 0px, $gray);
+        @include border-radius(4px);
+
+        span {
+            position: relative;
+            top: 25%;
+            left: 25%;
+        } 
     }
 }

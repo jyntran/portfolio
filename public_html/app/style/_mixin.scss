@@ -1,3 +1,15 @@
+@mixin border-radius ($size) {
+  border-radius: $size;
+  -moz-border-radius: $size;
+  -webkit-border-radius: $size;
+}
+
+@mixin box-shadow ($x, $y, $blur, $spread, $colour) {
+  -webkit-box-shadow: $x $y $blur $spread $colour;
+  -moz-box-shadow: $x $y $blur $spread $colour;
+  box-shadow: $x $y $blur $spread $colour;
+}
+
 @mixin transition-delay ($time) {
   -moz-transition-delay: $time;
   -ms-transition-delay: $time;
