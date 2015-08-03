@@ -1,45 +1,51 @@
 .container {
-    min-height: 768px;
-    overflow: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+    @include transition-delay(2.0s);
+    @include transition-duration(2.0s);
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity:0;
+    }
+
+    &.ng-enter.ng-enter-active,
+    &.ng-leave {
+        opacity:1;
+    }
+
     > a {
         text-decoration: none;
         color: $gray;
     }
 
-    .content {
-        width: 80%;
-        max-width: 768px;
-        margin: auto;
-        position: relative;
+    width: 80%;
+    max-width: 768px;
+    margin: auto;
+    position: relative;
 
-        .view {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            @include transition-duration(0.8s);
-            @include transition-timing-function(ease);
+    .view {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include transition-duration(0.8s);
+        @include transition-timing-function(ease);
 
-            &.ng-enter,
-            &.ng-leave.ng-leave-active {
-                left: -10%;
-                opacity:0;
-            }
+        &.ng-enter,
+        &.ng-leave.ng-leave-active {
+            left: -10%;
+            opacity:0;
+        }
 
-            &.ng-enter.ng-enter-active,
-            &.ng-leave {
-                left: 0%;
-                opacity:1;
-            }
+        &.ng-enter.ng-enter-active,
+        &.ng-leave {
+            left: 0%;
+            opacity:1;
+        }
 
-            section {
-                background-color: $white-a40;
-                box-shadow: 0 0 16px $white;
-                padding: 24px;
-                margin: 24px 0;
-            }
+        section {
+            background-color: $white-a40;
+            box-shadow: 0 0 16px $white;
+            padding: 24px;
+            margin: 24px 0;
         }
     }
 }
@@ -50,42 +56,72 @@
 
 .work {
     height: 120px;
-    padding: 24px;
-    margin: 24px 0;
+    margin-bottom: 24px;
     position: relative;
-    @include transition-duration(0.8s);
+    @include transition-duration(1.0s);
+    @include transition-timing-function(linear);
+    @include transition-property(all);
+    list-style: none;
+
+    &.ng-enter, &.ng-leave {
+        @include transition-duration(0.4s);
+        @include transition-timing-function(linear);
+        @include transition-property(all);
+    }
 
     &.ng-enter,
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        height: 0;
-        margin-top: -18px;
+        max-height: 0;
+        margin-bottom: 0px;
     }
 
     &.ng-enter.ng-enter-active,
     &.ng-leave {
         opacity: 1;
-        height: 120px;
-        margin-top: 0px;
+        max-height: 120px;
+        margin-bottom: 24px;
     }    
 
     &.ng-enter-stagger, &.ng-leave-stagger {
-        @include transition-delay(0.8s);
+        @include transition-delay(0.4s);
         @include transition-duration(0s);
     }
 
-    h3 {
+    &-thumbnail {
+        width: 8em;
+        height: 8em;
+        display: block;
+        background-color: $white;
+        box-sizing: border-box;
+        padding: 4px;
+        overflow: hidden;
+        border-bottom: 1px solid $gray;
+        border-right: 1px solid $gray;
+        border-radius: 4px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include transition-duration(0.2s);            
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &-title {
         margin: 0 0 16px;
     }
 
     &-description {
+        min-height: 40px;
     }
 
     &-actions {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin: 16px;
+        //position: absolute;
+        //bottom: 24px;
+        //right: 24px;
     }
 
     &-action {
@@ -93,7 +129,7 @@
         background-color: $white;
         width: 2em;
         height: 2em;
-        margin-left: 8px;
+        margin-right: 8px;
         @include box-shadow(1px, 1px, 0px, 0px, $gray);
         @include border-radius(4px);
 

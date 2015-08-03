@@ -6,6 +6,10 @@
             "git": "https://github.com/jyntran/find-benji"
         },
         "description": "Create.JS port of a past project.",
+        "preview": {
+            "thumb": "/data/img/ben-th.png",
+            "full": "/data/img/ben.png"
+        },
         "tags": [ "art", "code" ]
     },
     {
@@ -15,6 +19,10 @@
             "git": "https://github.com/jyntran/absolution"
         },
         "description": "Frame by frame animation with Javascript.",
+        "preview": {
+            "thumb": "/data/img/abs-th.png",
+            "full": "/data/img/abs.png"
+        },
         "tags": [ "art", "code" ]
     },
     {

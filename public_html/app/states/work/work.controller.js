@@ -16,6 +16,7 @@
 
         vm.toggleFilter = toggleFilter;
         vm.isActive = isActive;
+        vm.showLightbox = showLightbox;
 
         init();
         //////////
@@ -47,6 +48,11 @@
                     result = false;
             });            
             return result;
+        }
+
+        function showLightbox(preview) {
+            vm.show = true;
+            vm.preview = preview;
         }
     }])
 })();
