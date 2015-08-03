@@ -1,5 +1,5 @@
 .container {
-    width: 80%;
+    width: 100%;
     max-width: 768px;
     margin: auto;
     position: relative;
@@ -48,6 +48,12 @@
             //margin: 24px 0;
             height: 100%;
         }
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .container {
+        width: 80%;
     }
 }
 
@@ -139,7 +145,4 @@
             background-color: $gray-lighter;
         }
     }
-}
-
-@media screen and (min-width: 48em) {
 }
