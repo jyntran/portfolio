@@ -1,12 +1,9 @@
-/* Style */
-@import 'font';
 @import 'colours';
-@import 'mixin';
-@import 'header';
-@import 'hsmenu';
-@import 'lightbox';
-@import 'container';
-@import 'footer';
+@import 'fonts';
+@import 'mixins';
+@import 'directives';
+@import 'layout';
+@import 'states';
 
 html, body {
     margin: 0;
@@ -17,7 +14,7 @@ html, body {
     overflow-x: hidden;
 }
 
-html, body,
+html,
 .pure-g [class *="pure-u"] {
     font-family: Quicksand, Arial, sans-serif !important;
 }
@@ -33,7 +30,6 @@ ul {
     margin: 0;
 }
 
-/* Checkboxes */
 .checkbox {
     width: 80px;
     position: relative;
