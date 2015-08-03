@@ -12,7 +12,7 @@
                 var date = new Date();
                 var hour = $filter('date')(date, 'H', '-0400');
 
-                if (hour <= 5 && hour >= 22)
+                if (hour <= 5 || hour >= 22)
                     img = 'night';
                 else if (hour >= 6 && hour <= 9)
                     img = 'sunrise';

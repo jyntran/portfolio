@@ -1,0 +1,7 @@
+<div class="lightbox">
+    <div ng-if="ctrl.show" class="lightbox-overlay" data-ng-click="ctrl.close()"></div>
+    <div ng-if="ctrl.show" class="lightbox-modal">
+        <div class="lightbox-content"><img ng-src="{{ctrl.content}}"/></div>
+        <div class="lightbox-close" data-ng-click="ctrl.close()"><span class="icon-cross"></span></div>
+    </div>
+</div>

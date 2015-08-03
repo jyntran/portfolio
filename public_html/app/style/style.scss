@@ -1,24 +1,74 @@
-/* Style */
-@import 'font';
 @import 'colours';
-@import 'mixin';
-@import 'header';
-@import 'container';
-@import 'footer';
+@import 'fonts';
+@import 'mixins';
+@import 'directives';
+@import 'layout';
+@import 'states';
 
 html, body {
-    font-family: Quicksand, Arial, sans-serif;
-}
-
-.state {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+}
 
-    &-home {
-        background-image: url('/app/style/img/container.jpg');
-    }
+html,
+.pure-g [class *="pure-u"] {
+    font-family: Quicksand, Arial, sans-serif !important;
+}
 
-    &-code {
-        background-image: url('/app/style/img/code.jpg');
+a {
+    text-decoration: none;
+    color: $gray;   
+    @include transition-duration(0.2s);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.checkbox {
+    width: 80px;
+    position: relative;
+    display: inline-block;
+    label {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $white;
+        border-radius: 4px;
+        @include box-shadow-inset(1px, 1px, 0px, 0px, $gray-light);
+        &:after {
+          content: '';
+          width: 9px;
+          height: 5px;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border: 3px solid $gray;
+          border-top: none;
+          border-right: none;
+          background: transparent;
+          opacity: 0;
+          transform: rotate(-45deg);
+        }
+        &:hover::after {
+          opacity: 0.5;
+        }
+        span {
+            margin-left: 32px;
+        }
     }
+    input[type=checkbox] {
+        visibility: hidden;
+        &:checked + label:after {
+          opacity: 1;
+        }
+    }    
 }

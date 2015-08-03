@@ -1,0 +1,89 @@
+/* Work */
+.filter {
+    margin: 24px 0;
+}
+
+.work {
+    margin-bottom: 24px;
+    position: relative;
+    @include transition-duration(1.0s);
+    @include transition-timing-function(ease);
+    @include transition-property(all);
+    list-style: none;
+
+    &.ng-enter, &.ng-leave {
+        @include transition-duration(0.8s);
+        @include transition-timing-function(ease);
+        @include transition-property(all);
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+        max-height: 0;
+        margin-bottom: 0px;
+    }
+
+    &.ng-enter.ng-enter-active,
+    &.ng-leave {
+        opacity: 1;
+        max-height: 240px;
+        margin-bottom: 24px;
+    }    
+
+    &.ng-enter-stagger, &.ng-leave-stagger {
+        @include transition-delay(0.4s);
+        @include transition-duration(0s);
+    }
+
+    &-thumbnail {
+        width: 8em;
+        height: 8em;
+        display: block;
+        background-color: $white;
+        box-sizing: border-box;
+        padding: 4px;
+        overflow: hidden;
+        border-bottom: 1px solid $gray;
+        border-right: 1px solid $gray;
+        border-radius: 4px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include transition-duration(0.2s);            
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &-title {
+        margin: 0 0 16px;
+    }
+
+    &-description {
+        min-height: 40px;
+    }
+
+    &-actions {
+        text-align: right;
+        margin-top: 16px;
+    }
+
+    &-action {
+        display: inline-block;
+        background-color: $white;
+        width: 16px;
+        height: 16px;
+        padding: 0.4em;
+        margin-right: 8px;
+        text-align: left;
+        @include box-shadow(1px, 1px, 0px, 0px, $gray);
+        @include border-radius(4px);
+
+        &:hover {
+            background-color: $gray-lighter;
+        }
+    }
+}

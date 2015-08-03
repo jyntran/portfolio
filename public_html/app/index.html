@@ -13,22 +13,33 @@
     <script src="routing/routing.module.js"></script>
     <script src="routing/list.routes.js"></script>
     <script src="states/work/work.controller.js"></script>
+    <script src="directives/horizontalScrollMenu.directive.js"></script>
     <script src="directives/timeBg.directive.js"></script>
+    <script src="directives/lightbox.directive.js"></script>
 
-    <!-- CSS -->
+    <!-- Normalize -->
     <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css" />
+
+    <!-- Pure -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!-- Style -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
 
-<body ng-app="app">
+<body ng-app="app" time-bg>
 
     <div data-ng-include="'navigation/header.view.html'"></div>
 
-    <div class="container" time-bg>
-        <div class="content">
-            <div data-ui-view class="view"></div>
-        </div>
+    <div class="container">
+        <div data-ui-view class="view"></div>
     </div>
 
     <div data-ng-include="'navigation/footer.view.html'"></div>
