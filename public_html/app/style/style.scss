@@ -31,6 +31,37 @@ a {
     }
 }
 
+/* Checkboxes */
+.checkbox label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox label:before {
+    border-radius: 4px;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: $white;
+    @include box-shadow-inset(1px, 1px, 0px, 0px, $gray-light)
+}
+
+input[type=checkbox] + label:before {
+    color: $gray;
+    text-align: center;
+    line-height: 20px;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\2713";
+}
+
 .lightbox {
 
     div {

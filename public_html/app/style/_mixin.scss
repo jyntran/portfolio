@@ -10,6 +10,12 @@
   box-shadow: $x $y $blur $spread $colour;
 }
 
+@mixin box-shadow-inset ($x, $y, $blur, $spread, $colour) {
+  -webkit-box-shadow: inset $x $y $blur $spread $colour;
+  -moz-box-shadow: inset $x $y $blur $spread $colour;
+  box-shadow: inset $x $y $blur $spread $colour;
+}
+
 @mixin transition-delay ($time) {
   -moz-transition-delay: $time;
   -ms-transition-delay: $time;
