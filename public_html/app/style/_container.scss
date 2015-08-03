@@ -1,4 +1,9 @@
 .container {
+    width: 80%;
+    max-width: 768px;
+    margin: auto;
+    position: relative;
+    height: 100%;
     @include transition-delay(2.0s);
     @include transition-duration(2.0s);
 
@@ -16,11 +21,6 @@
         text-decoration: none;
         color: $gray;
     }
-
-    width: 80%;
-    max-width: 768px;
-    margin: auto;
-    position: relative;
 
     .view {
         position: absolute;
@@ -43,9 +43,10 @@
 
         section {
             background-color: $white-a40;
-            box-shadow: 0 0 16px $white;
+            //box-shadow: 0 0 16px $white;
             padding: 24px;
-            margin: 24px 0;
+            //margin: 24px 0;
+            height: 100%;
         }
     }
 }
@@ -56,17 +57,16 @@
 }
 
 .work {
-    height: 120px;
     margin-bottom: 24px;
     position: relative;
     @include transition-duration(1.0s);
-    @include transition-timing-function(linear);
+    @include transition-timing-function(ease);
     @include transition-property(all);
     list-style: none;
 
     &.ng-enter, &.ng-leave {
-        @include transition-duration(0.4s);
-        @include transition-timing-function(linear);
+        @include transition-duration(0.8s);
+        @include transition-timing-function(ease);
         @include transition-property(all);
     }
 
@@ -80,7 +80,7 @@
     &.ng-enter.ng-enter-active,
     &.ng-leave {
         opacity: 1;
-        max-height: 120px;
+        max-height: 240px;
         margin-bottom: 24px;
     }    
 
@@ -120,24 +120,26 @@
     }
 
     &-actions {
-        //position: absolute;
-        //bottom: 24px;
-        //right: 24px;
+        text-align: right;
+        margin-top: 16px;
     }
 
     &-action {
         display: inline-block;
         background-color: $white;
-        width: 2em;
-        height: 2em;
+        width: 16px;
+        height: 16px;
+        padding: 0.4em;
         margin-right: 8px;
+        text-align: left;
         @include box-shadow(1px, 1px, 0px, 0px, $gray);
         @include border-radius(4px);
 
-        span {
-            position: relative;
-            top: 25%;
-            left: 25%;
-        } 
+        &:hover {
+            background-color: $gray-lighter;
+        }
     }
+}
+
+@media screen and (min-width: 48em) {
 }

@@ -1,5 +1,5 @@
 <section data-ng-controller="WorkCtrl as ctrl">
-    <h3>Work</h3>
+    <h3>Works</h3>
 
         <div class="filter">
             <div class="checkbox" ng-repeat="filter in ctrl.filters">
@@ -23,7 +23,8 @@
                 <div class="pure-u-1">
                     <h4 class="work-title">{{work.title}}</h4>
                     <div class="work-description">{{work.description}}</div>
-                    <div class="pure-u-1">
+                </div>
+                <div class="pure-u-1">
                         <div class="work-actions">
                             <a ng-if="work.preview.full" href data-ng-click="ctrl.showLightbox(work.preview.full)" class="work-action" alt="Preview" title="Preview"><span class="icon-eye"></span></a>
                             <a ng-if="work.url.live" data-ng-href="{{work.url.live}}" class="work-action" alt="Live" title="Live"><span class="icon-link"></span></a>
