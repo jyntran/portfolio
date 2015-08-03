@@ -1,0 +1,14 @@
+<div class="custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+        <a href class="pure-menu-heading custom-menu-brand" ui-sref="home">J. Tran</a>
+        <a href class="custom-menu-toggle" id="toggle" ng-click="ctrl.toggle()" data-ng-class="{'x': ctrl.active}"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu"  data-ng-class="{'custom-menu-tucked': !ctrl.active}">
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href class="pure-menu-link" ui-sref="home"><span class="icon-home3"></span> Home</a></li>
+            <li class="pure-menu-item"><a href class="pure-menu-link" ui-sref="work"><span class="icon-stack"></span> Works</a></li>
+            <li class="pure-menu-item"><a href class="pure-menu-link" ui-sref="about"><span class="icon-user"></span> About</a></li>
+        </ul>
+    </div>
+</div>
