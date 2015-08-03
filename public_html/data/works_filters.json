@@ -1,0 +1,19 @@
+[
+    {
+        "name": "art",
+        "checked": true
+    },
+    {
+        "name": "code",
+        "checked": true
+    },
+    {
+        "name": "game",
+        "checked": true
+
+    },
+    {
+        "name": "web",
+        "checked": true
+    }
+]

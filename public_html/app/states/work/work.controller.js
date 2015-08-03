@@ -7,12 +7,8 @@
         var vm = this;
 
         vm.works = [];
-
-        vm.filtersObj = {
-            art: true,
-            code: true
-        }
-        vm.filters = [ 'art', 'code' ];
+        vm.filters = [];
+        vm.filtersDict = {};
 
         vm.toggleFilter = toggleFilter;
         vm.isActive = isActive;
@@ -35,17 +31,29 @@
                         console.log(error)
                     }
                 )
+            $http.get('/data/works_filters.json')
+                .then(
+                    function(resp) {
+                        vm.filters = resp.data;
+                        vm.filters.forEach(function(filter){
+                            vm.filtersDict[filter.name] = filter.checked;
+                        })
+                    },
+                    function(resp) {
+                        console.log(error)
+                    }
+                )
         }
 
         function toggleFilter(filter) {
-            vm.filtersObj[filter] = !vm.filtersObj[filter];
+            vm.filtersDict[filter.name] = !vm.filtersDict[filter.name];
         }
 
         function isActive(work) {
-            var result = true;
+            var result = false;
             work.tags.forEach(function(tag){
-                if (!vm.filtersObj[tag])
-                    result = false;
+                if (vm.filtersDict[tag])
+                    result = true;
             });            
             return result;
         }
