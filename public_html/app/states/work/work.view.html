@@ -2,21 +2,12 @@
     <h3>Work</h3>
 
         <div class="filter">
-            <label>Filter: </label>
-            <div class="checkbox">
-                <div ng-repeat="filter in ctrl.filters">
+            <div class="checkbox" ng-repeat="filter in ctrl.filters">
                     <input id="workFilter{{$id}}" type="checkbox" data-ng-click="ctrl.toggleFilter(filter)" checked>
                     <label for="workFilter{{$id}}"><span>{{filter}}</span></label>
-                </div>
             </div>
         </div>
-<!--                 <label ng-repeat="filter in ctrl.filters">
-                    <input type="checkbox" data-ng-click="ctrl.toggleFilter(filter)" checked/>
-                    {{filter}}
-                </label>
-            </div>
-        </div>
- -->
+
         <lightbox lightbox-open="ctrl.preview" lightbox-show="ctrl.show"></lightbox>
 
         <ul>
