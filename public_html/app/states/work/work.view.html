@@ -2,9 +2,9 @@
     <h3>Works</h3>
 
         <div class="filter">
-            <div class="checkbox" ng-repeat="filter in ctrl.filters">
-                <div class="pure-u-1-4">
-                    <input id="workFilter{{$id}}" type="checkbox" data-ng-click="ctrl.toggleFilter(filter)" checked>
+            <div class="pure-g">
+                <div class="checkbox pure-u-1-2 pure-u-sm-1-4" ng-repeat="filter in ctrl.filters">
+                    <input id="workFilter{{$id}}" type="checkbox" data-ng-click="ctrl.toggleFilter(filter)" data-ng-checked="filter.checked">
                     <label for="workFilter{{$id}}"><span>{{filter.name}}</span></label>
                 </div>
             </div>
