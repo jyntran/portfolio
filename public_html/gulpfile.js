@@ -5,7 +5,6 @@ var gulp = require('gulp');
 var changed = require('gulp-changed');
 var minifyHTML = require('gulp-minify-html');
 var sass = require('gulp-sass');
-var livereload = require('gulp-livereload');
 
 // minify new or changed HTML pages
 gulp.task('minify-html', function() {
@@ -19,13 +18,13 @@ gulp.task('minify-html', function() {
 });
 
 // compile sass
-gulp.task('sass', ['watch'], function () {
+gulp.task('sass', function () {
   gulp.src('./app/style/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./app/css'))
 });
 
-gulp.task('watch', function() {
-  livereload.listen();
+// default task
+gulp.task('default', function() {
   gulp.watch('./app/style/**/*.scss', ['sass']);
 });
