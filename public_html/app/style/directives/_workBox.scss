@@ -36,7 +36,7 @@
             background-color: $white;
             border-bottom: 1px solid $gray;
             border-right: 1px solid $gray;
-            @include border-radius-all(4px);
+            @include border-radius(4px, 4px, 0, 0);
             @include transition-duration(0.2s);            
         }
         &-nothumb {
@@ -81,10 +81,11 @@
     }
 
     &-actions {
+        margin-top: -4px;
         margin-bottom: 16px;
         text-align: center;
         background-color: $white;
-        @include border-radius-all(4px);
+        @include border-radius(0, 0, 4px, 4px);
         border-right: 1px solid $gray;
         border-bottom: 1px solid $gray;
     }
