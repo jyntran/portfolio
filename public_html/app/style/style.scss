@@ -14,9 +14,9 @@ html, body {
     overflow-x: hidden;
 }
 
-html,
-.pure-g [class *="pure-u"] {
-    font-family: Quicksand, Arial, sans-serif !important;
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: Quicksand, Arial, sans-serif;
 }
 
 a {
@@ -28,6 +28,46 @@ a {
 ul {
     padding: 0;
     margin: 0;
+}
+
+.radio {
+    position: relative;
+    display: inline-block;  
+    label {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $white;
+        border-radius: 100%;
+        @include box-shadow-inset(1px, 1px, 0px, 0px, $gray-light);
+        &:after {
+          content: '';
+          width: 7px;
+          height: 7px;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border: 3px solid $gray;
+          @include border-radius-all(100%);
+          background: $gray;
+          opacity: 0;
+        }
+        &:hover::after {
+          opacity: 0.5;
+        }
+        span {
+            margin-left: 32px;
+        }
+    }
+    input[type=radio] {
+        visibility: hidden;
+        &:checked + label:after {
+          opacity: 1;
+        }
+    }    
 }
 
 .checkbox {

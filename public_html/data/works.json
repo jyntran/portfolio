@@ -7,8 +7,8 @@
         },
         "description": "Create.JS port of a past project.",
         "preview": {
-            "thumb": "/data/img/ben-th.png",
-            "full": "/data/img/ben.png"
+            "thumb": "/data/img/ben-t.png",
+            "full": "/data/img/ben-f.png"
         },
         "tags": [ "art", "code" ]
     },
@@ -19,11 +19,34 @@
             "git": "https://github.com/jyntran/absolution"
         },
         "description": "Frame by frame animation with Javascript.",
-        "preview": {
-            "thumb": "/data/img/abs-th.png",
-            "full": "/data/img/abs.png"
-        },
         "tags": [ "art", "code" ]
+    },
+    {
+        "title": "My Face",
+        "description": "Lithograph print.",
+        "preview": {
+            "thumb": "/data/img/myface-t.jpg",
+            "full": "/data/img/myface-f.jpg"
+        },
+        "tags": [ "art" ]
+    },
+    {
+        "title": "Rip-off Soccer Cards",
+        "url": {
+            "live": "http://jyntran.ca/soccer",
+            "git": "https://github.com/jyntran/Rip-off-Soccer-Cards"
+        },
+        "description": "HTML5 Canvas image creator.",
+        "tags": [ "code" ]
+    },
+    {
+        "title": "Wishpaste",
+        "url": {
+            "live": "http://jyntran.ca/wishpaste",
+            "git": "https://github.com/jyntran/wishpaste"
+        },
+        "description": "BBcode generator with a PHP/MySQL database.",
+        "tags": [ "code" ]
     },
     {
         "title": "UWVSA",
@@ -33,5 +56,17 @@
         },
         "description": "Webpage using Zurb's Foundation framework.",
         "tags": [ "code" ]
+    },
+    {
+        "title": "Find Benji Game (Turing)",
+        "url": {
+            "download": "http://jyntran.ca/turing/FindBenji.zip"
+        },
+        "description": "Where's Waldo type game on Turing",
+        "preview": {
+            "thumb": "/data/img/ben-t.png",
+            "full": "/data/img/ben-f.png"
+        },
+        "tags": [ "art", "code" ]
     }
 ]

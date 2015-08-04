@@ -7,11 +7,10 @@
         var vm = this;
 
         vm.works = [];
-        vm.filters = [];
-        vm.filtersDict = {};
+        vm.filtering = 'both';
 
-        vm.toggleFilter = toggleFilter;
         vm.isActive = isActive;
+        vm.showInfo = showInfo;
         vm.showLightbox = showLightbox;
 
         init();
@@ -31,31 +30,22 @@
                         console.log(error)
                     }
                 )
-            $http.get('/data/works_filters.json')
-                .then(
-                    function(resp) {
-                        vm.filters = resp.data;
-                        vm.filters.forEach(function(filter){
-                            vm.filtersDict[filter.name] = filter.checked;
-                        })
-                    },
-                    function(resp) {
-                        console.log(error)
-                    }
-                )
-        }
-
-        function toggleFilter(filter) {
-            vm.filtersDict[filter.name] = !vm.filtersDict[filter.name];
         }
 
         function isActive(work) {
-            var result = false;
-            work.tags.forEach(function(tag){
-                if (vm.filtersDict[tag])
-                    result = true;
-            });            
-            return result;
+            if (vm.filtering == 'both')
+                return true;
+
+            var inArt = work.tags.indexOf('art') > -1;
+            var inCode = work.tags.indexOf('code') > -1;
+            if (vm.filtering == 'art')
+                return inArt && !inCode;
+            if (vm.filtering == 'code')
+                return inCode && !inArt;
+        }
+
+        function showInfo() {
+            vm.showInfo = true;
         }
 
         function showLightbox(preview) {

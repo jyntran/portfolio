@@ -43,10 +43,8 @@
 
         section {
             background-color: $white-a40;
-            //box-shadow: 0 0 16px $white;
             padding: 24px;
-            //margin: 24px 0;
-            height: 100%;
+            min-height: 100%;
         }
     }
 }
