@@ -1,10 +1,10 @@
 .work {
-    display: block;
     max-width: 22em;
     max-height: 28em;
     position: relative;
     margin: auto;
     list-style: none;
+
     @include transition-duration(0.8s);
     @include transition-timing-function(ease);
     @include transition-property(all);
@@ -23,8 +23,8 @@
         bottom: -28em;
         max-height: 0em;
         @include transform(scale(1,0));
-    }
-
+    }    
+    
     &-block {
         position: relative;
     }
@@ -34,8 +34,9 @@
             cursor: pointer;
             width: 100%;
             background-color: $white;
-            border-bottom: 1px solid $gray;
-            border-right: 1px solid $gray;
+            border-bottom: 1px solid $black-a50;
+            border-right: 1px solid $black-a50;
+            box-sizing: border-box;
             @include border-radius(4px, 4px, 0, 0);
             @include transition-duration(0.2s);            
         }
@@ -132,6 +133,8 @@
 
 @media screen and (min-width: 48em) {
     .work {
+        max-width: none;
+        max-height: none;
         padding: 7px;
         box-sizing: border-box;
         margin: 0;
@@ -139,8 +142,7 @@
         &.ng-leave,
         &.ng-enter.ng-enter-active {
             bottom: 0;
-            max-height: none;
-            width: 25%;
+            width: 33.3333%;
             left: 0%;
             @include transform(scale(1,1));
         }
@@ -148,7 +150,6 @@
         &.ng-enter,
         &.ng-leave.ng-leave-active {
             bottom: 0;
-            max-height: none;
             width: 0%;
             left: 8%;
             @include transform(scale(0,0));
@@ -159,17 +160,30 @@
             @include transition-duration(0s);
         }
 
-        &.ng-leave &-actions {
+        /*&.ng-leave &-actions {
             @include transition-duration(0.4s);
             opacity: 0;
             margin-top: -24px;
             z-index: -1;
+        }*/
+
+        &-block {
+            position: relative;
         }
 
         &-thumbnail {
+            position: relative;
+            display: inline-block;
+            img, svg {
+                border: none;
+            }
             &-nothumb {
                 padding: 16px;
             }
+        }
+
+        &-actions {
+            border-top: 1px solid $gray;
         }
 
         &-action {

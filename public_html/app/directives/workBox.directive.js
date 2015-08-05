@@ -1,10 +1,13 @@
 (function(){
     angular.module('app')
-    .directive('workBox', function(){
+    .directive('workBox', ['$window', function($window){
         return {
             restrict: 'EA',
             scope: {
-                work: "=data"
+                work: "=data",
+                current: "=" 
+                // showPreview: "=show",
+                // preview: "="
             },
             templateUrl: '/app/directives/workBox.directive.template.html',
             link: function(scope, elem, attr) {
@@ -16,5 +19,5 @@
                 }
             }
         }
-    })
+    }])
 })();

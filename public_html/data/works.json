@@ -19,15 +19,19 @@
             "git": "https://github.com/jyntran/absolution"
         },
         "description": "Frame by frame animation with Javascript.",
+        "preview": {
+            "thumb": "/data/img/abs-t.png",
+            "full": "/data/img/abs-t.png"
+        },
         "tags": [ "art", "code" ]
     },
     {
-        "title": "My Face",
-        "description": "Lithograph print.",
+        "title": "Octopus Man",
         "preview": {
-            "thumb": "/data/img/myface-t.jpg",
-            "full": "/data/img/myface-f.jpg"
+            "thumb": "/data/img/octoman-t.png",
+            "full": "/data/img/octoman-f.png"
         },
+        "description": "What's on the tin.",
         "tags": [ "art" ]
     },
     {
@@ -37,6 +41,9 @@
             "git": "https://github.com/jyntran/Rip-off-Soccer-Cards"
         },
         "description": "HTML5 Canvas image creator.",
+        "preview": {
+            "thumb": "/data/img/soccer-t.png"
+        },
         "tags": [ "code" ]
     },
     {
@@ -46,6 +53,10 @@
             "git": "https://github.com/jyntran/wishpaste"
         },
         "description": "BBcode generator with a PHP/MySQL database.",
+        "preview": {
+            "thumb": "/data/img/wishpaste-t.png",
+            "full": "/data/img/wishpaste-f.png"
+        },
         "tags": [ "code" ]
     },
     {
@@ -55,6 +66,10 @@
             "git": "https://github.com/jyntran/uwvsa"
         },
         "description": "Webpage using Zurb's Foundation framework.",
+        "preview": {
+            "thumb": "/data/img/uwvsa-t.png",
+            "full": "/data/img/uwvsa-f.png"
+        },
         "tags": [ "code" ]
     },
     {
