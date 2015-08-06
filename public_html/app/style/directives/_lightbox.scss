@@ -33,7 +33,7 @@
         padding: 24px;
         z-index: 999;
         background-color: $white;
-        @include box-shadow(1px, 1px, 4px, 0px, $gray-a40);
+        @include box-shadow(1px 1px 4px 0px $gray-a40);
 
         &.ng-enter,
         &.ng-leave.ng-leave-active {

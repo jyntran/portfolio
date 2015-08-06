@@ -4,16 +4,10 @@
   -webkit-border-radius: $all;
 }
 
-@mixin box-shadow ($x, $y, $blur, $spread, $colour) {
-  -webkit-box-shadow: $x $y $blur $spread $colour;
-  -moz-box-shadow: $x $y $blur $spread $colour;
-  box-shadow: $x $y $blur $spread $colour;
-}
-
-@mixin box-shadow-inset ($x, $y, $blur, $spread, $colour) {
-  -webkit-box-shadow: inset $x $y $blur $spread $colour;
-  -moz-box-shadow: inset $x $y $blur $spread $colour;
-  box-shadow: inset $x $y $blur $spread $colour;
+@mixin box-shadow ($all) {
+  -webkit-box-shadow: $all;
+  -moz-box-shadow: $all;
+  box-shadow: $all;
 }
 
 @mixin transition-delay ($time) {

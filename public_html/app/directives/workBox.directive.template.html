@@ -1,12 +1,12 @@
-<div class="work-block">
-    <div class="work-thumbnail" alt="{{work.title}}" title="{{work.title}}">
+<div class="work-block pure-g">
+    <div class="work-thumbnail pure-u-1" alt="{{work.title}}" title="{{work.title}}">
         <img ng-if="work.preview.thumb" data-ng-src="{{work.preview.thumb}}"/>
         <svg ng-if="!work.preview.thumb" class="work-thumbnail-nothumb" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512"><g id="icomoon-ignore">
         </g>
         <path d="M437.020 74.98c-48.353-48.351-112.64-74.98-181.020-74.98s-132.667 26.629-181.020 74.98c-48.351 48.353-74.98 112.64-74.98 181.020s26.629 132.667 74.98 181.020c48.353 48.351 112.64 74.98 181.020 74.98s132.667-26.629 181.020-74.98c48.351-48.353 74.98-112.64 74.98-181.020s-26.629-132.667-74.98-181.020zM448 256c0 41.407-13.177 79.794-35.556 111.19l-267.633-267.634c31.396-22.379 69.782-35.556 111.189-35.556 105.869 0 192 86.131 192 192zM64 256c0-41.407 13.177-79.793 35.556-111.189l267.635 267.634c-31.397 22.378-69.784 35.555-111.191 35.555-105.869 0-192-86.131-192-192z"></path>
         </svg>
     </div><!--
- --><div class="work-info" ng-show="showInfo">
+ --><div class="work-info pure-u-1" ng-show="showInfo">
         <h4 class="work-title">{{work.title}}</h4>
         <div class="work-description">
             <p>{{work.description}}</p>
@@ -16,8 +16,7 @@
 <div class="work-actions pure-u-1">
     <div class="pure-g">
         <div class="pure-u-1-4 work-action">
-            <a href class="work-action-link work-action-link-md" alt="Info" title="Info"><span class="icon-scissors"></span></a>
-            <a href class="work-action-link work-action-link-info" alt="Info" title="Info" data-ng-click="toggleInfo()"><span class="icon-info"></span></a>
+            <a href class="work-action-link" alt="Info" title="Info" data-ng-click="toggleInfo()"><span class="icon-info"></span></a>
         </div>
         <div class="pure-u-1-4 work-action">
             <a data-ng-href="{{work.url.live}}" class="work-action-link" data-ng-class="{'work-action-link-disabled':!work.url.live}" alt="Live" title="Live" target="_blank"><span class="icon-link"></span></a>

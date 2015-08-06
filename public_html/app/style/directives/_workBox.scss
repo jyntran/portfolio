@@ -30,12 +30,12 @@
     }
 
     &-thumbnail {
+        @include border-radius(4px 4px 0 0);
         img, svg {
+            @include border-radius(inherit);
             cursor: pointer;
             width: 100%;
             background-color: $white;
-            border-right: 1px solid $black-a50;
-            @include border-radius(4px 4px 0 0);
             @include transition-duration(0.2s);            
         }
         &-nothumb {
@@ -51,11 +51,12 @@
         top: 0;
         left: 0; 
         width: 100%;
-        height: 98.6%;
+        height: 100%;
+        display: block;
         box-sizing: border-box;
         padding: 16px;
         background-color: $white-a90;
-        @include border-radius(4px);
+        @include border-radius(4px 4px 0 0);
         @include transition-duration(0.4s);
         @include transition-timing-function(ease);
         @include transition-property(all);
@@ -86,9 +87,7 @@
         text-align: center;
         background-color: $white;
         @include border-radius(0 0 4px 4px);
-        border-top: 1px solid $gray;
-        border-right: 1px solid $black-a50;
-        border-bottom: 1px solid $black-a50;
+        border-top: 1px solid $gray-light;
     }
 
     &-action {
@@ -111,9 +110,6 @@
             display: block;
             padding: 0.4em;
             @include border-radius(inherit);
-
-            &-md { display: none; }
-            &-info { display: block; }
 
             &-disabled {
                 background-color: $gray-lighter;
@@ -138,25 +134,11 @@
     .work {
         max-width: none;
         max-height: none;
+        width: 100%;
+        bottom: 0;
         padding: 7px;
         box-sizing: border-box;
         margin: 0;
-
-        &.ng-leave,
-        &.ng-enter.ng-enter-active {
-            bottom: 0;
-            width: 100%;
-            left: 0%;
-            @include transform(scale(1,1));
-        }
-
-        &.ng-enter,
-        &.ng-leave.ng-leave-active {
-            bottom: 0;
-            width: 0%;
-            left: 8%;
-            @include transform(scale(0,0));
-        } 
 
         &.ng-enter-stagger, &.ng-leave-stagger {
             @include transition-delay(0.4s);
@@ -164,7 +146,6 @@
         }
 
         &-block {
-            position: relative;
             width: 100%;
         }
 
@@ -203,9 +184,6 @@
 
             &-link {
                 padding: 0.2em;
-
-                &-info { display: none; }
-                &-md { display: block; }
             }
             span {
                 font-size: 16px;

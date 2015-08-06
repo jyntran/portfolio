@@ -10,7 +10,6 @@
         vm.filtering = 'both';
 
         vm.isActive = isActive;
-        vm.showInfo = showInfo;
         vm.showLightbox = showLightbox;
 
         init();
@@ -42,10 +41,6 @@
                 return inArt && !inCode;
             if (vm.filtering == 'code')
                 return inCode && !inArt;
-        }
-
-        function showInfo() {
-            vm.showInfo = true;
         }
 
         function showLightbox(preview) {

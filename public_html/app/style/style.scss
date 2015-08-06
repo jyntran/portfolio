@@ -42,7 +42,7 @@ ul {
         left: 0;
         background: $white;
         border-radius: 100%;
-        @include box-shadow-inset(1px, 1px, 0px, 0px, $gray-light);
+        @include box-shadow(inset 1px 1px 0px 0px $gray-light);
         &:after {
           content: '';
           width: 7px;
@@ -82,7 +82,7 @@ ul {
         left: 0;
         background: $white;
         border-radius: 4px;
-        @include box-shadow-inset(1px, 1px, 0px, 0px, $gray-light);
+        @include box-shadow(1px 1px 0px 0px $gray-light);
         &:after {
           content: '';
           width: 9px;
