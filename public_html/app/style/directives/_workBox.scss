@@ -56,18 +56,18 @@
         padding: 16px;
         background-color: $white-a90;
         @include border-radius(4px);
-        @include transition-duration(0.2s);
+        @include transition-duration(0.4s);
         @include transition-timing-function(ease);
         @include transition-property(all);
 
-        &.ng-show-add,
+        &.ng-hide-remove,
         &.ng-hide-add.ng-hide-add-active {
             opacity: 0;
         }
 
-        &.ng-show-remove.ng-show-remove-active,
-        &.ng-hide-remove {
-            opacity: 0;
+        &.ng-hide-add,
+        &.ng-hide-remove.ng-hide-remove-active {
+            opacity: 1;
         }
     }
 
