@@ -11,6 +11,7 @@ html, body {
     height: 100%;
     background: url('/app/style/img/grey.png');
     overflow-x: hidden;
+    color: $gray-dark;
 }
 
 html, button, input, select, textarea,
@@ -49,9 +50,9 @@ ul {
           position: absolute;
           top: 4px;
           left: 4px;
-          border: 3px solid $gray;
+          border: 3px solid $red;
           @include border-radius(100%);
-          background: $gray;
+          background: $red;
           opacity: 0;
         }
         &:hover::after {
@@ -89,7 +90,7 @@ ul {
           position: absolute;
           top: 4px;
           left: 4px;
-          border: 3px solid $gray;
+          border: 3px solid $red;
           border-top: none;
           border-right: none;
           background: transparent;

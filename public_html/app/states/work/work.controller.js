@@ -21,7 +21,7 @@
 
         function init() {
             $scope.$on('resize::resize', function() {
-                console.log('[WorkCtrl] width: '+innerWidth);
+                //console.log('[WorkCtrl] width: '+innerWidth);
             });
             populateWorks();
         }
