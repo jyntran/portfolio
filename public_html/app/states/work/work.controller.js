@@ -3,7 +3,11 @@
 
     angular
     .module('app')
-    .controller('WorkCtrl', ['$http', function($http) {
+    .controller('WorkCtrl', WorkCtrl);
+
+    WorkCtrl.$inject = ['$http', '$scope'];
+
+    function WorkCtrl($http, $scope) {
         var vm = this;
 
         vm.works = [];
@@ -16,6 +20,9 @@
         //////////
 
         function init() {
+            $scope.$on('resize::resize', function() {
+                console.log('[WorkCtrl] width: '+innerWidth);
+            });
             populateWorks();
         }
 
@@ -47,5 +54,5 @@
             vm.show = true;
             vm.preview = preview;
         }
-    }])
+    }
 })();
