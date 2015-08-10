@@ -25,6 +25,9 @@
                             defaultResp();
                         scope.$apply();
                     })
+
+                    if (!scope.work.preview)
+                        scope.showInfo = true;
                 }
 
                 function toggleInfo() {

@@ -5,7 +5,7 @@
             "live": "http://jyntran.ca/findbenji",
             "git": "https://github.com/jyntran/find-benji"
         },
-        "description": "Create.JS port of a past project.",
+        "description": "Create.JS port of a past project",
         "preview": {
             "thumb": "/data/img/ben-t.png",
             "full": "/data/img/ben-f.png"
@@ -13,12 +13,23 @@
         "tags": [ "art", "code" ]
     },
     {
+        "title": "Phone.rpy",
+        "url": {
+            "git": "https://github.com/jyntran/phone.rpy"
+        },
+        "description": "Ren'Py/Python framework for a smartphone companion",
+        "preview": {
+            "thumb": "/data/img/phonerpy-t.png"
+        },
+        "tags": [ "code" ]
+    },
+    {
         "title": "Absolution",
         "url": {
             "live": "http://jyntran.ca/fine225",
             "git": "https://github.com/jyntran/absolution"
         },
-        "description": "Frame by frame animation with Javascript.",
+        "description": "Frame by frame animation with Javascript",
         "preview": {
             "thumb": "/data/img/abs-t.png",
             "full": "/data/img/abs-t.png"
@@ -26,24 +37,31 @@
         "tags": [ "art", "code" ]
     },
     {
-        "title": "Octopus Man",
-        "preview": {
-            "thumb": "/data/img/octoman-t.png",
-            "full": "/data/img/octoman-f.png"
-        },
-        "description": "What's on the tin.",
-        "tags": [ "art" ]
-    },
-    {
         "title": "Rip-off Soccer Cards",
         "url": {
             "live": "http://jyntran.ca/soccer",
             "git": "https://github.com/jyntran/Rip-off-Soccer-Cards"
         },
-        "description": "HTML5 Canvas image creator.",
+        "description": "HTML5 Canvas image creator",
         "preview": {
             "thumb": "/data/img/soccer-t.png"
         },
+        "tags": [ "code" ]
+    },
+    {
+        "title": "Jotto",
+        "url": {
+            "git": "https://github.com/jyntran/jotto"
+        },
+        "description": "Word guessing game in Java",
+        "tags": [ "code" ]
+    },
+    {
+        "title": "rainyday",
+        "url": {
+            "git": "https://github.com/jyntran/rainyday"
+        },
+        "description": "C/C++ and Xlib game",
         "tags": [ "code" ]
     },
     {
@@ -52,10 +70,23 @@
             "live": "http://jyntran.ca/wishpaste",
             "git": "https://github.com/jyntran/wishpaste"
         },
-        "description": "BBcode generator with a PHP/MySQL database.",
+        "description": "BBcode generator with a PHP/MySQL database",
         "preview": {
             "thumb": "/data/img/wishpaste-t.png",
             "full": "/data/img/wishpaste-f.png"
+        },
+        "tags": [ "code" ]
+    },
+    {
+        "title": "Wordpress Portfolio",
+        "url": {
+            "live": "http://huateasa.tk",
+            "git": "https://github.com/jyntran/gears"
+        },
+        "description": "LAMP stack with a personalized Wordpress theme",
+        "preview": {
+            "thumb": "/data/img/huateasa-t.png",
+            "full": "/data/img/huateasa-t.png"
         },
         "tags": [ "code" ]
     },
@@ -65,7 +96,7 @@
             "live": "http://uwvsa.clubs.feds.ca/",
             "git": "https://github.com/jyntran/uwvsa"
         },
-        "description": "Webpage using Zurb's Foundation framework.",
+        "description": "Webpage using Zurb's Foundation framework",
         "preview": {
             "thumb": "/data/img/uwvsa-t.png",
             "full": "/data/img/uwvsa-f.png"
