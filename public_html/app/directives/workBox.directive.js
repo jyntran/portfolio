@@ -1,4 +1,6 @@
 (function(){
+    'use strict';
+
     angular.module('app')
     .directive('workBox', function(){
         return {
@@ -9,25 +11,33 @@
             templateUrl: '/app/directives/workBox.directive.template.html',
             link: function(scope, elem, attr) {
                 scope.showInfo = false;
-                scope.toggleInfo = toggleInfo;
                 scope.enableInfo = true;
+
+                scope.toggleInfo = toggleInfo;
+
+                init();
                 /////
+                function init() {
+                    scope.$on('resize::resize', function(){
+                        if (innerWidth >= 568)
+                            smResp();
+                        else
+                            defaultResp();
+                        scope.$apply();
+                    })
+                }
+
                 function toggleInfo() {
                     scope.showInfo = !scope.showInfo;
                 }
 
-                function enableInfo(val) {
-                    scope.enableInfo = val;
+                // responsive
+                function smResp() {
+                    scope.enableInfo = false;
                 }
-
-                scope.$on('resize::resize', function(){
-                    if(innerWidth >= 568){
-                        enableInfo(false);
-                    } else {
-                        enableInfo(true);
-                    }
-                    scope.$apply();
-                })
+                function defaultResp() {
+                    scope.enableInfo = true;
+                }
             }
         }
     })

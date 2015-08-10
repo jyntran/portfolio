@@ -39,13 +39,15 @@
 
 <body ng-app="app" resize>
 
-    <div data-ng-include="'navigation/header.view.html'"></div>
+    <div data-ng-include="'/app/navigation/header.view.html'"></div>
 
     <div class="container">
         <div data-ui-view class="view"></div>
     </div>
 
-    <div data-ng-include="'navigation/footer.view.html'"></div>
+    <div data-ng-include="'/app/navigation/footer.view.html'"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </body>
 </html>

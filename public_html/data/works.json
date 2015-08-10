@@ -73,6 +73,19 @@
         "tags": [ "code" ]
     },
     {
+        "title": "Canadian North Rescue",
+        "url": {
+            "download": "http://jyntran.ca/turing/CNR.zip",
+            "git": "https://github.com/jyntran/canadian-north-rescue"
+        },
+        "description": "Turing game with levels",
+        "preview": {
+            "thumb": "/data/img/cnr-t.jpg",
+            "full": "/data/img/cnr-t.jpg"
+        },
+        "tags": [ "art", "code" ]
+    },
+    {
         "title": "Find Benji Game (Turing)",
         "url": {
             "download": "http://jyntran.ca/turing/FindBenji.zip"

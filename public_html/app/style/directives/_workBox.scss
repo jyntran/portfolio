@@ -52,15 +52,14 @@
     }
 
     &-info {
+        z-index: 1;
         position: absolute;
         top: 0;
         left: 0; 
         width: 100%;
         height: 100%;
         display: block;
-        border-top: 1px solid $gray;
-        border-left: 1px solid $gray;
-        border-right: 1px solid $gray;
+        border: 1px solid $gray;
         box-sizing: border-box;
         padding: 16px;
         background-color: $white-a90;
@@ -89,6 +88,9 @@
     }
 
     &-actions {
+        z-index: 2;
+        position: relative;
+        margin-top: -4px;
         width: 100%;
         text-align: center;
         background-color: $white;
@@ -143,7 +145,7 @@
 }
 
 /* sm */
-@media screen and (min-width: 35.5em) {
+@media screen and (min-width: 568px) {
     .work {
         max-width: none;
         max-height: none;
