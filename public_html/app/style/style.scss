@@ -9,9 +9,10 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: url('/app/style/img/grey.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
-    color: $gray-dark;
+    color: $black-a60;
 }
 
 html, button, input, select, textarea,
@@ -21,12 +22,12 @@ html, button, input, select, textarea,
 
 a {
     text-decoration: none;
-    color: $gray;   
+    color: $black;   
     @include transition-duration(0.2s);
 }
 
-.two-column {
-  @include column-count(2);
+ul {
+    box-sizing: border-box;
 }
 
 .radio {

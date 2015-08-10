@@ -1,13 +1,5 @@
 .footer {
-    ul {
-        width: 80%;
-        max-width: 768px;
-        padding: 0;
-        margin: auto;
-        
-        li {
-            list-style-type: none;
-            padding: 4px;
-        }
-    }
+    width: 100%;
+    border-top: 1px solid $gray;
+    height: 44px;
 }
