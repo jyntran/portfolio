@@ -19,6 +19,10 @@
                 url: '/',
                 templateUrl: 'states/work/work.view.html'
             })
+            .state('resume', {
+                url: '/',
+                templateUrl: 'states/resume/resume.view.html'
+            })
             .state('about', {
                 url: '/',
                 templateUrl: 'states/about/about.view.html'
