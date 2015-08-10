@@ -25,11 +25,6 @@ a {
     @include transition-duration(0.2s);
 }
 
-ul {
-    padding: 0;
-    margin: 0;
-}
-
 .radio {
     position: relative;
     display: inline-block;  

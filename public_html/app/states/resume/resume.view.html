@@ -1,0 +1,34 @@
+<section data-ng-controller="ResumeCtrl as ctrl">
+    <h3>Résumé</h3>
+    <article>
+        <h4>Technical Skills</h4>
+        <div data-ng-repeat="entry in ctrl.technical">
+            <strong>{{entry.name}}</strong>
+            <ul>
+                <li data-ng-repeat="item in entry.content">{{item}}</li>
+            </ul>
+        </div>
+    </article>
+    <article>
+        <h4>Employment</h4>
+        <div data-ng-repeat="entry in ctrl.history">
+        <strong>{{entry.position}}</strong><br/>
+        {{entry.employer}}, {{entry.location.city}}, {{entry.location.province}}<br/>
+        {{entry.date.start}} &mdash; {{entry.date.end}}
+        <ul>
+            <li>HTML5, CSS3, Javascript, jQuery</li>
+            <li>C/C++, PHP, Python, Java, C# on .NET</li>
+            <li>Racket/Scheme, Turing</li>
+        </ul>
+    </article>
+    <article>
+        <h4>Awards and Recognition</h4>
+        <ul>
+            <li data-ng-repeat="entry in ctrl.awards">
+            <strong>{{entry.name}}</strong><br/>
+            {{entry.location.city}}, {{entry.location.province}}<br/>
+            {{entry.date}}
+            </li>
+        </ul>
+    </article>
+</section>
