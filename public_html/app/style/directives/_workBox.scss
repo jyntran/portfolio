@@ -79,6 +79,19 @@
         }
     }
 
+    &-tags {
+        font-size: 14px;
+    }
+
+    &-tag {
+        &:before{
+            content: '#';
+        }
+        &:after{
+            content: ' ';
+        }
+    }
+
     &-title {
         margin: 0 0 16px;
     }
