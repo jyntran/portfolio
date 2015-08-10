@@ -1,32 +1,27 @@
 <section data-ng-controller="WorkCtrl as ctrl">
-    <h3>Works</h3>
-
-        <div class="filter" hidden>
-            <div class="pure-g">
-                <div class="checkbox pure-u-1">
-                    <input id="workFilterTest" type="checkbox">
-                    <label for="workFilterTest"><span>Test</span></label>
-                </div>
-                <div class="radio pure-u-1-3">
-                    <input id="workFilterBoth" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="both">
-                    <label for="workFilterBoth"><span>All</span></label>
-                </div>
-                <div class="radio pure-u-1-3">
-                    <input id="workFilterArt" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="art">
-                    <label for="workFilterArt"><span>Art</span></label>
-                </div>
-                <div class="radio pure-u-1-3">
-                    <input id="workFilterCode" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="code">
-                    <label for="workFilterCode"><span>Code</span></label>
-                </div>
-            </div>
-        </div>
-        
-        <lightbox lightbox-open="ctrl.preview" lightbox-show="ctrl.show"></lightbox>
-
+    <h2>Works</h2>
+    <div class="filter" hidden>
         <div class="pure-g">
-            <div data-ng-repeat="work in ctrl.works | filter:ctrl.isActive" class="work pure-u-1">
-                <work-box data="work" preview="work.preview" show="ctrl.show"></work-box>
+            <div class="radio pure-u-1-3">
+                <input id="workFilterBoth" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="both">
+                <label for="workFilterBoth"><span>All</span></label>
+            </div>
+            <div class="radio pure-u-1-3">
+                <input id="workFilterArt" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="art">
+                <label for="workFilterArt"><span>Art</span></label>
+            </div>
+            <div class="radio pure-u-1-3">
+                <input id="workFilterCode" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="code">
+                <label for="workFilterCode"><span>Code</span></label>
             </div>
         </div>
+    </div>
+    
+    <lightbox lightbox-open="ctrl.preview" lightbox-show="ctrl.show"></lightbox>
+
+    <div class="pure-g">
+        <div data-ng-repeat="work in ctrl.works | filter:ctrl.isActive" class="work pure-u-1">
+            <work-box data="work" preview="work.preview" show="ctrl.show"></work-box>
+        </div>
+    </div>
 </section>
