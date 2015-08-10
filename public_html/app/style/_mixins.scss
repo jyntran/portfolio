@@ -10,6 +10,12 @@
   box-shadow: $all;
 }
 
+@mixin column-count ($num) {
+  -webkit-column-count: $num;
+  -moz-column-count: $num;
+  column-count: $num;
+}
+
 @mixin transition-delay ($time) {
   -moz-transition-delay: $time;
   -ms-transition-delay: $time;

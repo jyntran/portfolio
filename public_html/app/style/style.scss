@@ -25,6 +25,10 @@ a {
     @include transition-duration(0.2s);
 }
 
+.two-column {
+  @include column-count(2);
+}
+
 .radio {
     position: relative;
     display: inline-block;  
