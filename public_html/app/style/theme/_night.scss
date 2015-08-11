@@ -1,0 +1,64 @@
+.night {
+
+    /* header */
+
+    &.custom-menu-wrapper {
+        background-color: $black;
+    }
+
+    .custom-menu .pure-menu-link,
+    .custom-menu .pure-menu-heading {
+        color: $white-a80;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu .pure-menu-link:hover,
+    .custom-menu .pure-menu-heading:hover {
+        background-color: transparent;
+        color: $white;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu .pure-menu-link:focus,
+    .custom-menu .pure-menu-heading:focus {
+        /*background-color: $white-a40;*/
+        background-color: transparent;
+        border-bottom: 2px solid $blue;
+    }
+
+    .custom-menu .pure-menu-heading.custom-menu-brand:focus {
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu-toggle .bar {
+        background-color: $white;
+    }
+
+    .custom-menu-screen {
+        background-color: $black;
+        /*border-bottom: 1px solid $gray-light;*/
+    }
+
+    .custom-menu-tucked .custom-menu-screen {
+        /*border-bottom: 1px solid $gray;*/
+    }
+
+
+    /* footer */
+
+    &.footer {
+        background-color: $black;
+        color: $white-a80;
+        a { color: $white; }        
+    }
+
+
+    /* container */
+
+    &.container {
+        color: $white-a60;
+        > a { color: $white; }
+        .view section { background-color: $black-a80; }
+    }
+
+}
