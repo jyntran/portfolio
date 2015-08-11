@@ -31,23 +31,19 @@
 
     &-thumbnail {
         @include border-radius(4px 4px 0 0);
-        border-top: 1px solid $gray;
-        border-left: 1px solid $gray;
-        border-right: 1px solid $gray;
         box-sizing: border-box;
 
         img, svg {
             @include border-radius(inherit);
             cursor: pointer;
             width: 100%;
-            background-color: $white;
             @include transition-duration(0.2s);            
         }
         &-nothumb {
             height: 100%;
             padding: 16%;
             box-sizing: border-box;
-            path { fill: $gray-light; }
+            path { /*fill: $gray-light;*/ }
         }
     }
 
@@ -59,10 +55,9 @@
         width: 100%;
         height: 100%;
         display: block;
-        border: 1px solid $gray;
+        background-color: transparent;
         box-sizing: border-box;
-        padding: 16px;
-        background-color: $white-a90;
+        border: 1px solid $gray;
         @include border-radius(4px 4px 0 0);
         @include transition-duration(0.4s);
         @include transition-timing-function(ease);
@@ -76,6 +71,11 @@
         &.ng-hide-add,
         &.ng-hide-remove.ng-hide-remove-active {
             opacity: 1;
+        }
+
+        &-wrap {
+            padding: 16px;
+            position: absolute;
         }
     }
 
@@ -106,12 +106,7 @@
         margin-top: -4px;
         width: 100%;
         text-align: center;
-        background-color: $white;
         @include border-radius(0 0 4px 4px);
-        border-top: 1px solid $gray-light;
-        border-bottom: 1px solid $gray;
-        border-left: 1px solid $gray;
-        border-right: 1px solid $gray;
         box-sizing: border-box;
     }
 
@@ -128,7 +123,7 @@
         }
 
         &:not(:first-child) {
-            border-left: 1px solid $gray-light;
+            /*border-left: 1px solid $gray-light;*/
         }
 
         &-link {
@@ -139,15 +134,12 @@
             @include border-radius(inherit);
 
             &-disabled {
-                background-color: $gray-lighter;
                 span {
-                    color: $gray-light;
                 }
             }
         }        
 
         &:hover {
-            background-color: $gray-lighter;
         }
 
         span { 

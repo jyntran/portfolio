@@ -9,6 +9,7 @@
                 work: "=data",
                 theme: "="
             },
+            replace:true,
             templateUrl: '/app/directives/workBox.directive.template.html',
             link: function(scope, elem, attr) {
                 scope.showInfo = false;
