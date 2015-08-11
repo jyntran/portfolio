@@ -61,4 +61,52 @@
         .view section { background-color: $black-a80; }
     }
 
+
+    /* workBox */
+
+/*    &.work-block {
+        .work-thumbnail {
+            border-top: 1px solid $white-a40;
+            border-left: 1px solid $white-a40;
+            border-right: 1px solid $white-a40;
+            img, svg {
+                background-color: $black;
+            }
+            &-nothumb {
+                path { fill: $gray-dark; }
+            }
+        }
+        .work-info {
+            border: 1px solid $white-a40;
+            background-color: $black-a80;
+        }
+        .work-actions {
+            background-color: $black;
+            border-top: 1px solid $white-a60;
+            border-bottom: 1px solid $white-a40;
+            border-left: 1px solid $white-a40;
+            border-right: 1px solid $white-a40;
+        }
+        .work-action {
+            &:not(:first-child) {
+                border-left: 1px solid $white-a60;
+            }
+            &-link {
+                color: $white-a60;
+                background-color: $black;
+                &:hover {
+                    background-color: $black;
+                    span { color: $white-a90; } 
+                }
+                &-disabled {
+                    background-color: $black;
+                    span { color: $gray-dark; }
+                    &:hover {
+                        background-color: $black;
+                        span { color: $white-a60; }
+                    }
+                }
+            }
+        }
+    }*/
 }

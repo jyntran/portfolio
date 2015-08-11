@@ -6,7 +6,8 @@
         return {
             restrict: 'EA',
             scope: {
-                work: "=data"
+                work: "=data",
+                theme: "="
             },
             templateUrl: '/app/directives/workBox.directive.template.html',
             link: function(scope, elem, attr) {
