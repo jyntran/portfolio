@@ -34,6 +34,7 @@
     <!--<![endif]-->
 
     <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin" />
     <link rel="stylesheet" type="text/css" href="/app/css/style.css" />
 
 </head>
@@ -42,7 +43,7 @@
 
     <div data-ng-include="'/app/navigation/header.view.html'"></div>
 
-    <div class="container">
+    <div class="container" data-ng-class="{day:theme=='day',night:theme=='night'}">
         <div data-ui-view class="view"></div>
     </div>
 

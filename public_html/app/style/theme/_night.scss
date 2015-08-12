@@ -62,51 +62,63 @@
     }
 
 
-    /* workBox */
+    &.work-block {
 
-/*    &.work-block {
         .work-thumbnail {
-            border-top: 1px solid $white-a40;
-            border-left: 1px solid $white-a40;
-            border-right: 1px solid $white-a40;
+            border: none;
             img, svg {
                 background-color: $black;
             }
             &-nothumb {
-                path { fill: $gray-dark; }
+                path { fill: $white-a40; }
             }
         }
         .work-info {
-            border: 1px solid $white-a40;
-            background-color: $black-a80;
+            border: none;
+            background-color: $black-a90;
         }
         .work-actions {
             background-color: $black;
-            border-top: 1px solid $white-a60;
-            border-bottom: 1px solid $white-a40;
-            border-left: 1px solid $white-a40;
-            border-right: 1px solid $white-a40;
+            border-top: 1px solid $white-a20;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
         }
         .work-action {
             &:not(:first-child) {
-                border-left: 1px solid $white-a60;
+                border-left: 1px solid $white-a20;
             }
             &-link {
-                color: $white-a60;
-                background-color: $black;
+                span {
+                    color: $white-a80;
+                }
                 &:hover {
-                    background-color: $black;
-                    span { color: $white-a90; } 
+                    background-color: $white-a20;
                 }
                 &-disabled {
-                    background-color: $black;
-                    span { color: $gray-dark; }
+                    background-color: transparent;
+                    span {
+                        color: $white-a20;
+                    }
+            
                     &:hover {
-                        background-color: $black;
-                        span { color: $white-a60; }
+                        background-color: transparent;
                     }
                 }
             }
         }
-    }*/
+    }
+}
+
+@media screen and (min-width: 568px) {
+
+.night {
+    &.work-block {
+        .work-info {
+            border: none;
+            background-color: none;
+        }
+    }
+}
+
 }

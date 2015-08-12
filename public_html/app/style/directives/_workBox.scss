@@ -58,7 +58,6 @@
         background-color: transparent;
         box-sizing: border-box;
         border: 1px solid $gray;
-        @include border-radius(4px 4px 0 0);
         @include transition-duration(0.4s);
         @include transition-timing-function(ease);
         @include transition-property(all);
@@ -115,11 +114,11 @@
         height: 2.8em;
 
         &:first-child:not(:last-child) {
-            @include border-radius(4px 0 0 4px);
+            @include border-radius(0 0 0 4px);
         }
 
         &:last-child:not(:first-child) {
-            @include border-radius(0 4px 4px 0);
+            @include border-radius(0 0 4px 0);
         }
 
         &:not(:first-child) {
@@ -190,6 +189,7 @@
             background: none;
             vertical-align: top;
             border: none;
+            @include border-radius(0px);
 
             &.ng-hide {
                 display: inline-block!important;

@@ -4,6 +4,8 @@
 @import 'directives';
 @import 'layout';
 @import 'states';
+@import 'theme/day';
+@import 'theme/night';
 
 html, body {
     margin: 0;
@@ -17,7 +19,8 @@ html, body {
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
-    font-family: Quicksand, Arial, sans-serif;
+    font-family: Cabin, serif;
+    /*font-family: Quicksand, Arial, sans-serif;*/
 }
 
 a {
