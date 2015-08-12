@@ -48,8 +48,10 @@
 
     &.footer {
         background-color: $white;
-        color: $black-a80;
-        a { color: $black; }        
+        a {
+            color: $black-a80;
+            &:hover { color: $black; }        
+        }        
     }
 
 
