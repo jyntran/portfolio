@@ -19,8 +19,13 @@ html, body {
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
-    font-family: Cabin, serif;
+    font-family: Molengo, Arial, sans-serif;
     /*font-family: Quicksand, Arial, sans-serif;*/
+}
+
+h1, h2 {
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 a {
