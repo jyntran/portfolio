@@ -119,3 +119,16 @@ ul {
         }
     }    
 }
+
+quote {
+  padding: 16px;
+  display: block;
+  .quote {
+    text-align: left;
+    text-transform: none;
+  }
+  .author {
+    text-align: right;
+    text-transform: none;
+  }
+}

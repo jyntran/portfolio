@@ -6,12 +6,11 @@
         return {
             restrict: 'EA',
             scope: { src: '@' },
-            template: '<p class="quote">{{qod.quote}}</p><p class="author">{{qod.author}}</p>',
+            template: '<h1 class="quote">&ldquo;{{qod.quote}}&rdquo;</h1><h2 class="author">&mdash; {{qod.author}}</h2>',
             controller: function($scope) {
-                var qod;
                 $http.get($scope.src)
                 .then(function(resp){
-                    qod = resp.contents.quotes[0];
+                    $scope.qod = resp.data.contents.quotes[0];
                 }, function(error){
                     console.log('ERROR:')
                     console.log(error)
@@ -20,7 +19,3 @@
         }
     }])
 })();
-
-/*
-{"success":{"total":1},"contents":{"quotes":[{"quote":"A piece of art is never a finished work. It answers a question which has been asked, and asks a new question.","length":"109","author":"Robert Engman","tags":["art","question"],"category":"art","id":"E0hrdGC7eoxoyq0mmtPJGQeF"}]}}
-*/
