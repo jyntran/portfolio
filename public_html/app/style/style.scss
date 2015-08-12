@@ -121,14 +121,17 @@ ul {
 }
 
 quote {
-  padding: 16px;
-  display: block;
-  .quote {
-    text-align: left;
-    text-transform: none;
-  }
-  .author {
-    text-align: right;
-    text-transform: none;
-  }
+    font-size: 1.6em;
+    padding: 4%;
+    display: block;
+    max-width: 768px;
+    margin: auto;
+    .quote {
+        text-align: left;
+        text-transform: none;
+    }
+    .author {
+      text-align: right;
+      text-transform: none;
+    }
 }
