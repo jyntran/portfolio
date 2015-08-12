@@ -119,3 +119,20 @@ ul {
         }
     }    
 }
+
+quote {
+    font-size: 1.6em;
+    padding: 4%;
+    display: block;
+    max-width: 768px;
+    margin: auto;
+    text-shadow: 2px 2px 1px $black-a60;
+    .quote {
+        text-align: left;
+        text-transform: none;
+    }
+    .author {
+      text-align: right;
+      text-transform: none;
+    }
+}
