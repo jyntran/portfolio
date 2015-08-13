@@ -7,18 +7,16 @@
             restrict: 'E',
             templateUrl: '/app/directives/horizontalScrollMenu.directive.template.html',
             scope: {
-                active: '='
+                active: '=',
+                theme: '='
             },
-            controller: function() {
-                var vm = this;
-                vm.toggle = toggle;
+            link: function(scope, elem, attr) {
+                scope.toggle = toggle;
                 /////
                 function toggle(){
-                    vm.active = !vm.active;
+                    scope.active = !scope.active;
                 }
-            },
-            controllerAs: 'ctrl',
-            bindToController: true
+            }
         }
     })
 })();

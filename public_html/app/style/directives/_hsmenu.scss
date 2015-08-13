@@ -1,10 +1,6 @@
 .custom-menu-wrapper {
-    //background-color: #808080;
-    background-color: $white;
-    //margin-bottom: 2.5em;
     white-space: nowrap;
     position: relative;
-    @include box-shadow(0 1px 0px 0px $gray)
 }
 
 .custom-menu {
@@ -16,8 +12,6 @@
 
 .custom-menu .pure-menu-link,
 .custom-menu .pure-menu-heading {
-    //color: white;
-    color: $gray;
 }
 
 .custom-menu .pure-menu-link:hover,
@@ -29,7 +23,6 @@
     position: relative;
     padding-top: .5em;
     padding-bottom: .5em;
-    //border-bottom: 1px solid $gray-light;
 }
 
 .custom-menu-brand {
@@ -49,8 +42,6 @@
 }
 
 .custom-menu-toggle .bar {
-    //background-color: white;
-    background-color: $gray;
     display: block;
     width: 20px;
     height: 2px;
@@ -86,8 +77,6 @@
 }
 
 .custom-menu-screen {
-    //background-color: rgba(0, 0, 0, 0.5);
-    background-color: $white;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -97,7 +86,6 @@
     position: absolute;
     top: 0;
     z-index: -1;
-    border-bottom: 1px solid $gray-light;
 }
 
 .custom-menu-tucked .custom-menu-screen {
@@ -105,7 +93,6 @@
     -moz-transform: translateY(-3em);
     -ms-transform: translateY(-3em);
     transform: translateY(-3em);
-    border-bottom: 1px solid $gray;
 }
 
 @media (max-width: 62em) {
@@ -122,8 +109,6 @@
     .custom-menu-bottom {
         position: absolute;
         width: 100%;
-        //border-top: 1px solid #eee;
-        //background-color: #808080\9;
         z-index: 100;
     }
 

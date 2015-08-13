@@ -14,6 +14,7 @@
     <script src="/app/routing/list.routes.js"></script>
     <script src="/app/states/work/work.controller.js"></script>
     <script src="/app/states/resume/resume.controller.js"></script>
+    <script src="/app/providers/apiService.service.js"></script>
     <script src="/app/directives/horizontalScrollMenu.directive.js"></script>
     <script src="/app/directives/timeBg.directive.js"></script>
     <script src="/app/directives/themeChange.directive.js"></script>
@@ -42,14 +43,15 @@
 
 <body ng-app="app" resize time-bg>
 
-    <div data-ng-include="'/app/navigation/header.view.html'"></div>
+    <div class="body">
+        <div data-ng-include="'/app/navigation/header.view.html'"></div>
 
-    <div class="container" data-ng-class="{day:theme=='day',night:theme=='night'}">
-        <div data-ui-view class="view"></div>
+        <div class="container" data-ng-class="{day:theme=='day',night:theme=='night'}">
+            <div data-ui-view class="view"></div>
+        </div>
+
+        <div data-ng-include="'/app/navigation/footer.view.html'"></div>
     </div>
-
-    <div data-ng-include="'/app/navigation/footer.view.html'"></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </body>
