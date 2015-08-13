@@ -4,7 +4,7 @@
     angular.module('app')
     .factory('ApiService', ApiService);
 
-    function ApiService(){
+    function ApiService($http){
         var service = {
             getQuote: getQuote,
             getWeather: getWeather
@@ -13,29 +13,24 @@
 
         /////
 
-        // TODO: backend
-
         function getQuote() {
-            // var src = '/data/api_quote.json';
-            var src = 'http://api.theysaidso.com/qod.json?category=inspire';
-            $http.get(src)
+            return $http.get('/data/api_quote.json')
             .then(function(resp){
-                return qod = resp.data.contents.quotes[0];
+                return resp.data.contents.quotes[0];
             }, function(error){
                 console.log('ERROR: getQuote()')
                 console.log(error)
-            })
+            });
         }
 
         function getWeather() {
-            // var src = '/data/api_weather.json';
-            $http.get(src)
+            return $http.get('/data/api_weather.json')
             .then(function(resp){
-                return weather = resp;
+                return resp.data;
             }, function(error){
-                console.log('ERROR: getWeather')
+                console.log('ERROR: getWeather()')
                 console.log(error)
-            })
+            });
         }
     }
-})
+})();
