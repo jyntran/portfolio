@@ -23,6 +23,11 @@ html, button, input, select, textarea,
     /*font-family: Quicksand, Arial, sans-serif;*/
 }
 
+.body {
+    min-height: 100%;
+    position: relative;
+}
+
 h1, h2 {
     font-weight: 400;
     text-transform: uppercase;
