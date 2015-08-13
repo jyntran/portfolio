@@ -8,11 +8,11 @@
 http = require ('http');
 fs = require('fs');
 
-var file_weather = 'api_weather.json';
+var file = 'api_weather.json';
 
 var options = {
-  hostname: 'openweather.org',
-  // path: '/qod.json?category=inspire',
+  hostname: 'api.openweathermap.org',
+  path: '/data/2.5/weather?q=Waterloo,CA',
   method: 'GET'
 };
 

@@ -7,16 +7,15 @@ http = require ('http')
 fs = require('fs');
 
 // Quote (daily)
-var file_quote = 'api_quote.json';
-var file_weather = 'api_weather.json';
+var file = 'api_quote.json';
 
-var options_quote = {
+var options = {
   hostname: 'api.theysaidso.com',
   path: '/qod.json?category=inspire',
   method: 'GET'
 };
 
-function write() {
+function write(data) {
     fs.writeFile(file, data, function (err) {
       if (err) return console.log(err);
       console.log(data);
@@ -28,8 +27,7 @@ var req = http.request(options, function(res) {
   console.log('HEADERS: ' + JSON.stringify(res.headers));
   res.setEncoding('utf8');
   res.on('data', function (chunk) {
-    data = chunk;
-    write();
+    write(chunk);
     console.log('BODY: ' + chunk);
   });
 });

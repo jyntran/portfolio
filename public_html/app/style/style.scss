@@ -131,13 +131,15 @@ quote {
     display: block;
     max-width: 768px;
     margin: auto;
-    text-shadow: 2px 2px 1px $black-a60;
+    text-shadow: 2px 2px 0 $black-a60, 0px 0px 8px $black-a40;
     .quote {
         text-align: left;
         text-transform: none;
+        color: $white;
     }
     .author {
       text-align: right;
       text-transform: none;
+      color: $white;
     }
 }

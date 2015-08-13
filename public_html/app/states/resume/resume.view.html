@@ -22,11 +22,11 @@
     </article>
     <article>
         <h2>Awards and Recognition</h2>
-        <ul>
-            <li data-ng-repeat="entry in ctrl.awards">
-            <h3>{{entry.name}}</h3>
-            {{entry.location.city}}, {{entry.location.province}}. {{entry.date}}
-            </li>
-        </ul>
+        <div class="resume-entry" data-ng-repeat="entry in ctrl.awards">
+            <div class="pure-u-1 pure-u-md-2-3 resume-heading"><h3>{{entry.name}}</h3></div>
+            <div class="pure-u-1 resume-info">
+                {{entry.location.city}}, {{entry.location.province}}. {{entry.date}}
+            </div>
+        </div>
     </article>
 </section>

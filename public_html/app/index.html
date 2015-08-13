@@ -15,11 +15,12 @@
     <script src="/app/states/work/work.controller.js"></script>
     <script src="/app/states/resume/resume.controller.js"></script>
     <script src="/app/providers/apiService.service.js"></script>
+    <script src="/app/providers/timeService.service.js"></script>
     <script src="/app/directives/horizontalScrollMenu.directive.js"></script>
     <script src="/app/directives/timeBg.directive.js"></script>
-    <script src="/app/directives/themeChange.directive.js"></script>
     <script src="/app/directives/lightbox.directive.js"></script>
     <script src="/app/directives/quote.directive.js"></script>
+    <script src="/app/directives/weatherBg.directive.js"></script>
     <script src="/app/directives/workBox.directive.js"></script>
     <script src="/app/directives/resize.directive.js"></script>
 
@@ -41,16 +42,31 @@
 
 </head>
 
-<body ng-app="app" resize time-bg>
+<body ng-app="app" resize weather-bg>
 
     <div class="body">
-        <div data-ng-include="'/app/navigation/header.view.html'"></div>
+        <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu>
 
         <div class="container" data-ng-class="{day:theme=='day',night:theme=='night'}">
-            <div data-ui-view class="view"></div>
+            <div class="content">
+                <div data-ui-view class="view"></div>
+            </div>
         </div>
 
-        <div data-ng-include="'/app/navigation/footer.view.html'"></div>
+        <div class="footer" data-ng-class="{'day':theme=='day', 'night':theme=='night'}" hidden>
+            <div class="pure-g">
+                <div class="social pure-u-1 pure-u-sm-1-2">
+                    <a href="mailto:me@jyntran.ca" title="E-mail" alt="E-mail"><span class="icon-envelop"></span></a>
+                    <a href="http://github.com/jyntran" title="GitHub" alt="GitHub"><span class="icon-github2"></span></a>
+                    <a href="http://ca.linkedin.com/in/jyntran" title="LinkedIn" alt="LinkedIn"><span class="icon-linkedin2"></span></a>
+                    <a href="http://twitter.com/jyntran" title="Twitter" alt="Twitter"><span class="icon-twitter"></span></a>
+                    <a href="http://bliptych.tumblr.com" title="tumblr" alt="tumblr"><span class="icon-tumblr"></span></a>
+                </div>
+                <div class="theysaidso pure-u-1 pure-u-sm-1-2">
+                    <span style="z-index:50;font-size:0.9em;"><img src="http://theysaidso.com/branding/theysaidso.png" height="20" width="20" alt="theysaidso.com"/><a href="http://theysaidso.com" title="Powered by quotes from theysaidso.com" style="margin-left: 4px; vertical-align: middle;">theysaidso.com</a></span>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
