@@ -2,24 +2,22 @@
 
 var fetch = require('/var/www/dev.jyntran.ca/public_html/data/fetch');
 
-var CronJob = require('cron').CronJob;
+var CronJob = require('/usr/sbin/cron').CronJob;
 var test = new CronJob('* * * * * *', function() {
     console.log('run fetch.test');
     fetch.test();
 });
 
-// try {
-//     new CronJob('05 * * * * *', function() {
-//         console.log('this should not be printed');
-//     })
-// } catch(ex) {
-//     console.log("cron pattern not valid");
-// }
-
 (function quote() {
-    new CronJob('00 05 07 * * *', function() {
-    // new CronJob('00 05 00 * * *', function() {
+    new CronJob('00 05 * * * *', function() {
         console.log('Run quote.handler.js');
         fetch.quote();
+    }, null, true);
+})();
+
+(function weather() {
+    new CronJob('00 00 * * * *', function() {
+        console.log('Run weather.handler.js');
+        fetch.weather();
     }, null, true);
 })();
