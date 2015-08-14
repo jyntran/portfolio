@@ -13,19 +13,19 @@
                 var hour = $filter('date')(date, 'H', '-0400');
 
                 if (hour <= 5 || hour >= 22) {
-                    img = 'night';
+                    // img = 'night';
                     scope.theme = 'night'; }
                 else if (hour >= 6 && hour <= 9) {
-                    img = 'sunrise';
+                    // img = 'sunrise';
                     scope.theme = 'day'; }
                 else if (hour >= 18 && hour <= 21) {
-                    img = 'sunset';
+                    // img = 'sunset';
                     scope.theme = 'night'; }
                 else {
-                    img = 'day';
+                    // img = 'day';
                     scope.theme = 'day'; }
 
-                elem.css('background-image', 'url(/app/style/img/sky_'+img+')');
+                // elem.css('background-image', 'url(/app/style/img/sky_'+img+')');
             }
         }
     }]);
