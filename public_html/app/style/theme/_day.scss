@@ -8,7 +8,7 @@
 
     &.custom-menu-wrapper {
         background-color: $white;
-        border-bottom: 1px solid $gray-light;
+        border-bottom: 1px solid $gray;
     }
 
     .custom-menu .pure-menu-link,
@@ -40,7 +40,7 @@
 
     .custom-menu-screen {
         background-color: $white;
-        border-bottom: 1px solid $gray-light;
+        border-bottom: 1px solid $gray;
     }
 
     .custom-menu-tucked .custom-menu-screen {
@@ -92,6 +92,9 @@
             border: 1px solid $gray;
             /*border: 1px solid transparent;*/
             background-color: $white-a90;
+        }
+        .work-tag {
+            background-color: $black-a10;
         }
         .work-actions {
             background-color: $white;

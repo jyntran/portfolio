@@ -40,7 +40,7 @@
 
     .custom-menu-screen {
         background-color: $black;
-        /*border-bottom: 1px solid $gray-light;*/
+        /*border-bottom: 1px solid $gray;*/
     }
 
     .custom-menu-tucked .custom-menu-screen {
@@ -86,6 +86,9 @@
         .work-info {
             border: none;
             background-color: $black-a80;
+        }
+        .work-tag {
+            background-color: $white-a10;
         }
         .work-actions {
             background-color: $black;

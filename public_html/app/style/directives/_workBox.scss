@@ -29,7 +29,7 @@
     }  
 
     &.ng-enter-stagger, &.ng-leave-stagger {
-        @include transition-delay(0.4s);
+        @include transition-delay(0.2s);
         @include transition-duration(0s);
     }  
     
@@ -92,11 +92,12 @@
     }
 
     &-tag {
+        padding: 4px;
+        margin-right: 4px;
+        font-family: monospace;
+        @include border-radius(4px);
         &:before{
             content: '#';
-        }
-        &:after{
-            content: ' ';
         }
     }
 
