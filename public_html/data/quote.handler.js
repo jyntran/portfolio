@@ -1,14 +1,9 @@
-/*
-  R E S T ful
-  todo
-*/
+#!/usr/bin/node
 
-http = require ('http')
-fs = require('fs');
+var http = require ('http');
+var fs = require('fs');
 
-// Quote (daily)
-var file = 'api_quote.json';
-
+var file = '/var/www/dev.jyntran.ca/public_html/data/api_quote.json';
 var options = {
   hostname: 'api.theysaidso.com',
   path: '/qod.json?category=inspire',
