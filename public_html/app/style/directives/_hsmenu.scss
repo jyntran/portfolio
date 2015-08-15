@@ -90,13 +90,14 @@
 }
 
 .custom-menu-tucked .custom-menu-screen {
+    height: 0;
     -webkit-transform: translateY(-3em);
     -moz-transform: translateY(-3em);
     -ms-transform: translateY(-3em);
     transform: translateY(-3em);
 }
 
-@media (max-width: 62em) {
+@media (max-width: 568px) {
 
     .custom-menu {
         display: block;
