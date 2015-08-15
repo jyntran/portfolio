@@ -1,0 +1,13 @@
+.contact {
+    &-form {
+        text-align: center;
+        textarea {
+            min-height: 240px;
+            resize: vertical;
+        }
+    }
+}
+
+.input-verify {
+    display: none!important;
+}
