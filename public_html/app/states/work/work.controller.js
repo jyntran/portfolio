@@ -11,7 +11,7 @@
         var vm = this;
 
         vm.works = [];
-        vm.filtering = 'both';
+        vm.filtering = 'all';
 
         vm.isActive = isActive;
         vm.showLightbox = showLightbox;
@@ -39,15 +39,17 @@
         }
 
         function isActive(work) {
-            if (vm.filtering == 'both')
+            if (vm.filtering == 'all')
                 return true;
 
             var inArt = work.tags.indexOf('art') > -1;
             var inCode = work.tags.indexOf('code') > -1;
             if (vm.filtering == 'art')
                 return inArt && !inCode;
-            if (vm.filtering == 'code')
+            else if (vm.filtering == 'code')
                 return inCode && !inArt;
+            else if (vm.filtering == 'both')
+                return inCode && inArt;
         }
 
         function showLightbox(preview) {

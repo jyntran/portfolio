@@ -8,7 +8,7 @@
 
     &.custom-menu-wrapper {
         background-color: $white;
-        /*border-bottom: 1px solid $gray-light;*/
+        border-bottom: 1px solid $gray-light;
     }
 
     .custom-menu .pure-menu-link,
@@ -40,7 +40,7 @@
 
     .custom-menu-screen {
         background-color: $white;
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid $gray-light;
     }
 
     .custom-menu-tucked .custom-menu-screen {
@@ -63,9 +63,13 @@
     /* container */
 
     &.container {
-        color: $black-a60;
+        color: $black-a60; 
         > a { color: $black; }
         .view section { background-color: $white-a80; }
+    }
+
+    &.filter {
+        background-color: $white-a40;
     }
 
 

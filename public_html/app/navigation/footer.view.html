@@ -13,10 +13,10 @@
         <div class="widgets pure-u-1 pure-u-sm-1-3">
             <div class="pure-g">
                 <div class="weather pure-u-1-2 pure-u-sm-1">
-                    <span><a ng-href="http://openweathermap.org/city/{{weather.id}}" title="{{weather.name}} weather at openweathermap.org">{{weather.name}}: {{weather.main.temp}}&deg;C {{weather.weather[0].description}}</a></span>
+                    <a ng-href="http://openweathermap.org/city/{{weather.id}}" title="{{weather.name}} weather at openweathermap.org"><span>{{weather.name}}:&nbsp;</span><span>{{weather.main.temp}}&deg;C {{weather.weather[0].description}}</span></a>
                 </div>
                 <div class="theysaidso pure-u-1-2 pure-u-sm-1">
-                    <span alt="theysaidso.com"/><a href="http://theysaidso.com" title="Powered by quotes from theysaidso.com">theysaidso.com</a></span>
+                    <a href="http://theysaidso.com" title="Powered by quotes from theysaidso.com"><span>Quote from</span><span> theysaidso.com</span></a>
                 </div>
             </div>
         </div>
