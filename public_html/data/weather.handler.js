@@ -1,15 +1,9 @@
-/*
-  R E S T ful
-  todo
-*/
+#!/usr/bin/node
 
-// weather
+var http = require ('http');
+var fs = require('fs');
 
-http = require ('http');
-fs = require('fs');
-
-var file = 'api_weather.json';
-
+var file = '/var/www/dev.jyntran.ca/public_html/data/api_weather.json';
 var options = {
   hostname: 'api.openweathermap.org',
   path: '/data/2.5/weather?q=Waterloo,CA',

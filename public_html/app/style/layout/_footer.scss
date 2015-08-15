@@ -1,11 +1,11 @@
 .footer {
     z-index: 5;
-    position: absolute;
     width: 100%;
     min-height: 48px;
     padding: 8px;
     bottom: 0;
     box-sizing: border-box;
+    @include transition-duration(300ms);
 
     .social {
         text-align: center;
