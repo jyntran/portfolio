@@ -22,7 +22,7 @@
     &.ng-enter,
     &.ng-leave.ng-leave-active {
         opacity: 0;
-        top: -48px;
+        top: -24px;
         max-height: 0em;
         z-index: 1;
         /*@include transform(scale(1,0));*/
@@ -66,6 +66,7 @@
         background-color: transparent;
         box-sizing: border-box;
         border: 1px solid $gray;
+        @include border-radius(4px);
         @include transition-duration(0.4s);
         @include transition-timing-function(ease);
         @include transition-property(all);
