@@ -9,7 +9,7 @@
             link: function(scope, elem, attr) {
                 scope.$watch('weather', function(weather){
                     if (weather) {
-                        var main = weather.main.toLowerCase();
+                        var main = weather.weather[0].main.toLowerCase();
                         var file = '';
                         if (~main.indexOf('rain')
                             || (~main.indexOf('drizzle'))){

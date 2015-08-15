@@ -21,9 +21,23 @@
         }
     }
 
-    .theysaidso {
+    .footnote {
+        margin: auto;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .widgets {
         text-align: center;
         margin: auto;
+        font-size: 0.8em;
+        span { vertical-align: middle; }
+    }
+
+    .weather { text-align: left; }
+    .theysaidso {
+        text-align: right;
+        margin-right: 0;
     }
 }
 
@@ -33,14 +47,22 @@
 
     .social {
         text-align: left;
-        margin-bottom: 0;
+        margin-bottom: auto;
+        a {
+            font-size: 16px;
+            width: 16px;
+            height: 16px;
+            padding: 4px;
+        }
     }
 
-    .theysaidso {
+    .widgets {
         text-align: right;
-        margin-right: 0;
     }
 
+    .weather {
+        text-align: right;
+    }
 }
 
 }

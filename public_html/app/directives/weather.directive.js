@@ -6,7 +6,7 @@
         return function(scope, elem, attr) {
             ApiService.getWeather()
             .then(function(resp){
-                scope.weather = resp.weather[0];
+                scope.weather = resp;
             })
         }
     }])
