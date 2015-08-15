@@ -14,9 +14,10 @@
 
         a {
             font-size: 24px;
+            width: 24px;
+            height: 24px;
             display: inline-block;
-            margin: 0 4px;
-            span { vertical-align: middle; }
+            padding: 8px;
         }
     }
 
@@ -33,7 +34,6 @@
     .social {
         text-align: left;
         margin-bottom: 0;
-        a { font-size: 24px; }
     }
 
     .theysaidso {

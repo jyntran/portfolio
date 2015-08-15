@@ -17,7 +17,8 @@
     <script src="/app/providers/apiService.service.js"></script>
     <script src="/app/providers/timeService.service.js"></script>
     <script src="/app/directives/horizontalScrollMenu.directive.js"></script>
-    <script src="/app/directives/timeBg.directive.js"></script>
+    <script src="/app/directives/themeSensitive.directive.js"></script>
+    <script src="/app/directives/time.directive.js"></script>
     <script src="/app/directives/lightbox.directive.js"></script>
     <script src="/app/directives/quote.directive.js"></script>
     <script src="/app/directives/weatherBg.directive.js"></script>
@@ -42,7 +43,7 @@
 
 </head>
 
-<body ng-app="app" resize weather-bg time-bg>
+<body ng-app="app" resize time weather-bg>
 
     <div class="body">
         <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu>
@@ -51,9 +52,7 @@
             <div class="content">
                 <div data-ui-view class="view"></div>
             </div>
-        </div>
-
-        <div class="footer" data-ng-class="{'day':theme=='day', 'night':theme=='night'}" hidden>
+        <div class="footer" theme-sensitive>
             <div class="pure-g">
                 <div class="social pure-u-1 pure-u-sm-1-2">
                     <a href="mailto:me@jyntran.ca" title="E-mail" alt="E-mail"><span class="icon-envelop"></span></a>

@@ -7,9 +7,11 @@
             restrict: 'EA',
             template: '<h1 class="quote">&ldquo;{{qod.quote}}&rdquo;</h1><h2 class="author">&mdash; {{qod.author}}</h2>',
             link: function(scope, elem, attr) {
+                elem.css('display', 'none');
                 ApiService.getQuote()
                 .then(function(resp){
                     scope.qod = resp;
+                    elem.css('display', 'block');
                 })
             }
         }

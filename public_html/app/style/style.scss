@@ -132,6 +132,18 @@ quote {
     max-width: 768px;
     margin: auto;
     text-shadow: 2px 2px 0 $black-a60, 0px 0px 8px $black-a40;
+    @include transition-duration(300ms);
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity:0;
+    }
+
+    &.ng-enter.ng-enter-active,
+    &.ng-leave {
+        opacity:1;
+    }
+
     .quote {
         text-align: left;
         text-transform: none;
@@ -142,4 +154,8 @@ quote {
       text-transform: none;
       color: $white;
     }
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }

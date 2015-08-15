@@ -27,7 +27,7 @@
     .custom-menu .pure-menu-link:focus,
     .custom-menu .pure-menu-heading:focus {
         background-color: transparent;
-        border-bottom: 2px solid $blue;
+        border-bottom: 2px solid $red;
     }
 
     .custom-menu .pure-menu-heading.custom-menu-brand:focus {
@@ -40,7 +40,7 @@
 
     .custom-menu-screen {
         background-color: $white;
-        border-bottom: 1px solid $gray-light;
+        border-bottom: 1px solid $gray;
     }
 
     .custom-menu-tucked .custom-menu-screen {
@@ -52,6 +52,7 @@
 
     &.footer {
         background-color: $white;
+        border-top: 1px solid $gray;
         a {
             color: $black-a80;
             &:hover { color: $black; }        
