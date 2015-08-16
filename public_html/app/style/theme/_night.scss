@@ -65,7 +65,9 @@
     &.container {
         color: $white-a60;
         > a { color: $white; }
-        .view section { background-color: $black-a80; }
+        .view section {
+            background-color: $black-a80;
+        }
     }
 
     &.filter {
@@ -80,7 +82,7 @@
                 background-color: $black;
             }
             &-nothumb {
-                path { fill: $white-a60; }
+                path { fill: $white-a40; }
             }
         }
         .work-info {

@@ -20,7 +20,7 @@
                             || ~main.indexOf('hail')
                             || ~main.indexOf('sleet')){
                             file = 'snow';
-                        } else if (~main.indexOf('clouds')
+                        } else if (~main.indexOf('overcast')
                             || ~main.indexOf('storm')) {
                             file = 'clouds';
                         } else {

@@ -1,0 +1,139 @@
+.night {
+
+    h1, h2, h3, h4 {    
+        color: $white;
+    }
+
+    /* header */
+
+    &.custom-menu-wrapper {
+        background-color: $black;
+    }
+
+    .custom-menu .pure-menu-link,
+    .custom-menu .pure-menu-heading {
+        color: $white-a80;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu .pure-menu-link:hover,
+    .custom-menu .pure-menu-heading:hover {
+        background-color: transparent;
+        color: $white;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu .pure-menu-link:focus,
+    .custom-menu .pure-menu-heading:focus {
+        /*background-color: $white-a40;*/
+        background-color: transparent;
+        border-bottom: 2px solid $red;
+    }
+
+    .custom-menu .pure-menu-heading.custom-menu-brand:focus {
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu-toggle .bar {
+        background-color: $white;
+    }
+
+    .custom-menu-screen {
+        background-color: $black;
+        /*border-bottom: 1px solid $gray;*/
+    }
+
+    .custom-menu-tucked .custom-menu-screen {
+        /*border-bottom: 1px solid $gray;*/
+    }
+
+
+    /* footer */
+
+    &.footer {
+        background-color: $black;
+        
+        a {
+            color: $white-a80;
+            &:hover { color: $white; }        
+        }
+    }
+
+
+    /* container */
+
+    &.container {
+        color: $white-a60;
+        > a { color: $white; }
+        .view section {
+            background-color: $black-a80;
+        }
+    }
+
+    &.filter {
+        background-color: $black-a80;
+    }
+
+    &.work-block {
+
+        .work-thumbnail {
+            border: none;
+            img, svg {
+                background-color: $black;
+            }
+            &-nothumb {
+                path { fill: $white-a40; }
+            }
+        }
+        .work-info {
+            border: none;
+            background-color: $black-a80;
+        }
+        .work-tag {
+            background-color: $white-a10;
+        }
+        .work-actions {
+            background-color: $black;
+            border-top: 1px solid $white-a20;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+        }
+        .work-action {
+            &:not(:first-child) {
+                border-left: 1px solid $white-a20;
+            }
+            &-link {
+                span {
+                    color: $white-a80;
+                }
+                &:hover {
+                    background-color: $white-a20;
+                }
+                &-disabled {
+                    background-color: transparent;
+                    span {
+                        color: $white-a20;
+                    }
+            
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 568px) {
+
+.night {
+    &.work-block {
+        .work-info {
+            border: none;
+            background-color: none;
+        }
+    }
+}
+
+}
