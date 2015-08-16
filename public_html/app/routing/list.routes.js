@@ -26,6 +26,10 @@
             .state('about', {
                 url: '/',
                 templateUrl: 'states/about/about.view.html'
+            })
+            .state('contact', {
+                url: '/',
+                templateUrl: 'states/contact/contact.view.html'
             });
     }
 

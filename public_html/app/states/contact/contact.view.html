@@ -1,0 +1,28 @@
+<section data-ng-controller="ContactCtrl as ctrl">
+    <article>
+        <h2>Contact</h2>
+        <p>Please contact me using the following form. You will be sent a copy for your own records.</p>
+        <div class="contact-form">
+            <form class="pure-form pure-form-stacked" data-ng-submit="ctrl.send()" name="contactform">
+                <div class="pure-control-group">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name" class="input pure-input pure-input-1 pure-input-sm-1-2" required data-ng-model="ctrl.input.name"/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" name="email" class="input pure-input pure-input-1 pure-input-sm-1-2" required data-ng-model="ctrl.input.email"/>
+                    <input type="text" name="email-verify" class="input-verify" data-ng-model="ctrl.input.verify"/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="subject">Subject:</label>
+                    <input id="subject" type="text" name="subject" class="input pure-input pure-input-1 pure-input-sm-1-2" required data-ng-model="ctrl.input.subject"/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" type="text" name="message" class="input textarea pure-input pure-input-1 pure-input-sm-1-2" required data-ng-model="ctrl.input.message"></textarea>
+                </div>
+                <input class="pure-button button" name="submit" type="submit" value="Submit"/>
+            </form>
+        </div>
+    </article>
+</section>
