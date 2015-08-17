@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>J. Tran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bower:js -->
+    <!-- endinject -->
+    <!-- angular:js -->
+    <!-- endinject -->
+    <!-- bower:css -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+</head>
+
+<body ng-app="app" resize time weather weather-bg>
+
+    <div class="body">
+        <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu>
+
+        <div class="container" theme-sensitive>
+            <div class="content">
+                <div data-ui-view class="view"></div>
+            </div>
+            <div data-ng-include="'/app/navigation/footer.view.html'"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
