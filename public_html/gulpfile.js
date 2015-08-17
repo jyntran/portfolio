@@ -100,7 +100,7 @@ gulp.task('watch-specs', function(){
 });
 
 gulp.task('specs', function(){
-  gulp.src(spec)
+  return gulp.src(spec)
       .pipe(inject(
         gulp.src(sourcePaths.bower,
           {read: false}),
@@ -117,7 +117,7 @@ gulp.task('specs', function(){
 });
 
 gulp.task('index', function(){
-  gulp.src(index)
+  return gulp.src(index)
       .pipe(inject(
         gulp.src(sourcePaths.bower,
           {read: false}),
@@ -132,10 +132,10 @@ gulp.task('index', function(){
       .pipe(gulp.dest(dist));
 });
 
-gulp.task('start', function () {
-  nodemon({
+gulp.task('start', ['build', 'test'], function () {
+  return nodemon({
     script: server + 'app.js',
-    ext: 'js html',
+    ext: 'js html scss css',
     env: { 'NODE_ENV': 'development' }
   })
 })
@@ -144,4 +144,4 @@ gulp.task('test', ['specs']);
 
 gulp.task('build', ['styles', 'index']);
 gulp.task('watch', ['watch-angular', 'watch-views', 'watch-styles', 'watch-specs']);
-gulp.task('default', ['test', 'build', 'watch', 'start']);
+gulp.task('default', ['start']);
