@@ -7,8 +7,7 @@
     function ContactCtrl(ContactService){
         var vm = this;
 
-        // vm.input = {};
-        vm.input = {name:'test name', email:'test@test.com', subject:'test subject', message: 'test message'};
+        vm.input = {};
         vm.send = send;
 
         init();
@@ -23,6 +22,10 @@
             ContactService.sendForm(vm.input)
             .then(function(resp){
                 console.log('[ContactCtrl] form sent')
+                alert('Your form has been sent.');
+            }, function(error){
+                console.log('[ContactCtrl] form not sent')
+                alert('Your form could not be sent. Please try again.');
             })
         }
     }

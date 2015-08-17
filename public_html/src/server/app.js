@@ -66,10 +66,9 @@ router.get('/', function(req, res) {
 router.post('/contact', function(req, res) {
     var data = req.body.form;
     var mailOptions = {
-      // from: "j.yn.tran@gmail.com",
       from: data.name + ' <' + data.email + '>',
       sender: data.email,
-      to: "j.yn.tran@gmail.com",
+      to: "me@jyntran.ca",
       cc: data.email,
       subject: data.subject,
       generateTextFromHTML: true,
@@ -79,8 +78,10 @@ router.post('/contact', function(req, res) {
     transporter.sendMail(mailOptions, function(error, response) {
       if (error) {
         console.log(error);
+        res.send('error!')
       } else {
         console.log(response);
+        res.send('success!')
       }
       transporter.close();
     })
@@ -92,7 +93,7 @@ app.use('/', router);
 // START THE SERVER
 // ==============================================
 app.listen(port, function(){
-    console.log('--- SERVER ---' + port);
+    console.log('--- SERVER ---');
     console.log('Magic happens on port ' + port);
     console.log('---')
     console.log('env = ' + app.get('env') +
