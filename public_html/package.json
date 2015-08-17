@@ -46,7 +46,12 @@
     "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
   },
   "dependencies": {
+    "body-parser": "^1.13.3",
+    "connect": "^3.4.0",
     "express": "^4.13.3",
-    "normalize.css": "^3.0.3"
+    "nodemailer": "^1.4.0",
+    "nodemailer-smtp-transport": "^1.0.3",
+    "normalize.css": "^3.0.3",
+    "xoauth2": "^1.1.0"
   }
 }

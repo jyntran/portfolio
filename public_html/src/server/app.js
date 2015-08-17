@@ -1,10 +1,39 @@
 // BASE SETUP
 // ==============================================
 
+'use strict';
+
 var express = require('express');
+var connect = require('connect');
+var bodyParser = require('body-parser');
 var app     = express();
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
 var port    =   process.env.PORT || 8080;
 var path = require('path');
+ 
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
+var generator = require('xoauth2').createXOAuth2Generator({
+    user: 'j.yn.tran@gmail.com',
+    //...
+});
+
+generator.on('token', function(token){
+    console.log('New token for %s: %s', token.user, token.accessToken);
+});
+
+
+var transporter = nodemailer.createTransport(smtpTransport({
+    service: 'Gmail',
+    auth: {
+      xoauth2: generator 
+    }
+}));
 
 var appDir = path.join(process.cwd(), './build/');
 
@@ -28,9 +57,33 @@ router.use(function(req, res, next) {
     next(); 
 });
 
-// home page route
+// home page route 
 router.get('/', function(req, res) {
     res.sendFile(appDir + 'index.html');  
+});
+
+// contact
+router.post('/contact', function(req, res) {
+    var data = req.body.form;
+    var mailOptions = {
+      // from: "j.yn.tran@gmail.com",
+      from: data.name + ' <' + data.email + '>',
+      sender: data.email,
+      to: "j.yn.tran@gmail.com",
+      cc: data.email,
+      subject: data.subject,
+      generateTextFromHTML: true,
+      html: data.message
+    };
+
+    transporter.sendMail(mailOptions, function(error, response) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(response);
+      }
+      transporter.close();
+    })
 });
 
 // apply the routes to our application
