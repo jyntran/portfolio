@@ -14,17 +14,14 @@
         /////
 
         function init() {
-            console.log('[ContactCtrl] init')
+            // console.log('[ContactCtrl] init')
         }
 
         function send() {
-            console.log('[ContactCtrl] send')
             ContactService.sendForm(vm.input)
             .then(function(resp){
-                console.log('[ContactCtrl] form sent')
                 alert('Your form has been sent.');
             }, function(error){
-                console.log('[ContactCtrl] form not sent')
                 alert('Your form could not be sent. Please try again.');
             })
         }

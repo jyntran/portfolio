@@ -13,11 +13,8 @@
         /////
 
         function sendForm(form) {
-            // todo
             return $http.post('/contact', {form: form})
             .then(function(resp){
-                console.log('SUCCESS: sendForm()')
-                console.log(resp)
                 return resp;
             }, function(error){
                 console.log('ERROR: sendForm()')
