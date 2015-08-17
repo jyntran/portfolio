@@ -43,6 +43,10 @@ ul {
     box-sizing: border-box;
 }
 
+input, textarea {
+    color: $gray-dark;
+}
+
 .radio {
     position: relative;
     display: inline-block;  

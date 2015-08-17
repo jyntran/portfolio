@@ -2308,6 +2308,9 @@ a {
 ul {
   box-sizing: border-box; }
 
+input, textarea {
+  color: #666666; }
+
 .radio {
   position: relative;
   display: inline-block; }
