@@ -14,7 +14,7 @@
         /////
 
         function getQuote() {
-            return $http.get('/data/api_quote.json')
+            return $http.get('/get/quote')
             .then(function(resp){
                 return resp.data.contents.quotes[0];
             }, function(error){
@@ -24,7 +24,7 @@
         }
 
         function getWeather() {
-            return $http.get('/data/api_weather.json')
+            return $http.get('/get/weather')
             .then(function(resp){
                 return resp.data;
             }, function(error){
