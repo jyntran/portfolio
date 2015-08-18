@@ -27,7 +27,7 @@
         }
 
         function populateWorks() {
-            $http.get('/data/works.json')
+            $http.get('/get/works')
                 .then(
                     function(resp) {
                         vm.works = resp.data;

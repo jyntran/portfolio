@@ -3,10 +3,10 @@
 var http = require ('http');
 var fs = require('fs');
 
-var file = '/var/www/dev.jyntran.ca/public_html/src/client/data/api_weather.json';
+var file = '/var/www/dev.jyntran.ca/public_html/src/server/data/api_quote.json';
 var options = {
-  hostname: 'api.openweathermap.org',
-  path: '/data/2.5/weather?q=Waterloo,CA&units=metric',
+  hostname: 'api.theysaidso.com',
+  path: '/qod.json?category=inspire',
   method: 'GET'
 };
 
