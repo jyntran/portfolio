@@ -11,6 +11,8 @@ router.use(function(req, res, next) {
 
 router.get('/get/quote', apiHandler.getQuote);
 router.get('/get/weather', apiHandler.getWeather);
+router.get('/get/works', apiHandler.getWorks);
+router.get('/get/resume', apiHandler.getResume);
 
 router.post('/contact', contactHandler.sendEmail);
 
