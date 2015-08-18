@@ -3,7 +3,7 @@
 var http = require ('http');
 var fs = require('fs');
 
-var file = '/var/www/dev.jyntran.ca/public_html/data/api_quote.json';
+var file = '/var/www/dev.jyntran.ca/public_html/src/client/data/api_quote.json';
 var options = {
   hostname: 'api.theysaidso.com',
   path: '/qod.json?category=inspire',
