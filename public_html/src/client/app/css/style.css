@@ -2079,21 +2079,14 @@
   -ms-flex-order: 3;
   order: 3; }
 
-/* sm */
-@media screen and (min-width: 568px) {
-  .resume-skill-list {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2; } }
+.resume-skill:not(:last-child):after {
+  content: ', '; }
 
+/* sm */
 /* md */
 @media screen and (min-width: 768px) {
   .resume-entry {
     display: block; }
-  .resume-skill-list {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3; }
   .resume-date {
     position: relative; }
     .resume-date span {
