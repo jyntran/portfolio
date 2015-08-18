@@ -27,12 +27,12 @@
         }
 
         function populateWorks() {
-            $http.get('/data/works.json')
+            $http.get('/get/works', {cache:true})
                 .then(
                     function(resp) {
                         vm.works = resp.data;
                     },
-                    function(resp) {
+                    function(error) {
                         console.log(error)
                     }
                 )
