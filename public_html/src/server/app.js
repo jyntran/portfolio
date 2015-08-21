@@ -18,21 +18,21 @@ app.use(express.static('./'));
 
 app.use('/', routes);
 
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    console.log(err);
-    res.status(err.status).send({error: err});
-  });
-}
+// if (app.get('env') === 'development') {
+//   app.use(function(err, req, res, next) {
+//     console.log(err);
+//     res.status(err.status).send({error: err});
+//   });
+// }
 
-app.use(function (req, res, next){
-    res.status(404).send();
-})
+// app.use(function (req, res, next){
+//     res.status(404).send();
+// })
 
-app.use(function(err, req, res, next) {
-    console.log(err)
-  res.sendStatus(err.status || 500);
-});
+// app.use(function(err, req, res, next) {
+//     console.log(err)
+//   res.sendStatus(err.status || 500);
+// });
 
 app.listen(port, function(){
     console.log('--- SERVER ---');

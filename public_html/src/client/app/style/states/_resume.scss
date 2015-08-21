@@ -17,6 +17,9 @@
     &-info {
         @include flex-order(3);
     }
+    &-skill {
+        &:not(:last-child):after { content: ', ' };
+    }
 }
     
 /* sm */
@@ -37,9 +40,6 @@
     .resume {
         &-entry {
             display: block;
-        }
-        &-skill-list {
-            @include column-count(3);
         }
         &-date {
             position: relative;

@@ -30,7 +30,7 @@
                     function(resp) {
                         vm.works = resp.data;
                     },
-                    function(resp) {
+                    function(error) {
                         console.log(error)
                     }
                 )
