@@ -7,7 +7,10 @@
     function ApiService($http){
         var service = {
             getQuote: getQuote,
-            getWeather: getWeather
+            getWeather: getWeather,
+            getWorks: getWorks,
+            getResume: getResume,
+            getAbout: getAbout
         }
         return service;
 
@@ -29,6 +32,36 @@
                 return resp.data;
             }, function(error){
                 console.log('ERROR: getWeather()')
+                console.log(error)
+            });
+        }
+
+        function getWorks() {
+            return $http.get('/get/works', {cache:true})
+            .then(function(resp){
+                return resp.data;
+            }, function(error){
+                console.log('ERROR: getWorks()')
+                console.log(error)
+            });
+        }
+
+        function getResume() {
+            return $http.get('/get/resume', {cache:true})
+            .then(function(resp){
+                return resp.data;
+            }, function(error){
+                console.log('ERROR: getResume()')
+                console.log(error)
+            });
+        }
+
+        function getAbout() {
+            return $http.get('/get/about', {cache:true})
+            .then(function(resp){
+                return resp.data;
+            }, function(error){
+                console.log('ERROR: getAbout()')
                 console.log(error)
             });
         }

@@ -4,7 +4,7 @@
     angular.module('app')
     .controller('ResumeCtrl', ResumeCtrl);
 
-    function ResumeCtrl($http){
+    function ResumeCtrl(ApiService){
         var vm = this;
 
         vm.technical,
@@ -19,7 +19,7 @@
         }
 
         function populateResume() {
-            $http.get('/get/resume')
+            ApiService.getResume()
                 .then(
                     function(resp) {
                         vm.technical = resp.data.technical;

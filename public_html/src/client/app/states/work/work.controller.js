@@ -5,9 +5,7 @@
     .module('app')
     .controller('WorkCtrl', WorkCtrl);
 
-    WorkCtrl.$inject = ['$http', '$scope'];
-
-    function WorkCtrl($http, $scope) {
+    function WorkCtrl(ApiService, $scope) {
         var vm = this;
 
         vm.works = [];
@@ -27,7 +25,7 @@
         }
 
         function populateWorks() {
-            $http.get('/data/works.json')
+            ApiService.getWorks()
                 .then(
                     function(resp) {
                         vm.works = resp.data;
