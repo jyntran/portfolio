@@ -1,6 +1,13 @@
-<section>
+<section data-ng-controller="AboutCtrl as ctrl">
     <h2>About</h2>
     <article>
-        <p>Hello world.</p>
+        <div class="pure-g">
+            <div data-ng-if="ctrl.photo" class="pure-u-1 pure-u-sm-1-2">
+                <img ng-src="{{ctrl.photo}}" class="pure-img about-photo"/>
+            </div><!--
+         --><div class="pure-u-1 pure-u-sm-1-2">
+                <p>{{ctrl.bio}}</p>
+            </div>
+        </div>
     </article>
 </section>

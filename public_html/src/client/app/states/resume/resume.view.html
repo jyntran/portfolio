@@ -2,10 +2,10 @@
     <article>
         <h2>Technical Skills</h2>
         <div class="resume-entry" data-ng-repeat="entry in ctrl.technical">
-            <h3>{{entry.name}}</h3>
-            <ul class="resume-skill-list">
+            <p><strong>{{entry.name}}: </strong><span class="resume-skill" data-ng-repeat="item in entry.content">{{item}}</span></p>
+<!--             <ul class="resume-skill-list">
                 <li data-ng-repeat="item in entry.content">{{item}}</li>
-            </ul>
+            </ul> -->
         </div>
     </article>
     <article>

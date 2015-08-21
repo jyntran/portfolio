@@ -19,7 +19,7 @@
         }
 
         function populateResume() {
-            $http.get('/get/resume')
+            $http.get('/get/resume', {cache:true})
                 .then(
                     function(resp) {
                         vm.technical = resp.data.technical;
