@@ -44,12 +44,7 @@
         img, svg {
             @include border-radius(inherit);
             cursor: pointer;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            height: 100%;
-            width: auto;
-            @include transform(translate(-50%,-50%));
+            width: 100%;
             @include transition-duration(0.2s)
             ;            
             &.portrait {
