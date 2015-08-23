@@ -12,7 +12,10 @@
         vm.filtering = 'all';
 
         vm.isActive = isActive;
-        vm.showLightbox = showLightbox;
+
+        vm.lightbox = null;
+
+        // vm.showLightbox = showLightbox;
 
         init();
         //////////
@@ -50,9 +53,9 @@
                 return inCode && inArt;
         }
 
-        function showLightbox(preview) {
-            vm.show = true;
-            vm.preview = preview;
-        }
+        // function showLightbox(preview) {
+        //     vm.show = true;
+        //     vm.preview = preview;
+        // }
     }
 })();

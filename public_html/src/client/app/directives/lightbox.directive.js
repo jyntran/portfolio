@@ -4,9 +4,9 @@
     angular.module('app')
     .directive('lightbox', function(){
         return {
-            restrict: 'EA',
+            restrict: 'E',
             scope: {
-                content: "=lightboxOpen",
+                content: "=",
             },
             templateUrl: '/app/directives/lightbox.directive.template.html',
             controller: function() {
@@ -14,7 +14,7 @@
                 vm.close = close;
                 /////
                 function close() {
-                    vm.show = false;
+                    vm.content = null;
                 }
             },
             controllerAs: 'ctrl',
