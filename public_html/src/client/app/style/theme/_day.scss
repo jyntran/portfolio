@@ -1,50 +1,49 @@
+body.day { background-color: $white; }
+
 .day {
 
     h1, h2, h3, h4 {
         color: $black;
     }
 
+    &.logo {
+        background-position-y: 0%;
+    }
+
     /* header */
 
-    &.custom-menu-wrapper {
-        background-color: $white;
-        border-bottom: 1px solid $gray;
+    .header {
+        &-bar {
+            background-color: $white;
+            border-bottom: 1px solid $gray-light;
+        }
+        &-toggle {
+            color: $black;
+        }
+        &-menu {
+            background-color: $white;
+            border-left: 1px solid $gray-light;
+            border-bottom: 1px solid $gray-light;
+        }
+    }
+    .navigation {
+        &-item {
+            background-color: transparent;
+            &:hover { background-color: $black-a10; }
+        }
+        &-link {
+            color: $black-a80;
+            &:before {
+                background-color: $gray-light;
+            }
+        }
     }
 
-    .custom-menu .pure-menu-link,
-    .custom-menu .pure-menu-heading {
-        color: $black-a80;
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu .pure-menu-link:hover,
-    .custom-menu .pure-menu-heading:hover {
-        background-color: transparent;
-        color: $black;
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu .pure-menu-link:focus,
-    .custom-menu .pure-menu-heading:focus {
-        background-color: transparent;
-        border-bottom: 2px solid $red;
-    }
-
-    .custom-menu .pure-menu-heading.custom-menu-brand:focus {
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu-toggle .bar {
-        background-color: $gray;
-    }
-
-    .custom-menu-screen {
-        background-color: $white;
-        border-bottom: 1px solid $gray;
-    }
-
-    .custom-menu-tucked .custom-menu-screen {
-        border-bottom: 1px solid $gray;
+    .social {
+        &-link {
+            color: $black-a80;
+            &:hover { color: $black; }        
+        }
     }
 
 
@@ -127,6 +126,8 @@
         }
     }
 }
+
+.resume-skill-heading.day { color: $black; }
 
 @media screen and (min-width: 568px) {
 

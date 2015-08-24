@@ -6,15 +6,28 @@
 
     function ApiService($http){
         var service = {
+            data: {},
+            getMaster: getMaster,
             getQuote: getQuote,
             getWeather: getWeather,
             getWorks: getWorks,
             getResume: getResume,
-            getAbout: getAbout
+            getAbout: getAbout,
+            getCurrent: getCurrent
         }
         return service;
 
         /////
+
+        function getMaster() {
+            $http.get('/get/master', {cache:true})
+            .then(function(resp){
+                service.data = resp.data;
+            }, function(error){
+                console.log('ERROR: getMaster()')
+                console.log(error)
+            });            
+        }
 
         function getQuote() {
             return $http.get('/get/quote')
@@ -36,34 +49,26 @@
             });
         }
 
-        function getWorks() {
-            return $http.get('/get/works', {cache:true})
+        function getCurrent() {
+            return $http.get('/get/current')
             .then(function(resp){
                 return resp.data;
             }, function(error){
-                console.log('ERROR: getWorks()')
+                console.log('ERROR: getCurrent()')
                 console.log(error)
-            });
+            });            
+        }
+
+        function getWorks() {
+            return service.data.works;
         }
 
         function getResume() {
-            return $http.get('/get/resume', {cache:true})
-            .then(function(resp){
-                return resp.data;
-            }, function(error){
-                console.log('ERROR: getResume()')
-                console.log(error)
-            });
+            return service.data.resume;
         }
 
         function getAbout() {
-            return $http.get('/get/about', {cache:true})
-            .then(function(resp){
-                return resp.data;
-            }, function(error){
-                console.log('ERROR: getAbout()')
-                console.log(error)
-            });
+            return service.data.about;
         }
     }
 })();

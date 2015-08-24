@@ -24,17 +24,18 @@
 
 </head>
 
-<body ng-app="app" resize time weather weather-bg>
+<body ng-app="app" resize time weather theme-sensitive> 
 
     <div class="body">
-        <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu>
+        <div data-ng-include="'/app/navigation/header.view.html'"></div>
+        <!-- <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu> -->
 
         <div class="container" theme-sensitive>
             <div class="content">
                 <div data-ui-view class="view"></div>
             </div>
-            <div data-ng-include="'/app/navigation/footer.view.html'"></div>
         </div>
+        <!-- <div data-ng-include="'/app/navigation/footer.view.html'"></div> -->
     </div>
     
 </body>

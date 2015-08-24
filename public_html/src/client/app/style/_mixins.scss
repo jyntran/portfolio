@@ -31,6 +31,13 @@
   order: $num;
 }
 
+@mixin transition ($all) {
+  -moz-transition: $all;
+  -ms-transition: $all;
+  -webkit-transition: $all;
+  transition: $all;
+}
+
 @mixin transition-delay ($time) {
   -moz-transition-delay: $time;
   -ms-transition-delay: $time;

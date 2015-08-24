@@ -2,8 +2,8 @@
 @import 'fonts';
 @import 'mixins';
 @import 'directives';
-@import 'layout';
 @import 'states';
+@import 'layout';
 @import 'theme/day';
 @import 'theme/night';
 
@@ -13,8 +13,8 @@ html, body {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
     color: $black-a60;
+    overflow-x: hidden;
 }
 
 html, button, input, select, textarea,

@@ -1,3 +1,22 @@
-<nav class="header" role="navigation">
-    <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu>
-</nav>
+<div class="header" data-ng-controller="HeaderCtrl as ctrl" theme-sensitive>
+    <div class="header-bar">
+        <div class="header-toggle" data-ng-click="ctrl.toggleMenu()"><span class="icon-menu"></span></div>
+    </div>
+    <div class="header-menu" data-ng-if="ctrl.showMenu">
+        <div class="navigation">
+            <ul>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="home">Home</a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="work">Works</a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="resume">Résumé</a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="contact">Contact</a></li>
+                <li class="navigation-item"><a href="http://blog.jyntran.ca" class="navigation-link">Blog</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="http://github.com/jyntran" title="GitHub" alt="GitHub" class="social-link"><span class="icon-github2"></span></a>
+            <a href="http://ca.linkedin.com/in/jyntran" title="LinkedIn" alt="LinkedIn" class="social-link"><span class="icon-linkedin2"></span></a>
+            <a href="http://twitter.com/jyntran" title="Twitter" alt="Twitter" class="social-link"><span class="icon-twitter"></span></a>
+            <a href="http://bliptych.tumblr.com" title="tumblr" alt="tumblr" class="social-link"><span class="icon-tumblr"></span></a>
+        </div>
+    </div>
+</div>

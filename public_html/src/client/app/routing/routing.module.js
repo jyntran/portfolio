@@ -3,7 +3,7 @@
     
     angular.module('app.routing', ['ui.router'])
         .config(routes)
-        .run();
+        .run(getMaster);
 
     function routes($stateProvider, $urlRouterProvider) {
 
@@ -30,6 +30,10 @@
                 url: '/',
                 templateUrl: '/src/client/app/states/contact/contact.view.html'
             });
+    }
+
+    function getMaster(ApiService) {
+        ApiService.getMaster();
     }
 
 })();

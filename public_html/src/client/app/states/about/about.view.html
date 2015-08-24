@@ -8,6 +8,24 @@
          --><div class="pure-u-1 pure-u-sm-1-2">
                 <p>{{ctrl.bio}}</p>
             </div>
+            <div class="pure-u-1" data-ng-if="ctrl.current">
+                <div class="current-anime">
+                    <a ng-href="{{ctrl.current.anime.url}}">
+                    <div class="current-anime-banner">
+                        <div class="current-anime-overlay">
+                        </div>
+                        <div class="current-anime-overlay current-anime-info">
+                            <div class="current-anime-info-heading">Animé</div>
+                            <div class="current-anime-info-title title">{{ctrl.current.anime.title}}</div>
+                            <!-- <div class="current-anime-info-subtitle subtitle">{{ctrl.current.anime.subtitle}}</div> -->
+                        </div>
+                        <div data-ng-repeat="anime in ctrl.current.anime.data" class="current-anime-item">
+                            <div class="current-anime-item-thumb"><img ng-src="{{anime.cover_image}}"/></div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </article>
 </section>

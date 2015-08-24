@@ -1,50 +1,49 @@
+body.night { background-color: $black; }
+
 .night {
 
     h1, h2, h3, h4 {    
         color: $white;
     }
 
+    &.logo {
+        background-position-y: 100%;
+    }
+
     /* header */
 
-    &.custom-menu-wrapper {
-        background-color: $black;
+    .header {
+        &-bar {
+            background-color: $black;
+            border-bottom: 1px solid $gray-dark;
+        }
+        &-toggle {
+            color: $white;
+        }
+        &-menu {
+            background-color: $black;
+            border-left: 1px solid $gray-dark;
+            border-bottom: 1px solid $gray-dark;
+        }
+    }
+    .navigation {
+        &-item {
+            background-color: transparent;
+            &:hover { background-color: $white-a10; }
+        }
+        &-link {
+            color: $white-a80;
+            &:before {
+                background-color: $gray-dark;
+            }
+        }
     }
 
-    .custom-menu .pure-menu-link,
-    .custom-menu .pure-menu-heading {
-        color: $white-a80;
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu .pure-menu-link:hover,
-    .custom-menu .pure-menu-heading:hover {
-        background-color: transparent;
-        color: $white;
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu .pure-menu-link:focus,
-    .custom-menu .pure-menu-heading:focus {
-        /*background-color: $white-a40;*/
-        background-color: transparent;
-        border-bottom: 2px solid $red;
-    }
-
-    .custom-menu .pure-menu-heading.custom-menu-brand:focus {
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu-toggle .bar {
-        background-color: $white;
-    }
-
-    .custom-menu-screen {
-        background-color: $black;
-        /*border-bottom: 1px solid $gray;*/
-    }
-
-    .custom-menu-tucked .custom-menu-screen {
-        /*border-bottom: 1px solid $gray;*/
+    .social {
+        &-link {
+            color: $white-a80;
+            &:hover { color: $white; }        
+        }
     }
 
 
@@ -124,6 +123,8 @@
         }
     }
 }
+
+.resume-skill-heading.night { color: $white; }
 
 @media screen and (min-width: 568px) {
 

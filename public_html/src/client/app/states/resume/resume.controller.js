@@ -19,17 +19,10 @@
         }
 
         function populateResume() {
-            ApiService.getResume()
-                .then(
-                    function(resp) {
-                        vm.technical = resp.data.technical;
-                        vm.history = resp.data.history;
-                        vm.awards = resp.data.awards;
-                    },
-                    function(error) {
-                        console.log(error)
-                    }
-                )
+            var resume = ApiService.getResume();
+            vm.technical = resume.technical;
+            vm.history = resume.history;
+            vm.awards = resume.awards;
         }
     }
 })();

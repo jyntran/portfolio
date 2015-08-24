@@ -15,14 +15,21 @@
 
         function init() {
             populateAbout();
+            populateCurrent();
         }
 
         function populateAbout() {
-            ApiService.getAbout()
+            var about = ApiService.getAbout();
+            vm.bio = about.bio;
+            vm.photo = about.photo;
+        }
+
+        function populateCurrent() {
+            ApiService.getCurrent()
                 .then(
                     function(resp) {
-                        vm.bio = resp.data.bio;
-                        vm.photo = resp.data.photo;
+                        console.log(resp)
+                        vm.current = resp;
                     },
                     function(error) {
                         console.log(error)

@@ -1,4 +1,11 @@
 .resume {
+    h2, h3 {
+        margin: 0;
+    }
+    h2 {
+        margin-bottom: 16px;
+    }
+    
     &-entry {
         @include flex(column);
     }
@@ -19,6 +26,10 @@
     }
     &-skill {
         &:not(:last-child):after { content: ', ' };
+        margin-bottom: 12px;
+        &-left {
+            font-weight: bold;
+        }
     }
 }
     
@@ -28,7 +39,6 @@
         &-skill-left {
             padding-right: 16px;
             text-align: right;
-            font-weight: bold;
             box-sizing: border-box;
         }
     }
