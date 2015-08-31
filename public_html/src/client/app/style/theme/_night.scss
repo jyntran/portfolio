@@ -6,6 +6,10 @@ body.night { background-color: $black; }
         color: $white;
     }
 
+    a {
+        color: $white;
+    }
+
     &.logo {
         background-position-y: 100%;
     }
@@ -29,7 +33,7 @@ body.night { background-color: $black; }
     .navigation {
         &-item {
             background-color: transparent;
-            &:hover { background-color: $white-a10; }
+            /*&:hover { background-color: $white-a10; }*/
         }
         &-link {
             color: $white-a80;
@@ -56,6 +60,9 @@ body.night { background-color: $black; }
             color: $white-a80;
             &:hover { color: $white; }        
         }
+        .tag {
+            background-color: $white-a10;
+        }
     }
 
 
@@ -81,7 +88,7 @@ body.night { background-color: $black; }
                 background-color: $black;
             }
             &-nothumb {
-                path { fill: $white-a40; }
+                path { fill: $red; }
             }
         }
         .work-info {
@@ -93,7 +100,7 @@ body.night { background-color: $black; }
         }
         .work-actions {
             background-color: $black;
-            border-top: 1px solid $white-a20;
+            /*border-top: 1px solid $white-a20;*/
             border-left: none;
             border-right: none;
             border-bottom: none;

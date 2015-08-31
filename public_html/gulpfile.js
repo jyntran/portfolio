@@ -132,11 +132,12 @@ gulp.task('index', function(){
       .pipe(gulp.dest(dist));
 });
 
-gulp.task('start', ['build', 'test'], function () {
+gulp.task('start', ['build'], function () {
   return nodemon({
     script: server + 'app.js',
-    ext: 'js html scss css',
-    env: { 'NODE_ENV': 'development' }
+    env: { 'NODE_ENV': 'development' },
+    ignore: ['*.js'],
+    tasks: ['build']
   })
 })
 
@@ -144,4 +145,4 @@ gulp.task('test', ['specs']);
 
 gulp.task('build', ['styles', 'index']);
 gulp.task('watch', ['watch-angular', 'watch-views', 'watch-styles', 'watch-specs']);
-gulp.task('default', ['start']);
+gulp.task('default', ['build', 'start']);

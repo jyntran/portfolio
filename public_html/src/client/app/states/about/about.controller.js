@@ -8,7 +8,6 @@
         var vm = this;
 
         vm.bio;
-        vm.photo;
 
         init();
         /////
@@ -22,13 +21,13 @@
             var about = ApiService.getAbout();
             vm.bio = about.bio;
             vm.photo = about.photo;
+            vm.music = about.music;
         }
 
         function populateCurrent() {
             ApiService.getCurrent()
                 .then(
                     function(resp) {
-                        console.log(resp)
                         vm.current = resp;
                     },
                     function(error) {

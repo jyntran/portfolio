@@ -10,6 +10,12 @@
   box-shadow: $all;
 }
 
+@mixin clip-path ($all) {
+  -webkit-clip-path: $all;
+  -moz-clip-path: $all;
+  clip-path: $all;
+}
+
 @mixin column-count ($num) {
   -webkit-column-count: $num;
   -moz-column-count: $num;
@@ -29,6 +35,11 @@
   -webkit-order: $num;
   -ms-flex-order: $num;
   order: $num;
+}
+
+@mixin mask ($all) {
+  -webkit-mask: $all;
+  mask: $all;
 }
 
 @mixin transition ($all) {
