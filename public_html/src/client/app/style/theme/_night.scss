@@ -10,6 +10,10 @@ body.night { background-color: $black; }
         color: $white;
     }
 
+    ul li span {
+        color: $white-a80;
+    }
+
     &.logo {
         background-position-y: 100%;
     }
@@ -69,7 +73,7 @@ body.night { background-color: $black; }
     /* container */
 
     &.container {
-        color: $white-a60;
+        color: $white-a80;
         > a { color: $white; }
         .view section {
             background-color: $black-a80;

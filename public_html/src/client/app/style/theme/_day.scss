@@ -6,6 +6,14 @@ body.day { background-color: $white; }
         color: $black;
     }
 
+    a {
+        color: $black;
+    }
+
+    ul li span {
+        color: $black-a80;
+    }
+
     &.logo {
         background-position-y: 0%;
     }
@@ -62,7 +70,7 @@ body.day { background-color: $white; }
     /* container */
 
     &.container {
-        color: $black-a60; 
+        color: $black-a80; 
         > a { color: $black; }
         .view section {
             background-color: $white-a80;

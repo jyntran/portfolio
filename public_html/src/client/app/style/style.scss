@@ -41,6 +41,12 @@ a {
 
 ul {
     box-sizing: border-box;
+    color: $red;
+    list-style-type: square;
+}
+
+em {
+  color: $red;
 }
 
 input, textarea {
@@ -188,4 +194,10 @@ quote {
     &:before{
         content: '#';
     }
+}
+
+.top {
+    padding: 8px 16px;
+    margin: 16px 0;
+    @include border-radius(4px);
 }

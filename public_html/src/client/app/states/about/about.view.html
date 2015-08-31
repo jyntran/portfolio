@@ -1,4 +1,5 @@
 <section data-ng-controller="AboutCtrl as ctrl">
+    <h2>About</h2>
     <article>
         <div class="pure-g">
             <div data-ng-if="ctrl.photo" class="pure-u-1 pure-u-sm-1-2">
@@ -15,13 +16,13 @@
             </div>
             <div class="pure-u-1" data-ng-if="ctrl.current">
                 <div class="current-anime" data-ng-if="ctrl.current.anime">
-                    <h2>Current Animé</h2>
+                    <h2>Animé</h2>
                     <a ng-href="{{ctrl.current.anime.url}}">
                     <div class="current-anime-banner">
                         <div class="current-anime-overlay">
                         </div>
                         <div class="current-anime-overlay current-anime-info">
-                            <!-- <div class="current-anime-info-heading">Animé</div> -->
+                            <!-- <div class="current-anime-info-heading">Current</div> -->
                             <div class="current-anime-info-title title">{{ctrl.current.anime.title}}</div>
                             <div class="current-anime-info-subtitle subtitle">{{ctrl.current.anime.subtitle}}</div>
                         </div>

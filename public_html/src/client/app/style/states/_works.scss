@@ -3,8 +3,6 @@
     z-index: 4;
     position: relative;
     padding: 0px 16px 8px;
-    margin: 16px 0;
-    @include border-radius(4px);
 
     .checkbox, .radio {
         margin-top: 16px;
