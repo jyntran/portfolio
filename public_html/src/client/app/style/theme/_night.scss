@@ -48,6 +48,9 @@ body.night {
             &:before {
                 background-color: $gray-dark;
             }
+            &:focus {
+                color: $red;
+            }
         }
         .footnote {
             color: $white-a80;

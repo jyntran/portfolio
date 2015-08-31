@@ -32,6 +32,10 @@
         &.ng-leave {
             right: 0;
         }
+
+        &.ng-leave {
+            @include transition-delay(0.1s);
+        }
     }
 }
 

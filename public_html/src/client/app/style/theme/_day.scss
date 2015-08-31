@@ -48,6 +48,9 @@ body.day {
             &:before {
                 background-color: $gray;
             }
+            &:focus {
+                color: $red;
+            }
         }
         .footnote {
             color: $black-a80;
