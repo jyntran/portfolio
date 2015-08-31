@@ -1,6 +1,6 @@
 <div class="header" data-ng-controller="HeaderCtrl as ctrl" theme-sensitive>
     <div class="header-bar">
-        <div class="header-toggle" data-ng-click="ctrl.toggleMenu()"><span class="icon-menu"></span></div>
+        <div class="header-toggle" data-ng-click="ctrl.toggleMenu()" data-ng-class="{'header-toggle-active':ctrl.showMenu}"><span class="icon-menu"></span></div>
     </div>
     <div class="header-menu" data-ng-if="ctrl.showMenu">
         <div class="navigation">

@@ -1,4 +1,7 @@
-body.day { background-color: $white; }
+body.day {
+    background-color: $white;
+    color: $black-a80;
+}
 
 .day {
 
@@ -27,6 +30,7 @@ body.day { background-color: $white; }
         }
         &-toggle {
             color: $black;
+            &:active, &:focus, &-active { color: $red; }
         }
         &-menu {
             background-color: $white;
@@ -45,12 +49,15 @@ body.day { background-color: $white; }
                 background-color: $gray;
             }
         }
+        .footnote {
+            color: $black-a80;
+        }
     }
 
     .social {
         &-link {
             color: $black-a80;
-            &:hover { color: $black; }        
+            &:hover { color: $red; }        
         }
     }
 

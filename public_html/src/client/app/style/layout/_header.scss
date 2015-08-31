@@ -11,6 +11,7 @@
         padding: 0 8px;
         position: absolute;
         right: 0;
+        @include transition(all 0.4s);
     }
     &-menu {
         position: absolute;
