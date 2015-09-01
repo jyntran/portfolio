@@ -38,7 +38,7 @@
     }
 
     &-thumbnail {
-        @include border-radius(4px 4px 0 0);
+        @include border-radius(4px);
         box-sizing: border-box;
 
         img, svg {
@@ -176,10 +176,22 @@
             display: inline-block;
             position: relative;
             width: 25%;
+            height: 175px;
+            overflow: hidden;
 
             img, svg {
                 border: none;
                 cursor: initial;
+                position: absolute;
+                width: auto;
+                height: 100%;
+                @include transform(scale(1));
+                @include transition(all 0.4s);
+                @include grayscale();
+                &:hover {
+                    @include grayscaleOff();
+                    @include transform(scale(1.05));
+                }
             }
             &-nothumb {
                 padding: 16px;
