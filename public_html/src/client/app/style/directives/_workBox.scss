@@ -40,9 +40,13 @@
     &-thumbnail {
         @include border-radius(4px);
         box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
 
         img, svg {
-            @include border-radius(inherit);
+            z-index: 2;
+            @include border-radius(4px);
             cursor: pointer;
             width: 100%;
             @include transition(all 0.4s);
@@ -65,7 +69,7 @@
     }
 
     &-info {
-        z-index: 1;
+        z-index: 4;
         position: absolute;
         top: 0;
         left: 0; 
