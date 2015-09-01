@@ -29,15 +29,14 @@
         width: 160px;
         height: 160px;
         margin: auto;
-        background-color: $red;
         @include border-radius(4px);
         img {
             height: 100%;
             position: absolute;
             left: 50%;
             @include transform(translateX(-50%));
-            @include grayscale();
             @include transition(all 0.2s);
+            @include grayscale();
             &:hover {
                 @include grayscaleOff();
             }
