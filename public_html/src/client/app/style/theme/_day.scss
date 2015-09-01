@@ -18,7 +18,7 @@ body.day {
     }
 
     &.logo {
-        background-position: 0%;
+        background-position: 0% 0%;
     }
 
     /* header */
@@ -91,7 +91,7 @@ body.day {
     &.filter {
         background-color: $white-a40;
         .tag {
-            background-color: $black-a10;
+            //background-color: $black-a10;
         }
     }
 
@@ -135,15 +135,9 @@ body.day {
                 span {
                     color: $black-a60;
                 }
-                &-disabled {
-                    background-color: $gray-lighter;
-                    span {
-                        color: $gray-light;
-                    }
-            
-                    &:hover {
-                        background-color: $gray-lighter;
-                    }
+        		&:hover {
+	          	    background-color: $red;
+                    color: $white;
                 }
             }
         }

@@ -34,6 +34,7 @@
 
                 function toggleInfo() {
                     scope.showInfo = !scope.showInfo;
+                    console.log(scope.showInfo)
                 }
 
                 // responsive

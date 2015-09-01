@@ -48,7 +48,7 @@
                 margin: auto;
                 max-width: 768px;
                 min-height: 100%;
-		position: relative;
+        		position: relative;
 
                 article {
                     padding-left: 0px;
@@ -63,10 +63,6 @@
                     &.ng-enter.ng-enter-active,
                     &.ng-leave {
                         opacity: 1;
-                    }
-
-                    &:not(:last-child) {
-                        border-bottom: 1px solid $black-a40;
                     }
                 }
             }
