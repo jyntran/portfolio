@@ -7,6 +7,13 @@
 @import 'theme/day';
 @import 'theme/night';
 
+::-moz-selection {
+  background-color: $red-a60;
+}
+::selection {
+  background-color: $red-a60;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -206,3 +213,4 @@ quote {
     margin: 0;
     @include border-radius(4px);
 }
+

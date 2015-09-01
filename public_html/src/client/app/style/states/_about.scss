@@ -18,10 +18,11 @@
 .current {
     &-icon {
         color: $red;
-        margin: auto 4px;
+        margin-right: 4px;
     }
     &-box {
         margin: 16px auto;
+        width: 160px;
     }
     &-thumb {
         overflow: hidden;

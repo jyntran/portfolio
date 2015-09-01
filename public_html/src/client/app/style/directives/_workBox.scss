@@ -70,7 +70,7 @@
         display: block;
         background-color: transparent;
         box-sizing: border-box;
-        border: 1px solid $gray;
+        //border: 1px solid $gray;
         @include border-radius(4px);
         @include transition-duration(0.4s);
         @include transition-timing-function(ease);
