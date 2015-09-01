@@ -7,11 +7,12 @@
     }
     &-download {
         position: absolute;
-        right: 0;
+    	right: 0;
         text-align: right;
-        a {
+	a {
             margin: 4px;
             padding: 4px;
+    	    font-size: 1.4em;
             &:hover {
                 color: $red;
             }

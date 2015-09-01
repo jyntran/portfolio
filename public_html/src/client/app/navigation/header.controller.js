@@ -22,9 +22,10 @@
             };
         }
 
-        function toggleMenu() {
+        function toggleMenu(event) {
             vm.showMenu = !vm.showMenu;
             event.stopPropagation();
+            event.preventDefault();
         };
     }
 })();

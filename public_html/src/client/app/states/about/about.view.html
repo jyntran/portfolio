@@ -2,20 +2,22 @@
     <h2>About</h2>
     <article>
         <div class="pure-g">
-            <div data-ng-if="ctrl.photo" class="pure-u-1 pure-u-sm-1-2">
+            <div data-ng-if="ctrl.photo" class="pure-u-1 pure-u-sm-1-3">
                 <img ng-src="{{ctrl.photo}}" class="pure-img about-photo"/>
             </div><!--
-         --><div class="pure-u-1 pure-u-sm-1-2" data-ng-if="ctrl.bio">
+         --><div class="pure-u-1 pure-u-sm-2-3" data-ng-if="ctrl.bio">
                 <p class="about-bio">{{ctrl.bio}}</p>
             </div>
-            <div class="pure-u-1" data-ng-if="ctrl.music">
-                <h2>Music</h2>
-                <ul>
-                    <li data-ng-repeat="artist in ctrl.music"><a ng-href="{{artist.data.uri}}">{{artist.name}}</li>
-                </ul>
-            </div>
-            <div class="pure-u-1" data-ng-if="ctrl.current">
-                <current-anime anime="ctrl.current.anime"></current-anime>
+            <div class="pure-u-1">
+                <h3>Currently Into</h3>
+                <div class="pure-g">
+                    <div class="current-box pure-u-1 pure-u-sm-1-3" data-ng-repeat="item in ctrl.current">
+                        <a ng-href="{{item.url}}">
+                            <div class="current-thumb"><img ng-src="{{item.thumb}}"></div>
+                            <div class="current-caption"><span class="icon-{{item.type}} current-icon"></span>&nbsp;<span>{{item.caption}}</span></div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </article>

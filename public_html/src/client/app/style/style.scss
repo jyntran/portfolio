@@ -30,6 +30,12 @@ html, button, input, select, textarea,
 h1, h2 {
     font-weight: 400;
     text-transform: uppercase;
+    margin: 0.2em 0;
+    letter-spacing: 0.2em;
+}
+
+h3 {
+    font-weight: 100;
 }
 
 a {
@@ -197,6 +203,6 @@ quote {
 
 .top {
     padding: 8px 16px;
-    margin: 16px 0;
+    margin: 0;
     @include border-radius(4px);
 }

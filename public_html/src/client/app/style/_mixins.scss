@@ -10,6 +10,12 @@
   box-shadow: $all;
 }
 
+@mixin box-sizing ($all) {
+  -webkit-box-sizing: $all;
+  -moz-box-sizing: $all;
+  box-sizing: $all;
+}
+
 @mixin clip-path ($all) {
   -webkit-clip-path: $all;
   -moz-clip-path: $all;
@@ -35,6 +41,17 @@
   -webkit-order: $num;
   -ms-flex-order: $num;
   order: $num;
+}
+
+@mixin grayscale() {
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+@mixin grayscaleOff() {
+  filter: none;
+  -webkit-filter: grayscale(0);
 }
 
 @mixin mask ($all) {

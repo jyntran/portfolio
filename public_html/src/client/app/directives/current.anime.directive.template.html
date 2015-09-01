@@ -1,17 +1,17 @@
-<div class="current-anime">
+<div class="current">
     <h2>Animé</h2>
     <a ng-href="{{anime.url}}">
-    <div class="current-anime-banner">
-        <div class="current-anime-overlay">
-        </div>
-        <div class="current-anime-overlay current-anime-info">
-            <!-- <div class="current-anime-info-heading">Current</div> -->
-            <div class="current-anime-info-title title">{{anime.title}}</div>
-            <div class="current-anime-info-subtitle subtitle">{{anime.subtitle}}</div>
-        </div>
-        <div data-ng-repeat="anime in anime.data" class="current-anime-item">
-            <div class="current-anime-item-thumb"><img ng-src="{{anime.cover_image}}"/></div>
-        </div>
-    </div>
+    	<div class="current-banner">
+        	<div class="current-overlay">
+        	</div>
+        	<div class="current-overlay current-info">
+            		<!-- <div class="current-info-heading">Current</div> -->
+            		<div class="current-info-title title">{{anime.title}}</div>
+            		<div class="current-info-subtitle subtitle">{{anime.subtitle}}</div>
+        	</div>
+        	<div data-ng-repeat="anime in anime.data" class="current-item">
+            		<div class="current-item-thumb"><img ng-src="{{anime.cover_image}}"/></div>
+        	</div>
+    	</div>
     </a>
 </div>

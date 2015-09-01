@@ -1,6 +1,6 @@
 <div class="header" data-ng-controller="HeaderCtrl as ctrl" theme-sensitive>
     <div class="header-bar">
-        <div class="header-toggle" data-ng-click="ctrl.toggleMenu()" data-ng-class="{'header-toggle-active':ctrl.showMenu}"><span class="icon-menu"></span></div>
+        <div class="header-toggle" data-ng-click="ctrl.toggleMenu($event)" data-ng-class="{'header-toggle-active':ctrl.showMenu}"><span class="icon-menu"></span></div>
     </div>
     <div class="header-menu" data-ng-if="ctrl.showMenu">
         <div class="navigation">
@@ -10,7 +10,7 @@
                 <li class="navigation-item"><a href class="navigation-link" ui-sref="resume">Résumé</a></li>
                 <li class="navigation-item"><a href class="navigation-link" ui-sref="contact">Contact</a></li>
                 <li class="navigation-item"><a href class="navigation-link" ui-sref="about">About</a></li>
-                <li class="navigation-item"><a href="http://blog.jyntran.ca" class="navigation-link">Blog <span class="arrow-right2"></span></a></li>
+                <li class="navigation-item"><a href="http://blog.jyntran.ca" class="navigation-link">Blog &gt;</a></li>
             </ul>
         </div>
         <div class="social">
