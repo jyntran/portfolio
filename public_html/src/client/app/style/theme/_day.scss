@@ -60,7 +60,8 @@ body.day {
     .social {
         &-link {
             color: $black-a80;
-            &:hover { color: $red; }        
+            &:hover { color: $black; }
+            &:active { color: $red; }
         }
     }
 

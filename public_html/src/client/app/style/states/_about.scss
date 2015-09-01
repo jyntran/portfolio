@@ -35,10 +35,11 @@
             position: absolute;
             left: 50%;
             @include transform(translateX(-50%));
-            @include transition(all 0.2s);
+            @include transition(all 0.4s);
             @include grayscale();
             &:hover {
                 @include grayscaleOff();
+                @include transform(translateX(-50%) scale(1.05));
             }
         }
     }

@@ -60,7 +60,8 @@ body.night {
     .social {
         &-link {
             color: $white-a80;
-            &:hover { color: $red; }        
+            &:hover { color: $white; }
+            &:active { color: $red; }
         }
     }
 
@@ -73,9 +74,6 @@ body.night {
         a {
             color: $white-a80;
             &:hover { color: $white; }        
-        }
-        .tag {
-            background-color: $white-a10;
         }
     }
 
@@ -92,6 +90,9 @@ body.night {
 
     &.filter {
         background-color: $black-a80;
+        .tag {
+            background-color: $white-a10;
+        }
     }
 
     &.work-block {
@@ -110,7 +111,7 @@ body.night {
             background-color: $black-a80;
         }
         .work-tag {
-            background-color: $white-a10;
+            background-color: $white-a20;
         }
         .work-actions {
             background-color: $black;
