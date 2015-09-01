@@ -45,8 +45,12 @@
             @include border-radius(inherit);
             cursor: pointer;
             width: 100%;
-            @include transition-duration(0.2s)
-            ;            
+            @include transition(all 0.4s);
+            @include grayscale();
+            &:hover {
+                @include grayscaleOff();
+                @include transform(scale(1.05));
+            }
             &.portrait {
                 width: 100%;
                 height: auto;

@@ -15,19 +15,19 @@
                 templateUrl: '/src/client/app/states/home/home.view.html'
             })
             .state('work', {
-                url: '/',
+                url: '/works',
                 templateUrl: '/src/client/app/states/work/work.view.html'
             })
             .state('resume', {
-                url: '/',
+                url: '/resume',
                 templateUrl: '/src/client/app/states/resume/resume.view.html'
             })
             .state('about', {
-                url: '/',
+                url: '/about',
                 templateUrl: '/src/client/app/states/about/about.view.html'
             })
             .state('contact', {
-                url: '/',
+                url: '/contact',
                 templateUrl: '/src/client/app/states/contact/contact.view.html'
             });
     }
