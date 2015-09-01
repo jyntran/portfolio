@@ -114,7 +114,7 @@ body.night {
             background-color: $white-a20;
         }
         .work-actions {
-            background-color: $black;
+            //background-color: $black;
             /*border-top: 1px solid $white-a20;*/
             border-left: none;
             border-right: none;
@@ -122,24 +122,15 @@ body.night {
         }
         .work-action {
             &:not(:first-child) {
-                border-left: 1px solid $white-a20;
+                //border-left: 1px solid $white-a20;
             }
             &-link {
+                border-color: $gray;
                 span {
                     color: $white-a80;
                 }
                 &:hover {
-                    background-color: $white-a20;
-                }
-                &-disabled {
-                    background-color: transparent;
-                    span {
-                        color: $white-a20;
-                    }
-            
-                    &:hover {
-                        background-color: transparent;
-                    }
+                    background-color: $red-a60;
                 }
             }
         }

@@ -75,6 +75,7 @@
         @include transition-duration(0.4s);
         @include transition-timing-function(ease);
         @include transition-property(all);
+        cursor: pointer;
 
         &.ng-hide-remove,
         &.ng-hide-add.ng-hide-add-active {
@@ -89,11 +90,18 @@
         &-wrap {
             padding: 16px;
             position: absolute;
+            width: 100%;
+            height: 100%;
+            @include box-sizing(border-box);
         }
     }
 
     &-tags {
         font-size: 14px;
+        padding: 8px;
+        margin: 8px;
+        text-align: center;
+        display: none;
     }
 
     &-tag {
@@ -116,36 +124,22 @@
 
     &-actions {
         z-index: 2;
-        position: relative;
-        margin-top: -4px;
         width: 100%;
         text-align: center;
-        @include border-radius(0 0 4px 4px);
         box-sizing: border-box;
     }
 
     &-action {
         box-sizing: border-box;
         height: 2.8em;
-
-        &:first-child:not(:last-child) {
-            @include border-radius(0 0 0 4px);
-        }
-
-        &:last-child:not(:first-child) {
-            @include border-radius(0 0 4px 0);
-        }
-
-        &:not(:first-child) {
-            /*border-left: 1px solid $gray-light;*/
-        }
+        display: inline-block;
 
         &-link {
+            padding: 8px;
+            text-transform: uppercase;
+            border: 2px solid $gray;
+            margin: 8px;
             display: block;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            @include border-radius(inherit);
 
             &-disabled {
                 span {
@@ -185,6 +179,7 @@
 
             img, svg {
                 border: none;
+                cursor: initial;
             }
             &-nothumb {
                 padding: 16px;
@@ -200,6 +195,7 @@
             vertical-align: top;
             border: none;
             @include border-radius(0px);
+            cursor: initial;
 
             &.ng-hide {
                 display: inline-block!important;
@@ -207,17 +203,15 @@
         }
 
         &-actions {
-            width: 25%;
+            text-align: left;
         }
 
         &-action {
-            height: 32px;
-
             &-link {
-                span {
-                    font-size: 16px;
-                    line-height: 32px;
-                }
+                padding: 4px;
+                margin: 4px;
+                border-width: 1px;
+                font-size: 12px;
             }
         }
     }

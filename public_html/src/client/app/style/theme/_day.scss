@@ -120,7 +120,7 @@ body.day {
             background-color: $black-a10;
         }
         .work-actions {
-            background-color: $white;
+            //background-color: $white;
             /*border-top: 1px solid $gray-light;*/
             /*border-bottom: 1px solid $gray;*/
             /*border-left: 1px solid $gray;*/
@@ -131,6 +131,7 @@ body.day {
                 /*border-left: 1px solid $gray-light;*/
             }
             &-link {
+                border-color: $gray;
                 span {
                     color: $black-a60;
                 }
