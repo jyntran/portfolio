@@ -34,6 +34,7 @@
                                 file = 'clear';
                         }
                         elem.css('background-image', 'url(/app/style/img/weather_'+file+'.jpg)');
+                        scope.weatherBg = '/app/style/img/weather_'+file+'.jpg';
                     }
                 })
             }

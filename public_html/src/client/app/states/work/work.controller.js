@@ -12,7 +12,10 @@
         vm.filtering = 'all';
 
         vm.isActive = isActive;
-        vm.showLightbox = showLightbox;
+
+        vm.lightbox = null;
+
+        // vm.showLightbox = showLightbox;
 
         init();
         //////////
@@ -25,15 +28,7 @@
         }
 
         function populateWorks() {
-            ApiService.getWorks()
-                .then(
-                    function(resp) {
-                        vm.works = resp.data;
-                    },
-                    function(error) {
-                        console.log(error)
-                    }
-                )
+            vm.works = ApiService.getWorks();
         }
 
         function isActive(work) {
@@ -50,9 +45,9 @@
                 return inCode && inArt;
         }
 
-        function showLightbox(preview) {
-            vm.show = true;
-            vm.preview = preview;
-        }
+        // function showLightbox(preview) {
+        //     vm.show = true;
+        //     vm.preview = preview;
+        // }
     }
 })();

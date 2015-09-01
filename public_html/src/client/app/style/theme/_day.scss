@@ -1,50 +1,68 @@
+body.day {
+    background-color: $white;
+    color: $black-a80;
+}
+
 .day {
 
     h1, h2, h3, h4 {
         color: $black;
     }
 
+    a {
+        color: $black;
+    }
+
+    ul li span {
+        color: $black-a80;
+    }
+
+    &.logo {
+        background-position: 0%;
+    }
+
     /* header */
 
-    &.custom-menu-wrapper {
-        background-color: $white;
-        border-bottom: 1px solid $gray;
+    .header {
+        &-bar {
+            background-color: $white;
+            border-bottom: 1px solid $gray;
+        }
+        &-toggle {
+            color: $black;
+            &:active, &:focus, &-active { color: $red; }
+        }
+        &-menu {
+            background-color: $white;
+            border-left: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+        }
+    }
+    .navigation {
+        &-item {
+            background-color: transparent;
+            /*&:hover { background-color: $black-a10; }*/
+        }
+        &-link {
+            color: $black-a80;
+            &:before {
+                background-color: $gray;
+            }
+            &:focus {
+                color: $red;
+            }
+        }
+        .footnote {
+            color: $black-a80;
+        }
     }
 
-    .custom-menu .pure-menu-link,
-    .custom-menu .pure-menu-heading {
-        color: $black-a80;
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu .pure-menu-link:hover,
-    .custom-menu .pure-menu-heading:hover {
-        background-color: transparent;
-        color: $black;
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu .pure-menu-link:focus,
-    .custom-menu .pure-menu-heading:focus {
-        background-color: transparent;
-        border-bottom: 2px solid $red;
-    }
-
-    .custom-menu .pure-menu-heading.custom-menu-brand:focus {
-        border-bottom: 2px solid transparent;
-    }
-
-    .custom-menu-toggle .bar {
-        background-color: $gray;
-    }
-
-    .custom-menu-screen {
-        background-color: $white;
-        border-bottom: 1px solid $gray;
-    }
-
-    .custom-menu-tucked .custom-menu-screen {
-        border-bottom: 1px solid $gray;
+    .social {
+        &-link {
+            color: $black-a80;
+            &:hover { color: $black; }
+            &:active { color: $red; }
+        }
     }
 
 
@@ -63,7 +81,7 @@
     /* container */
 
     &.container {
-        color: $black-a60; 
+        color: $black-a80; 
         > a { color: $black; }
         .view section {
             background-color: $white-a80;
@@ -72,6 +90,9 @@
 
     &.filter {
         background-color: $white-a40;
+        .tag {
+            background-color: $black-a10;
+        }
     }
 
 
@@ -80,18 +101,18 @@
     &.work-block {
 
         .work-thumbnail {
-            border-top: 1px solid $gray;
-            border-left: 1px solid $gray;
-            border-right: 1px solid $gray;
+            /*border-top: 1px solid $gray;*/
+            /*border-left: 1px solid $gray;*/
+            /*border-right: 1px solid $gray;*/
             img, svg {
                 background-color: $white;
             }
             &-nothumb {
-                path { fill: $gray-light; }
+                path { fill: $red; }
             }
         }
         .work-info {
-            border: 1px solid $gray;
+            /*border: 1px solid $gray;*/
             /*border: 1px solid transparent;*/
             background-color: $white-a90;
         }
@@ -99,17 +120,18 @@
             background-color: $black-a10;
         }
         .work-actions {
-            background-color: $white;
-            border-top: 1px solid $gray-light;
-            border-bottom: 1px solid $gray;
-            border-left: 1px solid $gray;
-            border-right: 1px solid $gray;
+            //background-color: $white;
+            /*border-top: 1px solid $gray-light;*/
+            /*border-bottom: 1px solid $gray;*/
+            /*border-left: 1px solid $gray;*/
+            /*border-right: 1px solid $gray;*/
         }
         .work-action {
             &:not(:first-child) {
-                border-left: 1px solid $gray-light;
+                /*border-left: 1px solid $gray-light;*/
             }
             &-link {
+                border-color: $gray;
                 span {
                     color: $black-a60;
                 }
@@ -127,6 +149,8 @@
         }
     }
 }
+
+.resume-skill-heading.day { color: $black; }
 
 @media screen and (min-width: 568px) {
 

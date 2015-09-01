@@ -1,31 +1,29 @@
 <section data-ng-controller="WorkCtrl as ctrl">
     <h2>Works</h2>
-    <div class="filter" theme-sensitive>
+    <div class="top filter" theme-sensitive>
         <div class="pure-g">
             <div class="radio pure-u-1-2 pure-u-sm-1-4">
                 <input id="workFilterAll" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="all">
-                <label for="workFilterAll"><span>All</span></label>
+                <label for="workFilterAll"><span class="tag">All</span></label>
             </div>
             <div class="radio pure-u-1-2 pure-u-sm-1-4">
                 <input id="workFilterArt" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="art">
-                <label for="workFilterArt"><span>Art</span></label>
+                <label for="workFilterArt"><span class="tag">Art</span></label>
             </div>
             <div class="radio pure-u-1-2 pure-u-sm-1-4">
                 <input id="workFilterCode" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="code">
-                <label for="workFilterCode"><span>Code</span></label>
+                <label for="workFilterCode"><span class="tag">Code</span></label>
             </div>
             <div class="radio pure-u-1-2 pure-u-sm-1-4">
                 <input id="workFilterBoth" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="both">
-                <label for="workFilterBoth"><span>Both</span></label>
+                <label for="workFilterBoth"><span class="tag">Both</span></label>
             </div>
         </div>
     </div>
     
-    <lightbox lightbox-open="ctrl.preview" lightbox-show="ctrl.show"></lightbox>
-
     <div class="pure-g">
         <div data-ng-repeat="work in ctrl.works | filter:ctrl.isActive" class="work pure-u-1">
-            <work-box data="work" preview="work.preview" show="ctrl.show" theme="theme" ng-cloak></work-box>
+            <work-box data="work" lightbox="ctrl.lightbox" theme="theme" ng-cloak></work-box>
         </div>
     </div>   
 </section>

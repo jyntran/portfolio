@@ -7,7 +7,7 @@
     function ResumeCtrl(ApiService){
         var vm = this;
 
-        vm.technical,
+        vm.skills,
         vm.history,
         vm.awards;
 
@@ -19,17 +19,12 @@
         }
 
         function populateResume() {
-            ApiService.getResume()
-                .then(
-                    function(resp) {
-                        vm.technical = resp.data.technical;
-                        vm.history = resp.data.history;
-                        vm.awards = resp.data.awards;
-                    },
-                    function(error) {
-                        console.log(error)
-                    }
-                )
+            var resume = ApiService.getResume();
+            vm.skills = resume.skills;
+            vm.history = resume.history;
+            vm.other = resume.other;
+            vm.awards = resume.awards;
+            vm.download = resume.download;
         }
     }
 })();

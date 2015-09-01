@@ -20,12 +20,12 @@
                 init();
                 /////
                 function init() {
-                    scope.$on('resize::resize', function(){
-                        if (innerWidth >= 568)
-                            smResp();
-                        else
+                    scope.$watch('resp', function(resp){
+                        if (resp == null)
                             defaultResp();
-                        scope.$apply();
+                        else
+                            smResp();
+                        // scope.$apply();
                     })
 
                     if (!scope.work.preview)

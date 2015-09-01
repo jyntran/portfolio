@@ -8,7 +8,6 @@
         var vm = this;
 
         vm.bio;
-        vm.photo;
 
         init();
         /////
@@ -18,16 +17,10 @@
         }
 
         function populateAbout() {
-            ApiService.getAbout()
-                .then(
-                    function(resp) {
-                        vm.bio = resp.data.bio;
-                        vm.photo = resp.data.photo;
-                    },
-                    function(error) {
-                        console.log(error)
-                    }
-                )
+            var about = ApiService.getAbout();
+            vm.bio = about.bio;
+            vm.photo = about.photo;
+            vm.current = about.current;
         }
     }
 })();

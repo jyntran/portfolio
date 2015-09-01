@@ -9,11 +9,11 @@ router.use(function(req, res, next) {
     next(); 
 });
 
+router.get('/get/master', apiHandler.getMaster);
+
 router.get('/get/quote', apiHandler.getQuote);
 router.get('/get/weather', apiHandler.getWeather);
-router.get('/get/works', apiHandler.getWorks);
-router.get('/get/resume', apiHandler.getResume);
-router.get('/get/about', apiHandler.getAbout);
+router.get('/get/current', apiHandler.getCurrent);
 
 router.post('/contact', contactHandler.sendEmail);
 
