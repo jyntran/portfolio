@@ -2,12 +2,10 @@
     'use strict';
 
     angular.module('app')
-    .directive('resize', function($window){
+    .directive('resize', function($window, Responsive){
         return {
             link: function(scope) {
-                scope.resp = null;
-                
-                angular.element($window).on('resize', function(e) {
+                angular.element($window).on('load resize', function(e) {
                     var w = $window,
                         x = w.innerWidth,
                         y = w.innerHeight;
@@ -16,12 +14,14 @@
 
                 function checkWidth(x) {
                     if (x >= 568 && x < 768)
-                        scope.resp = 'sm';
+                        Responsive.setResp('sm');
                     else if (x >= 768 && x < 1024)
-                        scope.resp = 'md';
+                        Responsive.setResp('md');
+                    else if (x >= 1024)
+                        Responsive.setResp('lg');
                     else
-                        scope.resp = 'lg';
-                    return scope.resp;
+                        Responsive.setResp(null);
+                    return Responsive.getResp();
                 }
             }
         }

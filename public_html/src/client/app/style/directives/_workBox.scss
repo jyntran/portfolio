@@ -38,7 +38,7 @@
     }
 
     &-thumbnail {
-        @include border-radius(4px);
+        @include border-radius(2px);
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
@@ -46,15 +46,10 @@
 
         img, svg {
             z-index: 2;
-            @include border-radius(4px);
+            @include border-radius(2px);
             cursor: pointer;
             width: 100%;
             @include transition(all 0.4s);
-            @include grayscale();
-            &:hover {
-                @include grayscaleOff();
-                @include transform(scale(1.05));
-            }
             &.portrait {
                 width: 100%;
                 height: auto;

@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('app')
-    .directive('workBox', function(){
+    .directive('workBox', function(Responsive){
         return {
             restrict: 'EA',
             scope: {
@@ -13,19 +13,18 @@
             templateUrl: '/app/directives/workBox.directive.template.html',
             link: function(scope, elem, attr) {
                 scope.showInfo = false;
-                scope.enableInfo = true;
 
                 scope.toggleInfo = toggleInfo;
 
                 init();
                 /////
                 function init() {
-                    scope.$watch('resp', function(resp){
+                    // scope.$watch('resp', function(resp){
+                    scope.$watch( function() { return Responsive.getResp() }, function(resp){
                         if (resp == null)
                             defaultResp();
                         else
                             smResp();
-                        // scope.$apply();
                     })
 
                     if (!scope.work.preview)
@@ -33,8 +32,8 @@
                 }
 
                 function toggleInfo() {
-                    scope.showInfo = !scope.showInfo;
-                    console.log(scope.showInfo)
+                    if (scope.enableInfo)
+                        scope.showInfo = !scope.showInfo;
                 }
 
                 // responsive
