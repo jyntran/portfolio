@@ -29,6 +29,10 @@
             .state('contact', {
                 url: '/contact',
                 templateUrl: '/src/client/app/states/contact/contact.view.html'
+            })
+            .state('blog', {
+                url: '/',
+                templateUrl: '/src/client/app/states/blog/blog.view.html'
             });
     }
 
