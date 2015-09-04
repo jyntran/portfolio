@@ -13,48 +13,47 @@
 	z-index: 10;
 	top: -55px;
 	right: 0;
-	.header {
+	&-header {
 		background: #222;
 		border-bottom: 4px solid #c00;
 		height: 120px;
 		line-height: 40px;
 	}
-	.content {
+	&-content {
 		background: white;
+		text-align: center;
 	}
 }
 
 .spinner {
-	text-align: center;
 	margin: 4em auto;
     position: absolute;
     width: 100%;
 	
 	span {
 		font-size: 4em;
-		position: absolute;
 		
-		@include animation(loading-bar-spinner 400ms linear infinite);
+		@include animation(animate-spinner 800ms linear infinite);
 	}
 }
 
-@-webkit-keyframes loading-bar-spinner {
+@-webkit-keyframes animate-spinner {
 	0%   { @include transform(rotate(0deg)); }
 	100% { @include transform(rotate(360deg)); }
 }
-@-moz-keyframes loading-bar-spinner {
+@-moz-keyframes animate-spinner {
 	0%   { @include transform(rotate(0deg)); }
 	100% { @include transform(rotate(360deg)); }
 }
-@-o-keyframes loading-bar-spinner {
+@-o-keyframes animate-spinner {
 	0%   { @include transform(rotate(0deg)); }
 	100% { @include transform(rotate(360deg)); }
 }
-@-ms-keyframes loading-bar-spinner {
+@-ms-keyframes animate-spinner {
 	0%   { @include transform(rotate(0deg)); }
 	100% { @include transform(rotate(360deg)); }
 }
-@keyframes loading-bar-spinner {
+@keyframes animate-spinner {
 	0%   { @include transform(rotate(0deg)); }
 	100% { @include transform(rotate(360deg)); }
 }
