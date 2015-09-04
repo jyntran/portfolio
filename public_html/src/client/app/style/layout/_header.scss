@@ -55,6 +55,12 @@
         padding: 8px;
         display: block;
         font-size: 24px;
+        &-label {}
+        &-icon {
+            position: absolute;
+            right: 0;
+            margin-right: 8px;
+        }
         &:before {
             content: "";
             position: absolute;
