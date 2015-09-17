@@ -1,7 +1,7 @@
 <section data-ng-controller="ResumeCtrl as ctrl">
     <div class="top resume-download" theme-sensitive>
         <a href="{{ctrl.download.pdf}}" alt="Download PDF" title="Download PDF"><span class="icon-file-pdf"></span></a>
-        <a href="{{ctrl.download.latex}}" alt="Download LaTeX" title="Download LaTeX"><span class="icon-file-text2"></span></a>
+        <a href="{{ctrl.download.latex}}" alt="Download LaTeX" title="Download LaTeX"><span class="icon-file-text2" data-ng-if="ctrl.download.latex"></span></a>
     </div>
     <h2>Skill Set</h2>
     <article>
