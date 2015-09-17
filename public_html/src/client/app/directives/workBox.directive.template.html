@@ -11,6 +11,9 @@
                 <span><span class="work-tag tag" data-ng-repeat="tag in work.tags">{{tag}}</span></span>
             </div>
             <div class="work-actions">
+                <div class="work-action" data-ng-if="work.preview.full">
+                    <a href data-ng-click="setLightbox(work.preview.full)">Preview</a>
+                </div>
                 <div class="work-action" data-ng-if="work.url.live">
                     <a data-ng-href="{{work.url.live}}" class="work-action-link" alt="Live" title="Live" target="_blank">Live</a>
                 </div>

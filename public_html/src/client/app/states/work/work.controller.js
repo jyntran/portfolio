@@ -25,6 +25,8 @@
                 //console.log('[WorkCtrl] width: '+innerWidth);
             });
             populateWorks();
+            console.log('lightbox')
+            console.log(vm.lightbox)
         }
 
         function populateWorks() {

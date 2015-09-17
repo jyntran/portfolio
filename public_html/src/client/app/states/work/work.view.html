@@ -20,10 +20,12 @@
             </div>
         </div>
     </div>
+
+    <lightbox current="ctrl.lightbox"></lightbox>
     
     <div class="pure-g"><!--
     --><div data-ng-repeat="work in ctrl.works | filter:ctrl.isActive" class="work pure-u-1"><!--
-         --><work-box data="work" theme="theme" ng-cloak></work-box><!--
+         --><work-box data="work" theme="theme" current="ctrl.lightbox" ng-cloak></work-box><!--
     --></div><!--
  --></div>   
 </section>

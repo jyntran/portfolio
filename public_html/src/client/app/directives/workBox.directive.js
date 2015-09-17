@@ -7,7 +7,8 @@
             restrict: 'EA',
             scope: {
                 work: "=data",
-                theme: "="
+                theme: "=",
+                current: "="
             },
             replace:true,
             templateUrl: '/app/directives/workBox.directive.template.html',
@@ -15,6 +16,8 @@
                 scope.showInfo = false;
 
                 scope.toggleInfo = toggleInfo;
+
+                scope.setLightbox = setLightbox;
 
                 init();
                 /////
@@ -34,6 +37,12 @@
                 function toggleInfo() {
                     if (scope.enableInfo)
                         scope.showInfo = !scope.showInfo;
+                }
+
+                function setLightbox(preview) {
+                    console.log('setLightbox')
+                    scope.current = preview;
+                    console.log(scope.current);
                 }
 
                 // responsive
