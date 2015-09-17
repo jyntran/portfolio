@@ -15,8 +15,6 @@
 
         vm.lightbox = null;
 
-        // vm.showLightbox = showLightbox;
-
         init();
         //////////
 
@@ -25,8 +23,6 @@
                 //console.log('[WorkCtrl] width: '+innerWidth);
             });
             populateWorks();
-            console.log('lightbox')
-            console.log(vm.lightbox)
         }
 
         function populateWorks() {
@@ -46,10 +42,5 @@
             else if (vm.filtering == 'both')
                 return inCode && inArt;
         }
-
-        // function showLightbox(preview) {
-        //     vm.show = true;
-        //     vm.preview = preview;
-        // }
     }
 })();

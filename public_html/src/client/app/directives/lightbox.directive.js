@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('app')
-    .directive('lightbox', function(){
+    .directive('lightbox', function($document){
         return {
             scope: {
                 preview: "=current"
@@ -14,7 +14,14 @@
 
                 init();
                 /////
-                function init() {}
+                function init() {
+                    $document.bind('keydown', function(e) {
+                        if (e.which == 27 || e.which == 88) { // ESC or X
+                            close();
+                            scope.$apply();
+                        }
+                    });
+                }
 
                 function close() {
                     scope.preview = null;
