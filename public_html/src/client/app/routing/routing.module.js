@@ -31,7 +31,7 @@
                 templateUrl: '/src/client/app/states/contact/contact.view.html'
             })
             .state('blog', {
-                url: '/',
+                url: '/blog',
                 templateUrl: '/src/client/app/states/blog/blog.view.html'
             });
     }
@@ -40,4 +40,4 @@
         ApiService.getMaster();
     }
 
-})();
+})()
