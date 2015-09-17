@@ -95,6 +95,23 @@ body.night {
         }
     }
 
+
+    /* lightbox */
+
+    &.lightbox {
+
+        &-modal img {
+            border-color: $black;
+        }
+
+        &-close {
+            background-color: $black;
+        }
+    }
+
+
+    /* workBox */
+
     &.work-block {
 
         .work-thumbnail {

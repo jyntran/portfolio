@@ -11,8 +11,11 @@
                 <span><span class="work-tag tag" data-ng-repeat="tag in work.tags">{{tag}}</span></span>
             </div>
             <div class="work-actions">
+                <div class="work-action" data-ng-if="work.preview.fullPortrait">
+                    <a href data-ng-if="work.preview.fullPortrait" data-ng-click="setLightbox(work.preview.fullPortrait, true)" class="work-action-link" alt="Preview" title="Preview">Preview</a>
+                </div>
                 <div class="work-action" data-ng-if="work.preview.full">
-                    <a href data-ng-click="setLightbox(work.preview.full)">Preview</a>
+                    <a href data-ng-if="work.preview.full" data-ng-click="setLightbox(work.preview.full, false)" class="work-action-link" alt="Preview" title="Preview">Preview</a>
                 </div>
                 <div class="work-action" data-ng-if="work.url.live">
                     <a data-ng-href="{{work.url.live}}" class="work-action-link" alt="Live" title="Live" target="_blank">Live</a>
