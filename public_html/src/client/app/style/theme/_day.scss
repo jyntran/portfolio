@@ -96,6 +96,20 @@ body.day {
     }
 
 
+    /* lightbox */
+
+    &.lightbox {
+
+        &-modal img {
+            border-color: $white;
+        }
+
+        &-close {
+            background-color: $white;
+        }
+    }
+
+
     /* workBox */
 
     &.work-block {

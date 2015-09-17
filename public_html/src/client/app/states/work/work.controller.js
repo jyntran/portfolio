@@ -15,8 +15,6 @@
 
         vm.lightbox = null;
 
-        // vm.showLightbox = showLightbox;
-
         init();
         //////////
 
@@ -44,10 +42,5 @@
             else if (vm.filtering == 'both')
                 return inCode && inArt;
         }
-
-        // function showLightbox(preview) {
-        //     vm.show = true;
-        //     vm.preview = preview;
-        // }
     }
 })();
