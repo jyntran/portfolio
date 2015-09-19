@@ -141,7 +141,7 @@
             padding: 8px;
             text-transform: uppercase;
             border: 2px solid $gray;
-            margin: 8px;
+            margin: 0px;
             display: block;
 
             &-disabled {
@@ -212,7 +212,6 @@
         &-action {
             &-link {
                 padding: 4px;
-                margin: 4px;
                 border-width: 1px;
                 font-size: 12px;
             }
