@@ -16,8 +16,9 @@
             link: function(scope, elem, attr) {
                 scope.showInfo = false;
 
-                scope.toggleInfo = toggleInfo;
+                scope.thumbAction = thumbAction;
 
+                scope.toggleInfo = toggleInfo;
                 scope.setLightbox = setLightbox;
 
                 init();
@@ -37,9 +38,15 @@
                         scope.hasPreview = scope.work.preview.full || scope.work.preview.fullPortrait;
                 }
 
-                function toggleInfo() {
+                function thumbAction() {
                     if (scope.enableInfo)
-                        scope.showInfo = !scope.showInfo;
+                        toggleInfo();
+                    else
+                        setLightbox();
+                }
+
+                function toggleInfo() {
+                    scope.showInfo = !scope.showInfo;
                 }
 
                 function setLightbox() {
