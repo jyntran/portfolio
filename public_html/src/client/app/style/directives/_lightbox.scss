@@ -35,12 +35,15 @@
 
     &-modal {
         position: fixed;
-        left: 4%;
-        right: 4%;
+        /*margin-left: 4%;*/
+        /*margin-right: 4%;*/
+        padding: 0 4%;
+        width: 100%;
         top: 12.5%;
+        left: 0;
         margin-top: 0px;
         z-index: 999;
-        @include box-shadow(1px 1px 4px 0px $gray-a40);
+        @include box-sizing(border-box);
 
         &.ng-enter,
         &.ng-leave.ng-leave-active {
@@ -55,54 +58,34 @@
         }
 
         img {
+            background-color: $white;
             border: 8px solid $white;
             @include box-sizing(border-box);
             width: 100%;
             height: auto;
         }
-    }
-
-    &-modal-portrait {
-        top: 4%;
-
-        img {
-            /*height: 100%;*/
-            /*width: auto;*/
-        }
-    }
-
-    &-close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 4px;
-        padding: 8px;
-        line-height: 16px;
-        background-color: $white;
-        @include border-radius(0 0 0 4px);
-
-        &:hover span {
-            color: $gray-light;
-        }
-
-        span {
-            color: $gray;
-            font-size: 16px;
-        }
-
-    }
-}
-
-@media screen and (min-width: 768px) {
-
-.lightbox {
-    &-modal {
-        left: 18%;
-        right: 18%;
-        top: 25%;
 
         &-portrait {
             top: 4%;
+            bottom: 4%;
+            padding: 0;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 568px) {
+
+.lightbox {
+    &-modal {
+        /*padding: 0 18%;*/
+
+        &-portrait {
+            /*top: 4%;*/
         }
     }
 }

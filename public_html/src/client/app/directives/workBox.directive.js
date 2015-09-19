@@ -11,7 +11,7 @@
                 current: "=",
                 isPortrait: "="
             },
-            replace:true,
+            replace: true,
             templateUrl: '/app/directives/workBox.directive.template.html',
             link: function(scope, elem, attr) {
                 scope.showInfo = false;
@@ -33,6 +33,8 @@
 
                     if (!scope.work.preview)
                         scope.showInfo = true;
+                    else
+                        scope.hasPreview = scope.work.preview.full || scope.work.preview.fullPortrait;
                 }
 
                 function toggleInfo() {
@@ -40,13 +42,21 @@
                         scope.showInfo = !scope.showInfo;
                 }
 
-                function setLightbox(url, isPortrait) {
-                    console.log('setLightbox')
-                    scope.current = {
-                        url: url,
-                        isPortrait: isPortrait
-                    };
-                    console.log(scope.current);
+                function setLightbox() {
+                    if (scope.hasPreview) {
+                        var url, isPortrait;
+                        if (scope.work.preview.full) {
+                            url = scope.work.preview.full;
+                            isPortrait = false;
+                        } else if (scope.work.preview.fullPortrait) {
+                            url = scope.work.preview.fullPortrait;
+                            isPortrait = true;
+                        }
+                        scope.current = {
+                            url: url,
+                            isPortrait: isPortrait
+                        };
+                    }
                 }
 
                 // responsive
