@@ -78,14 +78,12 @@
     }
 }
 
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 768px) {
 
 .lightbox {
     &-modal {
-        /*padding: 0 18%;*/
-
-        &-portrait {
-            /*top: 4%;*/
+        img {
+            max-width: 768px;
         }
     }
 }
