@@ -7,8 +7,6 @@
     function AboutCtrl(ApiService){
         var vm = this;
 
-        vm.bio;
-
         init();
         /////
 
@@ -17,10 +15,9 @@
         }
 
         function populateAbout() {
-            var about = ApiService.getAbout();
-            vm.bio = about.bio;
-            vm.photo = about.photo;
-            vm.current = about.current;
+            vm.about = (function() {
+                return ApiService.getAbout();
+            })();
         }
     }
 })();
