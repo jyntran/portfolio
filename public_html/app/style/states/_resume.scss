@@ -1,0 +1,59 @@
+.resume {
+    &-entry {
+        @include flex(column);
+    }
+    &-heading {
+        @include flex-order(0);
+        margin-top: 0;
+        span { font-size: 14px; }
+    }
+    &-subheading {
+        @include flex-order(1);
+    }
+    &-date {
+        @include flex-order(2);
+        position: relative;
+    }
+    &-info {
+        @include flex-order(3);
+    }
+}
+    
+/* sm */
+@media screen and (min-width: 568px) {
+
+    .resume {
+        &-entry {
+//            background-color: $white;
+//            border: 1px solid $gray;
+//            @include border-radius(4px);
+//            padding: 16px;
+//            margin: 16px;
+        }
+        &-skill-list {
+            @include column-count(2);
+        }
+    }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+
+    .resume {
+        &-entry {
+            display: block;
+        }
+        &-skill-list {
+            @include column-count(3);
+        }
+        &-date {
+            position: relative;
+            span {
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 1em 0;
+            }
+        }
+    }
+}

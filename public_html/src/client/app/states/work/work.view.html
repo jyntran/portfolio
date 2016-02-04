@@ -1,0 +1,31 @@
+<section data-ng-controller="WorkCtrl as ctrl">
+    <h2>Works</h2>
+    <div class="top filter" theme-sensitive>
+        <div class="pure-g">
+            <div class="radio pure-u-1-2 pure-u-sm-1-4">
+                <input id="workFilterAll" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="all">
+                <label for="workFilterAll"><span class="tag">All</span></label>
+            </div>
+            <div class="radio pure-u-1-2 pure-u-sm-1-4">
+                <input id="workFilterArt" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="art">
+                <label for="workFilterArt"><span class="tag">Art</span></label>
+            </div>
+            <div class="radio pure-u-1-2 pure-u-sm-1-4">
+                <input id="workFilterCode" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="code">
+                <label for="workFilterCode"><span class="tag">Code</span></label>
+            </div>
+            <div class="radio pure-u-1-2 pure-u-sm-1-4">
+                <input id="workFilterBoth" type="radio" ng-model="ctrl.filtering" name="workFilterToggle" value="both">
+                <label for="workFilterBoth"><span class="tag">Both</span></label>
+            </div>
+        </div>
+    </div>
+
+    <lightbox current="ctrl.lightbox"></lightbox>
+    
+    <div class="pure-g"><!--
+    --><div data-ng-repeat="work in ctrl.works | filter:ctrl.isActive" class="work pure-u-1"><!--
+         --><work-box data="work" theme="theme" current="ctrl.lightbox" ng-cloak></work-box><!--
+    --></div><!--
+ --></div>   
+</section>

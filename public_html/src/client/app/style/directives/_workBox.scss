@@ -1,0 +1,220 @@
+.work {
+    max-width: 22em;
+    max-height: 28em;
+    position: relative;
+    margin: 0 auto 16px auto;
+    list-style: none;
+    z-index: 3;
+
+    @include transition-duration(0.4s);
+    @include transition-timing-function(ease);
+    @include transition-property(all);
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+        top: 0;
+        max-height: 28em;
+        z-index: 1;
+        /*@include transform(scale(1,1));*/
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+        top: -24px;
+        max-height: 0em;
+        z-index: 1;
+        /*@include transform(scale(1,0));*/
+    }  
+
+    &.ng-enter-stagger, &.ng-leave-stagger {
+        @include transition-delay(0.2s);
+        @include transition-duration(0s);
+    }  
+    
+    &-block {
+        position: relative;
+    }
+
+    &-thumbnail {
+        @include border-radius(2px);
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+
+        img, svg {
+            z-index: 2;
+            @include border-radius(2px);
+            cursor: pointer;
+            width: 100%;
+            @include transition(all 0.4s);
+            &.portrait {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-nothumb {
+            height: 100%;
+            padding: 16%;
+            box-sizing: border-box;
+            path { /*fill: $gray-light;*/ }
+        }
+    }
+
+    &-info {
+        z-index: 4;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: transparent;
+        box-sizing: border-box;
+        //border: 1px solid $gray;
+        @include border-radius(4px);
+        @include transition-duration(0.4s);
+        @include transition-timing-function(ease);
+        @include transition-property(all);
+        cursor: pointer;
+
+        &.ng-hide-remove,
+        &.ng-hide-add.ng-hide-add-active {
+            opacity: 0;
+        }
+
+        &.ng-hide-add,
+        &.ng-hide-remove.ng-hide-remove-active {
+            opacity: 1;
+        }
+
+        &-wrap {
+            padding: 16px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include box-sizing(border-box);
+        }
+    }
+
+    &-tags {
+        font-size: 14px;
+        padding: 8px;
+        margin: 8px;
+        text-align: center;
+        display: none;
+    }
+
+    &-tag {
+        padding: 4px;
+        margin-right: 4px;
+        font-family: monospace;
+        @include border-radius(4px);
+        &:before{
+            content: '#';
+        }
+    }
+
+    &-title {
+        margin: 0 0 16px;
+    }
+
+    &-description {
+        min-height: 40px;
+    }
+
+    &-actions {
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    &-action {
+        box-sizing: border-box;
+        height: 2.8em;
+        display: inline-block;
+
+        &-link {
+            padding: 8px;
+            text-transform: uppercase;
+            border: 2px solid $gray;
+            margin: 0px;
+            display: block;
+
+            &-disabled {
+                span {
+                }
+            }
+        }        
+
+        &:hover {
+        }
+
+        span { 
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+    }
+}
+
+/* sm */
+@media screen and (min-width: 568px) {
+    .work {
+        max-width: none;
+        max-height: none;
+        width: 100%;
+        bottom: 0;
+        margin: 0;
+        padding: 8px;
+        box-sizing: border-box;
+
+        &-block {
+            width: 100%;
+        }
+
+        &-thumbnail {
+            display: inline-block;
+            position: relative;
+            width: 25%;
+            overflow: hidden;
+
+            img, svg {
+                border: none;
+            }
+            &-nothumb {
+                padding: 16px;
+            }
+        }
+
+        &-info {
+            display: inline-block;
+            position: relative;
+            width: 75%;
+            max-height: 11em;
+            background: none;
+            vertical-align: top;
+            border: none;
+            @include border-radius(0px);
+            cursor: initial;
+
+            &.ng-hide {
+                display: inline-block!important;
+            }
+        }
+
+        &-actions {
+            text-align: left;
+        }
+
+        &-action {
+            &-link {
+                padding: 4px;
+                border-width: 1px;
+                font-size: 12px;
+            }
+        }
+    }
+}

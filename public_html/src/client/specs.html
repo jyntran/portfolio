@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Spec Runner</title>
+  <link rel="stylesheet" href="../bower_components/mocha/mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="/node_modules/mocha/mocha.js"></script>
+  <script src="/node_modules/chai/chai.js"></script>
+  <script src="/node_modules/mocha-clean/index.js"></script>
+  <script src="/node_modules/sinon-chai/lib/sinon-chai.js"></script>
+  <script src="/node_modules/chai-as-promised/lib/chai-as-promised.js"></script>
+
+  <script>mocha.setup('bdd');</script>
+
+  <script>
+    var assert = chai.assert;
+    var expect = chai.expect;
+    var should = chai.should();
+  </script>
+  <!-- bower:js -->
+  <!-- endinject -->
+  <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+  <!-- angular:js -->
+  <!-- endinject -->
+  <!-- specs:js -->
+  <!-- endinject -->
+  <script>
+    if (navigator.userAgent.indexOf('PhantomJS') === -1) {
+      mocha.run();
+    }
+  </script>
+</body>
+</html>

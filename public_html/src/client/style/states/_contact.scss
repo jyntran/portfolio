@@ -1,0 +1,14 @@
+.contact {
+    &-form {
+        width: 100%;
+        max-width: 480px;
+        textarea {
+            min-height: 240px;
+            resize: vertical;
+        }
+    }
+}
+
+.input-verify {
+    display: none!important;
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>J. Tran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Angular -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/app/app.module.js"></script>
+    <script src="/app/routing/routing.module.js"></script>
+    <script src="/app/routing/list.routes.js"></script>
+    <script src="/app/states/work/work.controller.js"></script>
+    <script src="/app/states/resume/resume.controller.js"></script>
+    <script src="/app/states/contact/contact.controller.js"></script>
+    <script src="/app/providers/apiService.service.js"></script>
+    <script src="/app/providers/contactService.service.js"></script>
+    <script src="/app/providers/timeService.service.js"></script>
+    <script src="/app/directives/horizontalScrollMenu.directive.js"></script>
+    <script src="/app/directives/themeSensitive.directive.js"></script>
+    <script src="/app/directives/time.directive.js"></script>
+    <script src="/app/directives/lightbox.directive.js"></script>
+    <script src="/app/directives/quote.directive.js"></script>
+    <script src="/app/directives/weather.directive.js"></script>
+    <script src="/app/directives/weatherBg.directive.js"></script>
+    <script src="/app/directives/workBox.directive.js"></script>
+    <script src="/app/directives/resize.directive.js"></script>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css" />
+
+    <!-- Pure -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Molengo" />
+    <link rel="stylesheet" type="text/css" href="/app/css/style.css" />
+
+</head>
+
+<body ng-app="app" resize time weather weather-bg>
+
+    <div class="body">
+        <horizontal-scroll-menu active="false" theme="theme"></horizontal-scroll-menu>
+
+        <div class="container" theme-sensitive>
+            <div class="content">
+                <div data-ui-view class="view"></div>
+            </div>
+            <div data-ng-include="'/app/navigation/footer.view.html'"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</body>
+</html>

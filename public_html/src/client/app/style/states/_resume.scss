@@ -1,0 +1,78 @@
+.resume {
+    h2, h3 {
+        margin: 0;
+    }
+    h2 {
+        margin-bottom: 16px;
+    }
+    &-download {
+        position: absolute;
+    	right: 0;
+        text-align: right;
+	a {
+            margin: 4px;
+            padding: 4px;
+    	    font-size: 1.4em;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+    &-entry {
+        @include flex(column);
+    }
+    &-heading {
+        @include flex-order(0);
+        margin-top: 0;
+        span { font-size: 14px; }
+    }
+    &-subheading {
+        @include flex-order(1);
+    }
+    &-date {
+        @include flex-order(2);
+        position: relative;
+    }
+    &-info {
+        @include flex-order(3);
+    }
+    &-skill {
+        margin-bottom: 12px;
+        &-left {
+            font-weight: bold;
+        }
+        &-entry {
+            &:not(:last-child):after { content: ', ' };
+        }
+    }
+}
+    
+/* sm */
+@media screen and (min-width: 568px) {
+    .resume {
+        &-skill-left {
+            padding-right: 16px;
+            text-align: right;
+            box-sizing: border-box;
+        }
+    }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+
+    .resume {
+        &-entry {
+            display: block;
+        }
+        &-date {
+            position: relative;
+            &-text {
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 1em 0;
+            }
+        }
+    }
+}

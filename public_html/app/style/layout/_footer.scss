@@ -1,0 +1,75 @@
+.footer {
+    z-index: 5;
+    width: 100%;
+    min-height: 48px;
+    padding: 8px;
+    bottom: 0;
+    box-sizing: border-box;
+    @include transition-duration(300ms);
+
+    .social {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 16px;
+
+        a {
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            padding: 8px;
+        }
+    }
+
+    .footnote {
+        margin: auto;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .widgets {
+        text-align: center;
+        margin: auto;
+        padding: 8px 1.6em;
+        font-size: 0.8em;
+        span {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+
+    .weather {
+        text-align: left;
+    }
+    .theysaidso {
+        text-align: right;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 568px) {
+
+.footer {
+
+    .social {
+        text-align: left;
+        margin-bottom: auto;
+        a {
+            font-size: 16px;
+            width: 16px;
+            height: 16px;
+            padding: 4px;
+        }
+    }
+
+    .widgets {
+        padding: 0;
+        text-align: right;
+    }
+
+    .weather {
+        text-align: right;
+    }
+}
+
+}

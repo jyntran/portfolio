@@ -1,0 +1,140 @@
+.day {
+
+    h1, h2, h3, h4 {
+        color: $black;
+    }
+
+    /* header */
+
+    &.custom-menu-wrapper {
+        background-color: $white;
+        border-bottom: 1px solid $gray;
+    }
+
+    .custom-menu .pure-menu-link,
+    .custom-menu .pure-menu-heading {
+        color: $black-a80;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu .pure-menu-link:hover,
+    .custom-menu .pure-menu-heading:hover {
+        background-color: transparent;
+        color: $black;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu .pure-menu-link:focus,
+    .custom-menu .pure-menu-heading:focus {
+        background-color: transparent;
+        border-bottom: 2px solid $red;
+    }
+
+    .custom-menu .pure-menu-heading.custom-menu-brand:focus {
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-menu-toggle .bar {
+        background-color: $gray;
+    }
+
+    .custom-menu-screen {
+        background-color: $white;
+        border-bottom: 1px solid $gray;
+    }
+
+    .custom-menu-tucked .custom-menu-screen {
+        border-bottom: 1px solid $gray;
+    }
+
+
+    /* footer */
+
+    &.footer {
+        background-color: $white;
+        border-top: 1px solid $gray;
+        a {
+            color: $black-a80;
+            &:hover { color: $black; }        
+        }        
+    }
+
+
+    /* container */
+
+    &.container {
+        color: $black-a60; 
+        > a { color: $black; }
+        .view section { background-color: $white-a80; }
+    }
+
+    &.filter {
+        background-color: $white-a40;
+    }
+
+
+    /* workBox */
+
+    &.work-block {
+
+        .work-thumbnail {
+            border-top: 1px solid $gray;
+            border-left: 1px solid $gray;
+            border-right: 1px solid $gray;
+            img, svg {
+                background-color: $white;
+            }
+            &-nothumb {
+                path { fill: $gray-light; }
+            }
+        }
+        .work-info {
+            border: 1px solid $gray;
+            /*border: 1px solid transparent;*/
+            background-color: $white-a90;
+        }
+        .work-tag {
+            background-color: $black-a10;
+        }
+        .work-actions {
+            background-color: $white;
+            border-top: 1px solid $gray-light;
+            border-bottom: 1px solid $gray;
+            border-left: 1px solid $gray;
+            border-right: 1px solid $gray;
+        }
+        .work-action {
+            &:not(:first-child) {
+                border-left: 1px solid $gray-light;
+            }
+            &-link {
+                span {
+                    color: $black-a60;
+                }
+                &-disabled {
+                    background-color: $gray-lighter;
+                    span {
+                        color: $gray-light;
+                    }
+            
+                    &:hover {
+                        background-color: $gray-lighter;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 568px) {
+
+.day {
+    &.work-block {
+        .work-info {
+            border: none;
+            background-color: none;
+        }
+    }
+}
+
+}

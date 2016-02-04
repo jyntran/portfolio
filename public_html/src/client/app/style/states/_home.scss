@@ -1,0 +1,29 @@
+.home {
+    margin: auto;
+    text-align: center;
+
+    @include transition-duration(0.4s);
+    @include transition-delay(0.4s);
+    @include transition-timing-function(ease);
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+}
+
+.logo {
+    margin: 24px auto;
+    width: 240px;
+    height: 360px;
+    overflow: hidden;
+    background-image: url('/assets/img/_logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

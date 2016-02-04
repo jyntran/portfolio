@@ -1,0 +1,174 @@
+body.day {
+    background-color: $white;
+    color: $black-a80;
+}
+
+.day {
+
+    h1, h2, h3, h4 {
+        color: $black;
+    }
+
+    a {
+        color: $black;
+    }
+
+    ul li span {
+        color: $black-a80;
+    }
+
+    &.logo {
+        background-position: 0% 0%;
+    }
+
+    /* header */
+
+    .header {
+        &-bar {
+            background-color: $white;
+            border-bottom: 1px solid $gray;
+        }
+        &-toggle {
+            color: $black;
+            &:active, &:focus, &-active { color: $red; }
+        }
+        &-menu {
+            background-color: $white;
+            border-left: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+        }
+    }
+    .navigation {
+        &-item {
+            background-color: transparent;
+            /*&:hover { background-color: $black-a10; }*/
+        }
+        &-link {
+            color: $black-a80;
+            &:before {
+                background-color: $gray;
+            }
+            &:focus {
+                color: $red;
+            }
+        }
+        .footnote {
+            color: $black-a80;
+        }
+    }
+
+    .social {
+        &-link {
+            color: $black-a80;
+            &:hover { color: $black; }
+            &:active { color: $red; }
+        }
+    }
+
+
+    /* footer */
+
+    &.footer {
+        background-color: $white;
+        border-top: 1px solid $gray;
+        a {
+            color: $black-a80;
+            &:hover { color: $black; }        
+        }        
+    }
+
+
+    /* container */
+
+    &.container {
+        color: $black-a80; 
+        > a { color: $black; }
+        .view section {
+            background-color: $white-a80;
+        }
+    }
+
+    &.filter {
+        background-color: $white-a40;
+        .tag {
+            //background-color: $black-a10;
+        }
+    }
+
+
+    /* lightbox */
+
+    &.lightbox {
+
+        &-modal img {
+            border-color: $white;
+        }
+
+        &-close {
+            background-color: $white;
+        }
+    }
+
+
+    /* workBox */
+
+    &.work-block {
+
+        .work-thumbnail {
+            /*border-top: 1px solid $gray;*/
+            /*border-left: 1px solid $gray;*/
+            /*border-right: 1px solid $gray;*/
+            img, svg {
+                background-color: $white;
+            }
+            &-nothumb {
+                path { fill: $red; }
+            }
+        }
+        .work-info {
+            /*border: 1px solid $gray;*/
+            /*border: 1px solid transparent;*/
+            background-color: $white-a90;
+        }
+        .work-tag {
+            background-color: $black-a10;
+        }
+        .work-actions {
+            //background-color: $white;
+            /*border-top: 1px solid $gray-light;*/
+            /*border-bottom: 1px solid $gray;*/
+            /*border-left: 1px solid $gray;*/
+            /*border-right: 1px solid $gray;*/
+        }
+        .work-action {
+            &:not(:first-child) {
+                /*border-left: 1px solid $gray-light;*/
+            }
+            &-link {
+                border-color: $gray;
+                span {
+                    color: $black-a60;
+                }
+        		&:hover {
+	          	    background-color: $red;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.resume-skill-heading.day { color: $black; }
+
+@media screen and (min-width: 568px) {
+
+.day {
+    &.work-block {
+        .work-info {
+            border: none;
+            background-color: none;
+        }
+    }
+}
+
+}

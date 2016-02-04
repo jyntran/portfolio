@@ -1,0 +1,117 @@
+@mixin animation ($all) {
+  animation: $all;
+  -ms-animation: $all;
+  -o-animation: $all;
+  -moz-animation: $all;
+  -webkit-animation: $all;
+}
+
+@mixin border-radius ($all) {
+  border-radius: $all;
+  -moz-border-radius: $all;
+  -webkit-border-radius: $all;
+}
+
+@mixin box-shadow ($all) {
+  -webkit-box-shadow: $all;
+  -moz-box-shadow: $all;
+  box-shadow: $all;
+}
+
+@mixin box-sizing ($all) {
+  -webkit-box-sizing: $all;
+  -moz-box-sizing: $all;
+  box-sizing: $all;
+}
+
+@mixin clip-path ($all) {
+  -webkit-clip-path: $all;
+  -moz-clip-path: $all;
+  clip-path: $all;
+}
+
+@mixin column-count ($num) {
+  -webkit-column-count: $num;
+  -moz-column-count: $num;
+  column-count: $num;
+}
+
+@mixin flex($direction) {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-order ($num) {
+  -webkit-order: $num;
+  -ms-flex-order: $num;
+  order: $num;
+}
+
+@mixin grayscale() {
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+@mixin grayscaleOff() {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+@mixin mask ($all) {
+  -webkit-mask: $all;
+  mask: $all;
+}
+
+@mixin transition ($all) {
+  -moz-transition: $all;
+  -ms-transition: $all;
+  -webkit-transition: $all;
+  transition: $all;
+}
+
+@mixin transition-delay ($time) {
+  -moz-transition-delay: $time;
+  -ms-transition-delay: $time;
+  -webkit-transition-delay: $time;
+  transition-delay: $time;
+}
+
+@mixin transition-duration ($time) {
+  -moz-transition-duration: $time;
+  -ms-transition-duration: $time;
+  -webkit-transition-duration: $time;
+  transition-duration: $time;
+}
+
+@mixin transition-property ($type) {
+  -moz-transition-property: $type;
+  -ms-transition-property: $type;
+  -webkit-transition-property: $type;
+  transition-property: $type;
+}
+
+@mixin transition-timing-function ($type) {
+  -moz-transition-timing-function: $type;
+  -ms-transition-timing-function: $type;
+  -webkit-transition-timing-function: $type;
+  transition-timing-function: $type;
+}
+
+@mixin transform($all) {
+  transform: $all;
+  -webkit-transform: $all;
+  -moz-transform: $all;
+  -o-transform: $all;
+  -ms-transform: $all;
+}
+
+@mixin transform-origin($point) {
+  -ms-transform-origin: $point;
+  -webkit-transform-origin: $point;
+  transform-origin: $point;
+}

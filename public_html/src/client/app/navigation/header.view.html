@@ -1,0 +1,27 @@
+<div class="header" data-ng-controller="HeaderCtrl as ctrl" theme-sensitive>
+    <div class="header-bar">
+        <div class="header-toggle" data-ng-click="ctrl.toggleMenu($event)" data-ng-class="{'header-toggle-active':ctrl.showMenu}"><span class="icon-menu"></span></div>
+    </div>
+    <div class="header-menu" data-ng-if="ctrl.showMenu">
+        <div class="navigation">
+            <ul class="navigation-list">
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="home"><span class="navigation-link-label">Home</span></a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="work"><span class="navigation-link-label">Works</span></a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="resume"><span class="navigation-link-label">Résumé</span></a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="contact"><span class="navigation-link-label">Contact</span></a></li>
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="about"><span class="navigation-link-label">About</span></a></li>
+                <!-- <li class="navigation-item"><a href="http://blog.jyntran.ca" class="navigation-link">Blog &gt;</a></li> -->
+                <li class="navigation-item"><a href class="navigation-link" ui-sref="blog"><span class="navigation-link-label">Blog</span><span class="navigation-link-icon">&gt;</span></a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="http://github.com/jyntran" title="GitHub" alt="GitHub" class="social-link"><span class="icon-github2"></span></a>
+            <a href="http://ca.linkedin.com/in/jyntran" title="LinkedIn" alt="LinkedIn" class="social-link"><span class="icon-linkedin2"></span></a>
+            <a href="http://twitter.com/jyntran" title="Twitter" alt="Twitter" class="social-link"><span class="icon-twitter"></span></a>
+            <a href="http://bliptych.tumblr.com" title="tumblr" alt="tumblr" class="social-link"><span class="icon-tumblr"></span></a>
+        </div>
+        <div class="footnote">
+            <span>&copy; {{year}} J. Tran</span>
+        </div>
+    </div>
+</div>

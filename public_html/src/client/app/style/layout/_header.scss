@@ -1,0 +1,121 @@
+.header {
+    &-bar {
+        width: 100%;
+        height: 48px;
+        z-index: 8;
+    }
+    &-toggle {
+        font-size: 32px;
+        line-height: 48px;
+        cursor: pointer;
+        padding: 0 8px;
+        position: absolute;
+        right: 0;
+        @include transition(all 0.4s);
+    }
+    &-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 48px;
+        z-index: 9;
+        width: 100%;
+        @include transition-duration(0.4s);
+        @include transition-timing-function(ease);
+
+        &.ng-enter,
+        &.ng-leave.ng-leave-active {
+            right: -50%;
+        }
+
+        &.ng-enter.ng-enter-active,
+        &.ng-leave {
+            right: 0;
+        }
+
+        &.ng-leave {
+            @include transition-delay(0.1s);
+        }
+    }
+}
+
+.navigation {
+    &-list {
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+    }
+    &-item {
+        @include transition-duration(0.4s);
+        background-color: transparent;
+        text-indent: 8px;
+    }
+    &-link {
+        position: relative;
+        padding: 8px;
+        display: block;
+        font-size: 24px;
+        &-label {}
+        &-icon {
+            position: absolute;
+            right: 0;
+            margin-right: 8px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            @include transform(scaleX(0));
+            @include transform-origin(left);
+            @include transition(all 0.3s ease-in-out 0s);
+        }
+        &:hover:before {
+            visibility: visible;
+            @include transform(scaleX(1));
+        }
+    }
+}
+
+.social {
+    margin: 16px 0;
+    text-align: center;
+    &-link {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        padding: 8px;
+    }
+}
+
+.footnote {
+    margin: 24px auto;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 568px) {
+.header {
+    &-menu {
+        width: 160px;
+    }
+}
+
+.social {
+    &-link {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.navigation {
+    &-link {
+        font-size: 16px;
+    }
+}
+}

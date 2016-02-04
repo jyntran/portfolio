@@ -1,0 +1,7 @@
+<div class="lightbox" data-ng-click="close()" theme-sensitive>
+    <div ng-if="preview" class="lightbox-overlay"></div>
+    <div ng-if="preview" class="lightbox-modal" data-ng-class="{'lightbox-modal-portrait': preview.isPortrait}">
+        <div class="lightbox-content"><img ng-src="{{preview.url}}"/>
+        </div>
+    </div>
+</div>

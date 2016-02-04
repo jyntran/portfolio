@@ -1,0 +1,15 @@
+<div class="custom-menu-wrapper" theme-sensitive>
+    <div class="pure-menu custom-menu custom-menu-top">
+        <a href class="pure-menu-heading custom-menu-brand" ui-sref="home">J. Tran</a>
+        <a href class="custom-menu-toggle" id="toggle" ng-click="toggle()" data-ng-class="{'x': active}"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu"  data-ng-class="{'custom-menu-tucked': !active}">
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href class="pure-menu-link" ui-sref="work"><span class="icon-stack"></span> Works</a></li>
+            <li class="pure-menu-item"><a href class="pure-menu-link" ui-sref="resume"><span class="icon-file-text2"></span> Résumé</a></li>
+            <li class="pure-menu-item"><a href class="pure-menu-link" ui-sref="contact"><span class="icon-mail4"></span> Contact</a></li>
+            <li class="pure-menu-item"><a href="http://blog.jyntran.ca" class="pure-menu-link"><span class="icon-user"></span> Blog</a></li>
+        </ul>
+    </div>
+</div>
