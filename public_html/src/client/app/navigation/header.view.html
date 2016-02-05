@@ -1,6 +1,11 @@
 <div class="header" data-ng-controller="HeaderCtrl as ctrl" theme-sensitive>
     <div class="header-bar">
-        <div class="header-toggle" data-ng-click="ctrl.toggleMenu($event)" data-ng-class="{'header-toggle-active':ctrl.showMenu}"><span class="icon-menu"></span></div>
+        <div class="header-block header-audio" lastfm>
+            <div ng-if="lastfm">
+                <a href="http://last.fm/user/jyntran"><img src="/assets/img/eq_icon.gif" title="Currently listening to music"></a>
+            </div>
+        </div>
+        <div class="header-block header-toggle" data-ng-click="ctrl.toggleMenu($event)" data-ng-class="{'header-toggle-active':ctrl.showMenu}"><span class="icon-menu"></span></div>
     </div>
     <div class="header-menu" data-ng-if="ctrl.showMenu">
         <div class="navigation">

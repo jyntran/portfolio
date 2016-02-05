@@ -4,14 +4,19 @@
         height: 48px;
         z-index: 8;
     }
-    &-toggle {
+    &-block {
         font-size: 32px;
         line-height: 48px;
-        cursor: pointer;
         padding: 0 8px;
         position: absolute;
-        right: 0;
         @include transition(all 0.4s);
+    }
+    &-audio {
+        left: 0;
+    }
+    &-toggle {
+        right: 0;
+        cursor: pointer;
     }
     &-menu {
         position: absolute;

@@ -8,12 +8,10 @@
         var service = {
             data: {},
             getMaster: getMaster,
-            getQuote: getQuote,
-            getWeather: getWeather,
+            getLastFM: getLastFM,
             getWorks: getWorks,
             getResume: getResume,
-            getAbout: getAbout,
-            getCurrent: getCurrent
+            getAbout: getAbout
         }
         return service;
 
@@ -29,34 +27,14 @@
             });            
         }
 
-        function getQuote() {
-            return $http.get('/get/quote')
+        function getLastFM() {
+            return $http.get('/get/lastfm')
             .then(function(resp){
-                return resp.data.contents.quotes[0];
+                return resp.data.recenttracks.track[0];
             }, function(error){
-                console.log('ERROR: getQuote()')
+                console.log('ERROR: getLastFM()')
                 console.log(error)
             });
-        }
-
-        function getWeather() {
-            return $http.get('/get/weather')
-            .then(function(resp){
-                return resp.data;
-            }, function(error){
-                console.log('ERROR: getWeather()')
-                console.log(error)
-            });
-        }
-
-        function getCurrent() {
-            return $http.get('/get/current')
-            .then(function(resp){
-                return resp.data;
-            }, function(error){
-                console.log('ERROR: getCurrent()')
-                console.log(error)
-            });            
         }
 
         function getWorks() {

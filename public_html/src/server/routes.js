@@ -10,10 +10,7 @@ router.use(function(req, res, next) {
 });
 
 router.get('/get/master', apiHandler.getMaster);
-
-router.get('/get/quote', apiHandler.getQuote);
-router.get('/get/weather', apiHandler.getWeather);
-router.get('/get/current', apiHandler.getCurrent);
+router.get('/get/lastfm', apiHandler.getLastFM);
 
 router.post('/contact', contactHandler.sendEmail);
 
