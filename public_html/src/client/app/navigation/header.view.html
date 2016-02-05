@@ -1,7 +1,7 @@
 <div class="header" data-ng-controller="HeaderCtrl as ctrl" theme-sensitive>
     <div class="header-bar">
         <div class="header-block header-audio" lastfm>
-            <div ng-if="lastfm">
+            <div ng-if="lastfm['@attr'].nowplaying">
                 <a href="http://last.fm/user/jyntran"><img src="/assets/img/eq_icon.gif" title="Currently listening to music"></a>
             </div>
         </div>

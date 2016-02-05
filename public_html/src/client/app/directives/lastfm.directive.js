@@ -6,7 +6,7 @@
         return function(scope, elem, attr) {
             ApiService.getLastFM()
             .then(function(resp){
-                scope.lastfm = resp.nowplaying;
+                scope.lastfm = resp;
             })
         }
     }])
