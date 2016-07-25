@@ -1,6 +1,6 @@
 # portfolio
 
-[jyntran.ca]()
+[jyntran.ca](http://jyntran.ca)
 
 - AngularJS for front-end development
 - nodeJS for back-end development
