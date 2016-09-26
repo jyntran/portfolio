@@ -1,0 +1,507 @@
+{
+    "about" : {
+        "photo": "/assets/img/_me_320.png",
+        "bio": "Someone who is attending the University of Waterloo for mathematics and enjoys programming and integrating art with code.\r\n\r\nLikes to pass the time with movies, television, animé, and video games.\r\n\r\nOne day hopes to drive across the country One Week style.",
+        "links": [
+            {
+                "name": "Completionator",
+                "url": "http://completionator.com/Community/Profile/11240",
+                "icon": "pacman"
+            },
+            {
+                "name": "Letterboxd",
+                "url": "http://letterboxd.com/jyntran/",
+                "icon": "video-camera"
+            },
+            {
+                "name": "Last.FM",
+                "url": "http://www.last.fm/user/jyntran",
+                "icon": "headphones"
+            },
+            {
+                "name": "SideReel",
+                "url": "http://www.sidereel.com/profile/jyntran",
+                "icon": "tv"
+            }
+        ]
+    },
+    "works" : [
+        {
+            "title": "Training Places",
+            "url": {
+                "live": "https://trainingplaces.ca"
+            },
+            "description": "Canadian education and training institution database to simplify the query and application process. Uses nodeJS, ExpressJS, and AngularJS.",
+            "preview": {
+                "thumb": "/assets/img/trainingplaces-t.png",
+                "full": "/assets/img/trainingplaces-f.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Quizzle",
+            "url": {
+                "git": "https://github.com/mediaclassified/angular-quizzle",
+                "live": "http://mediaclassified.github.io/angular-quizzle"
+            },
+            "description": "Open-source AngularJS two-answer quiz directive that supports touch and swipe gestures.",
+            "preview": {
+                "thumb": "/assets/img/quizzle-t.png",
+                "full": "/assets/img/quizzle-f.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Lorem Ipsum Moe",
+            "url": {
+                "git": "https://github.com/jyntran/lorem-ipsum-moe-api",
+                "live": "http://loremipsum.moe"
+            },
+            "description": "Simple RESTful API that returns Lorem Ipsum placeholder text using romanized Japanese words. Uses NodeJS, ExpressJS, and AngularJS.",
+            "preview": {
+                "thumb": "/assets/img/moe-t.png",
+                "full": "/assets/img/moe-f.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Find Benji Game",
+            "url": {
+                "live": "http://findbenji.jyntran.ca",
+                "git": "https://github.com/jyntran/find-benji"
+            },
+            "description": "Create.JS port of a past project. Touch supported.",
+            "preview": {
+                "thumb": "/assets/img/ben-t.png",
+                "full": "/assets/img/ben-f.png"
+            },
+            "tags": [ "art", "code" ]
+        },
+        {
+            "title": "Phone.rpy",
+            "url": {
+                "git": "https://github.com/jyntran/phone.rpy",
+                "download": "/assets/renpy/Phone.rpy-1.0-all.zip"
+            },
+            "description": "Ren'Py/Python framework for a smartphone companion. Comes with a tutorial game.",
+            "preview": {
+                "thumb": "/assets/img/phonerpy-t.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Absolution",
+            "url": {
+                "live": "http://absolution.jyntran.ca",
+                "git": "https://github.com/jyntran/absolution"
+            },
+            "description": "Frame by frame animation with Javascript and a Bootstrap front-end.",
+            "preview": {
+                "thumb": "/assets/img/abs-t.png",
+                "full": "/assets/img/abs-f.png"
+            },
+            "tags": [ "art", "code" ]
+        },
+        {
+            "title": "Flight",
+            "description": "Charcoal and chalk render of the space shuttle Endeavour lifting off.",
+            "preview": {
+                "thumb": "/assets/img/endeavour-t.jpg",
+                "full": "/assets/img/endeavour-f.jpg"
+            },
+            "tags": [ "art" ]
+        },
+        {
+            "title": "Rip-off Soccer Cards",
+            "url": {
+                "live": "http://ripoffsoccercards.tk",
+                "git": "https://github.com/jyntran/Rip-off-Soccer-Cards"
+            },
+            "description": "HTML5 Canvas image creator with Bootstrap.",
+            "preview": {
+                "thumb": "/assets/img/soccer-t.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Jotto",
+            "url": {
+                "git": "https://github.com/jyntran/jotto"
+            },
+            "description": "Word guessing game in Java.",
+            "tags": [ "code" ]
+        },
+        {
+            "title": "rainyday",
+            "url": {
+                "git": "https://github.com/jyntran/rainyday"
+            },
+            "description": "Tower defence game in C/Xlib.",
+            "preview": {
+                "thumb": "/assets/img/rainyday-t.png",
+                "fullPortrait": "/assets/img/rainyday-f.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Hacked",
+            "url": {
+                "live": "https://drive.google.com/open?id=0B1w16GJvor0SUWxNaURiemZ0VU0"
+            },
+            "description": "Short video to modernize a fable using Machinima techniques in Moviestorm.",
+            "preview": {
+                "thumb": "/assets/img/hacked-t.png",
+                "full": "/assets/img/hacked-f.png"
+            },
+            "tags": [ "art" ]
+        },
+        {
+            "title": "David and Goliath",
+            "preview": {
+                "thumb": "/assets/img/dag-t.png",
+                "full": "/assets/img/dag-f.png"
+            },
+            "description": "CGI art rendered in Paint Tool SAI.",
+            "tags": [ "art" ]
+        },
+        {
+            "title": "Wishpaste",
+            "url": {
+                "live": "http://wishpaste.ga",
+                "git": "https://github.com/jyntran/wishpaste"
+            },
+            "description": "BBcode generator using a PHP/MySQL database backend and a Zurb's Foundation front-end.",
+            "preview": {
+                "thumb": "/assets/img/wishpaste-t.png",
+                "full": "/assets/img/wishpaste-f.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Wordpress Portfolio",
+            "url": {
+                "live": "http://huateasa.tk",
+                "git": "https://github.com/jyntran/gears"
+            },
+            "description": "LAMP stack with a personalized Wordpress theme. Uses the required+ parent theme by Zurb's Foundation.",
+            "preview": {
+                "thumb": "/assets/img/huateasa-t.png",
+                "full": "/assets/img/huateasa-t.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Iron Man",
+            "preview": {
+                "thumb": "/assets/img/ironman-t.jpg",
+                "fullPortrait": "/assets/img/ironman-f.jpg"
+            },
+            "description": "CGI art rendered in Paint Tool SAI.",
+            "tags": [ "art" ]
+        },
+        {
+            "title": "UWVSA",
+            "url": {
+                "live": "http://uwvsa.clubs.feds.ca/",
+                "git": "https://github.com/jyntran/uwvsa"
+            },
+            "description": "One-page website using Zurb's Foundation framework.",
+            "preview": {
+                "thumb": "/assets/img/uwvsa-t.png",
+                "full": "/assets/img/uwvsa-f.png"
+            },
+            "tags": [ "code" ]
+        },
+        {
+            "title": "Canadian North Rescue",
+            "url": {
+                "download": "http://jyntran.ca/turing/CNR.zip",
+                "git": "https://github.com/jyntran/canadian-north-rescue"
+            },
+            "description": "Traditional level game in Turing.",
+            "preview": {
+                "thumb": "/assets/img/cnr-t.jpg",
+                "full": "/assets/img/cnr-t.jpg"
+            },
+            "tags": [ "art", "code" ]
+        }
+    ],
+
+    "resume" : {
+        "download": {
+            "pdf": "/assets/file/2016_jtran_resume.pdf"    
+        },
+        "skills" : [
+            {
+                "name" : "Technical Skills",
+                "data" : [
+                    {
+                        "name" : "Proficient in",
+                        "content" : [
+                            "HTML5", "CSS3", "Javascript"
+                        ]
+                    },
+                    {
+                        "name" : "Familiar in",
+                        "content" : [
+                            "C/C++", "Java", "PHP", "Python", "Earl Grey", "C# on .NET"
+                        ]
+                    },
+                    {
+                        "name" : "Frameworks",
+                        "content" : [
+                            "AngularJS", "NodeJS", "CreateJS"
+                        ]
+                    },
+                    {
+                        "name" : "Productivity",
+                        "content" : [
+                            "Git, SVN, Microsoft Office"
+                        ]
+                    },
+                    {
+                        "name" : "Graphics",
+                        "content" : [
+                            "Adobe Creative Suite, Paint Tool SAI, Clip Studio Paint"
+                        ]
+                    } 
+                ]
+            },
+            {
+                "name" : "Life Skills",
+                "data" : [
+                    {
+                        "name" : "Intrapersonal",
+                        "content" : [
+                            "Organized", "punctual", "independent", "strong desire to learn", "quick to adapt"
+                        ]
+                    },
+                    {
+                        "name" : "Interpersonal",
+                        "content" : [
+                            "Works well in teams", "strong listening and receptive skills", "asks questions for clarity"
+                        ]
+                    }
+                ]
+            }   
+        ],
+
+        "history" : [
+            {
+                "position" : "Junior Technical Support Specialist",
+                "employer" : "University of Waterloo",
+                "duration" : "Full- and Part-Time",
+                "location" : {
+                    "city" : "Waterloo",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "September 2013",
+                    "end" : "Current"
+                },
+                "description" : [
+                    "Offered technical and informational assistance to clients regarding personal computing",
+                    "Performed thorough malware scans and installations of Windows, OS X, and Linux operating systems",
+                    "Reported problems with on-campus network systems",
+                    "Created and maintained technical support documentation on internal Sharepoint site"
+                ]
+            },
+            {
+                "position" : "Agile Test Engineer",
+                "employer" : "Pivotal",
+                "duration" : "Full-Time",
+                "location" : {
+                    "city" : "Toronto",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "May",
+                    "end" : "August 2016"
+                },
+                "description" : [
+		    "Proficient in exploratory testing and story verification in an Agile environment",
+		    "Developed iOS tests using Earl Grey UI automation framework",
+		    "Paired-programmed with team members using Java to develop a mock response server to assist in testing"
+                ]
+            },
+            {
+                "position" : "Front-End Web Developer",
+                "employer" : "Media Classified Corporation",
+                "duration" : "Full-Time",
+                "location" : {
+                    "city" : "Vaughan",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "May",
+                    "end" : "August 2015"
+                },
+                "description" : [
+                    "Developed Trainingplaces.ca, a MEAN website following Scrum (Agile) software development methodology",
+                    "Utilised a variety of API's such as Google Maps and Mandrill as well as various open source technologies",
+                    "Maintained the team’s Git repository using the feature branch workflow",
+                    "Collaborated in creating user stories, making web programming and design decisions"
+                ]
+            },
+            {
+                "position" : "Web Application Co-op",
+                "employer" : "Environment Canada",
+                "duration" : "Full-Time",
+                "location" : {
+                    "city" : "North York",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "May",
+                    "end" : "August 2014"
+                },
+                "description" : [
+                    "Collaborated in a team in providing technical support for their content management system (CMS)",
+                    "Developed new features for the internal Publishing Tool to simplify web page publishing using the .NET Framework in C#",
+                    "Wrote and ran test cases on web publishing tools as well as technical and user documentation"
+                ]
+            },
+            {
+                "position" : "Technical Writer",
+                "employer" : "RamSoft Inc.",
+                "duration" : "Full- and Part-Time",
+                "location" : {
+                    "city" : "Toronto",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "January 2013",
+                    "end" : "April 2014"
+                },
+                "description" : [
+                    "Maintained and updated various user manuals and release documents using SVN",
+                    "Collaborated with QA, development, and marketing to ensure documentation is precise and clear"
+                ]
+            },
+            {
+                "position" : "Junior Software QA Analyst",
+                "employer" : "RamSoft Inc.",
+                "duration" : "Full-Time",
+                "location" : {
+                    "city" : "Toronto",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "June",
+                    "end" : "August 2012"
+                },
+                "description" : [
+                    "Tested applications and software on a Windows server network of multiple workstations",
+                    "Wrote and performed various regression and sanity tests on PACS medical radiology software",
+                    "Investigated and reported detailed issues in cooperation with QA members and developers"
+                ]
+            }
+        ],
+
+        "other" : [
+            {
+                "position" : "Vietnamese Student Association Executive",
+                "employer" : "University of Waterloo",
+                "location" : {
+                    "city" : "Waterloo",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "September 2013",
+                    "end" : "April 2014"
+                },
+                "description" : [
+                    "Part of the marketing and media team involved in promoting various VSA events",
+                    "Created the club’s website using Zend’s Foundation framework and PHP"
+                ]
+            },
+            {
+                "position" : "Facebook Hackathon Participant",
+                "employer" : "University of Waterloo",
+                "location" : {
+                    "city" : "Waterloo",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "end" : "January 2013"
+                },
+                "description" : [
+                    "Worked in a team to develop a residence budget web application for off-campus students"
+                ]
+            },
+            {
+                "position" : "Math Society Volunteer",
+                "employer" : "University of Waterloo",
+                "location" : {
+                    "city" : "Waterloo",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "May",
+                    "end" : "August 2013"
+                },
+                "description" : [
+                    "Fulfilled office hour duties involving calculator checks, poster regulations, and sign-outs"
+                ]
+            },
+            {
+                "position" : "Graphic Designer",
+                "employer" : "Resurrection Catholic Secondary School",
+                "location" : {
+                    "city" : "Kitchener",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "start" : "September",
+                    "end" : "June 2011"
+                },
+                "description" : [
+                    "Created logos using Adobe programs and Corel Draw for use in promotion and apparel"
+                ]
+            }
+        ],
+
+        "awards" : [
+            {
+                "name" : "Vietnamese Association of Toronto Scholarship",
+                "location" : {
+                    "city" : "Mississauga",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "end" : "January 2012"
+                }
+            },
+            {
+                "name" : "Queen Elizabeth II Aiming for the Top Scholarship",
+                "location" : {
+                    "city" : "Kitchener",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "end" : "August 2012"
+                }
+            },
+            {
+                "name" : "University of Waterloo Merit Scholarship",
+                "location" : {
+                    "city" : "Waterloo",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "end" : "May 2011"
+                }
+            },
+            {
+                "name" : "1st in Graphic Design, Ontario Technological Skills Regional Competition",
+                "location" : {
+                    "city" : "Kitchener",
+                    "province" : "ON"
+                },
+                "date" : {
+                    "end" : "March 2010"
+                }
+            }
+        ]
+    }
+}
