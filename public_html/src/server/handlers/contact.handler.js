@@ -2,10 +2,7 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
 var generator = require('xoauth2').createXOAuth2Generator({
-    user: 'j.yn.tran@gmail.com',
-    clientId: '93155087723-cn6iuhqh3hef4trt5e8fndt32pv6glbr.apps.googleusercontent.com',
-    clientSecret: 'o2MKas4Zk3Y7fLN7BWAupbPB',
-    refreshToken: '1/iYwsEsHRrZCI0zIawlZJuKmDcyftzpUWziwni89Q-8JIgOrJDtdun6zK6XiATCKT'
+    //...
 });
 
 generator.on('token', function(token){
