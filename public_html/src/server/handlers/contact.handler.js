@@ -1,20 +1,7 @@
 var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
-var generator = require('xoauth2').createXOAuth2Generator({
-    //...
-});
-
-generator.on('token', function(token){
-    console.log('New token for %s: %s', token.user, token.accessToken);
-});
-
-var transporter = nodemailer.createTransport(smtpTransport({
-    service: 'Gmail',
-    auth: {
-      xoauth2: generator 
-    }
-}));
+var transporter = nodemailer.createTransport(smtpTransport('smtp://USER%40gmail.com/PASS@smtp.gmail.com'));
 
 module.exports.sendEmail = function(req, res) {
   console.log('/contact')
