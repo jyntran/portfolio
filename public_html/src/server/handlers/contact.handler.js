@@ -1,7 +1,9 @@
 var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
-var transporter = nodemailer.createTransport(smtpTransport('smtp://USER%40gmail.com/PASS@smtp.gmail.com'));
+var transporter = nodemailer.createTransport(smtpTransport({
+	/* values here */
+}));
 
 module.exports.sendEmail = function(req, res) {
   console.log('/contact')
