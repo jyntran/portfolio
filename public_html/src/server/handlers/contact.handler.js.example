@@ -2,7 +2,11 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
 var transporter = nodemailer.createTransport(smtpTransport({
-	/* values here */
+    service: 'gmail',
+    auth: {
+        user: '{USER}',
+        pass: '{PASS}'
+    }
 }));
 
 module.exports.sendEmail = function(req, res) {
@@ -11,11 +15,11 @@ module.exports.sendEmail = function(req, res) {
     var mailOptions = {
       from: data.name + ' <' + data.email + '>',
       sender: data.email,
-      to: "me@jyntran.ca",
+      to: "{RECIPIENT-EMAIL}",
       cc: data.email,
-      subject: data.subject,
+      subject: "Mail sent to {RECIPIENT-EMAIL}: " + data.subject,
       generateTextFromHTML: true,
-      html: data.message
+      html: "<p>Your message has been sent to {RECIPIENT-EMAIL}. Here is what you put into the contact form:</p><br/><blockquote>" + data.message + "</blockquote><br/><p>Thank you for viewing my portfolio! Please look out for my response soon.</p><br/><p>{NAME}<br/><a href='{SITE-LINK}' alt='{SITE-NAME}'>{SITE-NAME}</a></p>"
     };
 
     transporter.sendMail(mailOptions, function(error, response) {

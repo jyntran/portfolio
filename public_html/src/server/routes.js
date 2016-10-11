@@ -9,11 +9,22 @@ router.use(function(req, res, next) {
     next(); 
 });
 
+// API endpoints
 router.get('/get/master', apiHandler.getMaster);
 router.get('/get/lastfm', apiHandler.getLastFM);
 
+// Contact endpoint
 router.post('/contact', contactHandler.sendEmail);
 
+// Project redirects
+router.get('/absolution', function(req, res) {
+    res.redirect('http://absolution.jyntran.ca');
+});
+router.get('/fine225', function(req, res) {
+    res.redirect('http://absolution.jyntran.ca');
+});
+
+// Anything else, return an error
 router.use('/*', function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;

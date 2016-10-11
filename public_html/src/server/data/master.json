@@ -27,6 +27,19 @@
     },
     "works" : [
         {
+            "title": "Lorem Ipsum Moe",
+            "url": {
+                "git": "https://github.com/jyntran/lorem-ipsum-moe-api",
+                "live": "http://moe.jyntran.ca"
+            },
+            "description": "Simple RESTful API that returns Lorem Ipsum placeholder text using romanized Japanese words. Uses NodeJS, ExpressJS, and AngularJS.",
+            "preview": {
+                "thumb": "/assets/img/moe-t.png",
+                "full": "/assets/img/moe-f.png"
+            },
+            "tags": [ "code" ]
+	},
+        {
             "title": "Training Places",
             "url": {
                 "live": "https://trainingplaces.ca"
@@ -48,19 +61,6 @@
             "preview": {
                 "thumb": "/assets/img/quizzle-t.png",
                 "full": "/assets/img/quizzle-f.png"
-            },
-            "tags": [ "code" ]
-        },
-        {
-            "title": "Lorem Ipsum Moe",
-            "url": {
-                "git": "https://github.com/jyntran/lorem-ipsum-moe-api",
-                "live": "http://loremipsum.moe"
-            },
-            "description": "Simple RESTful API that returns Lorem Ipsum placeholder text using romanized Japanese words. Uses NodeJS, ExpressJS, and AngularJS.",
-            "preview": {
-                "thumb": "/assets/img/moe-t.png",
-                "full": "/assets/img/moe-f.png"
             },
             "tags": [ "code" ]
         },
@@ -114,7 +114,7 @@
         {
             "title": "Rip-off Soccer Cards",
             "url": {
-                "live": "http://ripoffsoccercards.tk",
+                "live": "http://ripoffsoccercard.tk",
                 "git": "https://github.com/jyntran/Rip-off-Soccer-Cards"
             },
             "description": "HTML5 Canvas image creator with Bootstrap.",
@@ -167,7 +167,6 @@
         {
             "title": "Wishpaste",
             "url": {
-                "live": "http://wishpaste.ga",
                 "git": "https://github.com/jyntran/wishpaste"
             },
             "description": "BBcode generator using a PHP/MySQL database backend and a Zurb's Foundation front-end.",
